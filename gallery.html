@@ -10,7 +10,12 @@
   <meta name="author" content="Art House Angola" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C5A059'/><text x='50%' y='65%' font-family='serif' font-size='50' font-weight='bold' fill='%230D0D0D' text-anchor='middle'>AH</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231B2758'/><circle cx='50' cy='50' r='32' fill='%23D02C2D'/><text x='50' y='59' font-family='sans-serif' font-size='26' font-weight='bold' fill='%23FFFFFF' text-anchor='middle'>AH</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css" />
@@ -22,12 +27,9 @@
        ========================================================================== -->
   <header class="header">
     <div class="container header-container">
-      <a href="/index.html" class="logo" id="headerLogo">
-        <div class="logo-mark">AH</div>
-        <div class="logo-text">
-          ART HOUSE
-          <span>ANGOLA</span>
-        </div>
+      <a href="/index.html" class="logo" id="headerLogo" aria-label="Art House Hotel & Rooftop Bar">
+        <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-white" />
+        <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-dark" />
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
@@ -63,9 +65,14 @@
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
     <div>
-      <div class="logo" style="margin-bottom: var(--spacing-lg);">
-        <div class="logo-mark">AH</div>
-        <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+      <div class="drawer-header">
+        <a href="/index.html" class="logo" aria-label="Art House Hotel & Rooftop Bar">
+          <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-white" />
+          <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-dark" />
+        </a>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
       </div>
 
       <nav class="mobile-nav-list">
@@ -175,9 +182,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/index.html" class="logo">
-            <div class="logo-mark">AH</div>
-            <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+          <a href="/index.html" class="footer-logo" aria-label="Art House Hotel & Rooftop Bar">
+            <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="footer-logo-img" />
           </a>
           <p>A luxury boutique hotel and art sanctuary in Luanda, Angola. Designed for relaxation, privacy, and memorable stays.</p>
         </div>

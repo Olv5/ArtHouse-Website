@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 68" width="330" height="68" fill="none">
+  <!-- ART -->
+  <text x="0" y="38" font-family="'Jost', 'Montserrat', 'Futura', 'Outfit', system-ui, sans-serif" font-size="40" font-weight="500" letter-spacing="3" fill="#FFFFFF">ART</text>
+  <!-- H -->
+  <text x="120" y="38" font-family="'Jost', 'Montserrat', 'Futura', 'Outfit', system-ui, sans-serif" font-size="40" font-weight="500" letter-spacing="3" fill="#FFFFFF">H</text>
+  <!-- Red O in HOUSE -->
+  <circle cx="178" cy="25" r="14.5" fill="#D02C2D" stroke="#FFFFFF" stroke-width="5" />
+  <!-- USE -->
+  <text x="201" y="38" font-family="'Jost', 'Montserrat', 'Futura', 'Outfit', system-ui, sans-serif" font-size="40" font-weight="500" letter-spacing="3" fill="#FFFFFF">USE</text>
+  <!-- HOTEL & ROOFTOP BAR -->
+  <text x="121" y="62" font-family="'Jost', 'Montserrat', 'Futura', 'Outfit', system-ui, sans-serif" font-size="12" font-weight="400" letter-spacing="3.2" fill="#FFFFFF">HOTEL <tspan fill="#D02C2D" font-weight="600">&amp;</tspan> ROOFTOP BAR</text>
+</svg>

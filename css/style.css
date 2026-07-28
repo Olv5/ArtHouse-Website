@@ -239,16 +239,17 @@ ul, ol {
 
 .btn-primary {
   background-color: var(--color-primary);
-  color: #0D0D0D;
-  font-weight: 700;
-  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.25);
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 14px rgba(35, 50, 99, 0.2);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
-  color: #000000;
+  color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.35);
+  box-shadow: 0 6px 20px rgba(35, 50, 99, 0.3);
 }
 
 .btn-gold {
@@ -295,8 +296,19 @@ ul, ol {
 }
 
 .btn-lg {
-  padding: 1.125rem 2.25rem;
+  padding: 1rem 1.75rem;
   font-size: 1rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+/* Full-width form submit buttons */
+form .btn[style*="width: 100%"],
+form .btn.btn-lg {
+  border-radius: var(--radius-md);
+  white-space: normal;
+  line-height: 1.4;
+  padding: 0.875rem 1.5rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -331,47 +343,88 @@ ul, ol {
 
 /* Logo */
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  color: var(--color-text-main);
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
 }
 
-.header:not(.scrolled) .logo {
-  color: var(--color-text-inverse);
-}
-
-.header.scrolled .logo {
-  color: var(--color-text-main);
-}
-
-.logo-mark {
-  width: 38px;
+.logo-img {
   height: 38px;
-  border-radius: var(--radius-sm);
-  background-color: var(--color-primary);
-  color: var(--color-bg-surface);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.125rem;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  transition: opacity var(--transition-fast);
 }
 
-.logo-text span {
+.header:not(.scrolled) .logo-img-dark {
+  display: none;
+}
+
+.header:not(.scrolled) .logo-img-white {
   display: block;
-  font-family: var(--font-sans);
-  font-size: 0.625rem;
-  font-weight: 500;
-  letter-spacing: 0.25em;
-  color: var(--color-gold);
-  margin-top: -3px;
+}
+
+.header.scrolled .logo-img-white {
+  display: block;
+}
+
+.header.scrolled .logo-img-dark {
+  display: none;
+}
+
+/* Light layout overrides */
+[data-layout="warm-sand"] .header:not(.scrolled) .logo-img-white,
+[data-layout="minimalist-arch"] .header:not(.scrolled) .logo-img-white,
+[data-layout="warm-sand"] .header.scrolled .logo-img-white,
+[data-layout="minimalist-arch"] .header.scrolled .logo-img-white {
+  display: none;
+}
+
+[data-layout="warm-sand"] .header:not(.scrolled) .logo-img-dark,
+[data-layout="minimalist-arch"] .header:not(.scrolled) .logo-img-dark,
+[data-layout="warm-sand"] .header.scrolled .logo-img-dark,
+[data-layout="minimalist-arch"] .header.scrolled .logo-img-dark {
+  display: block;
+}
+
+/* Mobile drawer logo rules */
+.logo-img-drawer-dark {
+  display: block;
+  height: 34px;
+  width: auto;
+  max-width: 185px;
+  object-fit: contain;
+}
+
+.logo-img-drawer-white {
+  display: none;
+  height: 34px;
+  width: auto;
+  max-width: 185px;
+  object-fit: contain;
+}
+
+/* Dark layout overrides for mobile drawer logo */
+[data-layout="dark-obsidian"] .logo-img-drawer-dark {
+  display: none;
+}
+
+[data-layout="dark-obsidian"] .logo-img-drawer-white {
+  display: block;
+}
+
+/* Footer logo */
+.footer-logo {
+  display: inline-block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Nav Links */
@@ -502,22 +555,54 @@ ul, ol {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
+  width: 88vw;
   max-width: 380px;
   height: 100vh;
+  height: 100dvh;
   background-color: var(--color-bg-surface);
   border-left: 1px solid var(--color-border-subtle);
   z-index: 1001;
-  padding: var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-md) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: var(--shadow-elevated);
   transition: right var(--transition-smooth);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-drawer.is-open {
   right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.drawer-close-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.drawer-close-btn:hover {
+  background-color: var(--color-primary);
+  color: #ffffff;
 }
 
 .drawer-backdrop {
@@ -541,18 +626,19 @@ ul, ol {
 .mobile-nav-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-md);
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-xs);
 }
 
 .mobile-nav-link {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--color-text-main);
-  padding: var(--spacing-2xs) 0;
+  padding: var(--spacing-xs) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 44px;
 }
 
 .mobile-drawer-footer {
@@ -877,6 +963,59 @@ ul, ol {
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Card Photo Navigation Arrows */
+.card-photo-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+  opacity: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  padding: 0;
+}
+
+.room-img-wrap:hover .card-photo-nav,
+.card-photo-nav:focus {
+  opacity: 1;
+}
+
+.card-photo-nav:hover {
+  background: var(--color-gold);
+  color: #0d0d0d;
+  border-color: var(--color-gold);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.12);
+}
+
+.card-photo-prev {
+  left: 10px;
+}
+
+.card-photo-next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .card-photo-nav {
+    opacity: 0.85;
+    width: 32px;
+    height: 32px;
+  }
+}
+
 /* Modal Gallery Thumbnails & Controls */
 .modal-gallery-container {
   position: relative;
@@ -1027,19 +1166,48 @@ ul, ol {
 
 .room-price-tag {
   position: absolute;
-  bottom: 16px;
+  top: 16px;
   right: 16px;
-  background-color: var(--color-bg-surface);
-  color: var(--color-text-main);
+  background-color: rgba(23, 22, 21, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.125rem;
-  padding: 6px 14px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-subtle);
+  font-size: 1rem;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 5;
 }
 
 .room-price-tag span {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-gold);
+}
+
+.room-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.room-card-price {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  white-space: nowrap;
+  text-align: right;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.room-card-price span {
   font-family: var(--font-sans);
   font-size: 0.75rem;
   font-weight: 400;
@@ -1054,7 +1222,7 @@ ul, ol {
 }
 
 .room-title {
-  margin-bottom: var(--spacing-2xs);
+  margin-bottom: var(--spacing-3xs, 2px);
   font-size: 1.375rem;
 }
 
@@ -1468,22 +1636,30 @@ ul, ol {
 
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 36px;
-  height: 36px;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-medium);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-text-main);
-  transition: background-color var(--transition-fast);
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
 }
 
 .modal-close:hover {
   background-color: var(--color-primary);
   color: white;
+  border-color: var(--color-primary);
+  transform: scale(1.08);
 }
 
 .modal-title {
@@ -1723,14 +1899,16 @@ ul, ol {
   border-color: #00A3C4;
 }
 
+:root .btn-primary,
 [data-layout="thomson-heritage"] .btn-primary {
   background-color: #233263;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
+:root .btn-primary:hover,
 [data-layout="thomson-heritage"] .btn-primary:hover {
   background-color: #3E4D82;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
 }
 
 [data-layout="thomson-heritage"] .btn-gold {
@@ -2002,9 +2180,11 @@ ul, ol {
 @media (max-width: 640px) {
   .layout-selector-bar {
     left: 12px;
-    bottom: 84px;
+    bottom: 16px;
     padding: 6px 10px;
     font-size: 0.75rem;
+    max-width: calc(100vw - 84px);
+    z-index: 980;
   }
   .layout-selector-label span {
     display: none;
@@ -2012,6 +2192,178 @@ ul, ol {
   .layout-btn {
     padding: 4px 8px;
     font-size: 0.6875rem;
+  }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVE OPTIMIZATIONS
+   ========================================================================== */
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Prevent iOS Safari 16px auto-zoom on input focus & ensure min touch target */
+@media (max-width: 768px) {
+  .form-control, input, select, textarea {
+    font-size: 16px !important;
+    min-height: 48px;
+  }
+  
+  .btn {
+    min-height: 44px;
+  }
+
+  .header-container {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+
+  .logo-img {
+    height: 32px;
+    max-width: 175px;
+  }
+}
+
+/* Mobile Header & Hero Section Polish */
+@media (max-width: 640px) {
+  .logo-img {
+    height: 28px;
+    max-width: 155px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .nav-actions .btn-primary {
+    display: none;
+  }
+
+  .hero {
+    min-height: 100dvh;
+    padding-top: calc(var(--header-height) + 1.25rem);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .booking-bar {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Brand / Philosophy Mobile Layout */
+  .brand-main-img {
+    height: 280px;
+  }
+
+  .brand-accent-card {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin: -32px 12px 0 auto;
+    max-width: 90%;
+    z-index: 4;
+  }
+
+  .philosophy-pills {
+    grid-template-columns: 1fr;
+  }
+
+  /* Room Card Actions on Mobile */
+  .room-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .room-actions .btn {
+    width: 100%;
+  }
+
+  .rooms-filter {
+    gap: 6px;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Modal Dialog Mobile Sizing */
+  .modal-backdrop {
+    padding: 8px;
+  }
+
+  .modal-box {
+    padding: 1.25rem 1rem;
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    z-index: 100;
+  }
+
+  .modal-room-img {
+    height: 200px;
+  }
+
+  .modal-thumb-btn {
+    width: 56px;
+    height: 42px;
+  }
+
+  .lightbox-prev, .lightbox-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+
+  /* Floating WhatsApp Button on Mobile */
+  .whatsapp-float {
+    bottom: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
   }
 }
 

@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       labelEventDate: "Preferred Event Date *",
       labelGuestCount: "Estimated Guest Count *",
       labelSpecialReq: "Event Details & Special Catering Requirements",
-      btnSendEventRequest: "Submit Event Proposal Request",
+      btnSendEventRequest: "Submit Event Proposal via WhatsApp",
 
       // Modal & Booking Translations
       bookingModalTag: "Direct Hotel Booking",
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       labelEventDate: "Data Preferencial do Evento *",
       labelGuestCount: "Número Estimado de Hóspedes *",
       labelSpecialReq: "Detalhes do Evento & Requisitos de Catering",
-      btnSendEventRequest: "Enviar Pedido de Proposta de Evento",
+      btnSendEventRequest: "Enviar Pedido de Proposta via WhatsApp",
 
       // Modal & Booking Translations PT
       bookingModalTag: "Reserva Direta de Hotel",
@@ -229,8 +229,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('no-scroll');
   };
 
+  window.toggleMobileMenu = toggleMobileMenu;
+  window.openMobileMenu = openMobileMenu;
+  window.closeMobileMenu = closeMobileMenu;
+
   if (mobileToggle) mobileToggle.addEventListener('click', toggleMobileMenu);
   if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeMobileMenu);
+
+  document.querySelectorAll('.drawer-close-btn').forEach(btn => {
+    btn.addEventListener('click', closeMobileMenu);
+  });
 
   // Active link indicator based on current page URL
   const currentPath = window.location.pathname;
@@ -427,6 +435,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Card Photo Navigation Arrow Click Handler
+  window.navigateCardPhoto = (btn, direction, event) => {
+    if (event) event.stopPropagation();
+    const wrap = btn.closest('.room-img-wrap');
+    if (!wrap) return;
+    const dots = Array.from(wrap.querySelectorAll('.thumb-dot'));
+    if (dots.length <= 1) return;
+    let activeIdx = dots.findIndex(dot => dot.classList.contains('active'));
+    if (activeIdx === -1) activeIdx = 0;
+    const nextIdx = (activeIdx + direction + dots.length) % dots.length;
+    dots[nextIdx].click();
+  };
+
   /* ==========================================================================
      5. ROOM FILTERING CONTROLS
      ========================================================================== */
@@ -585,27 +606,45 @@ document.addEventListener('DOMContentLoaded', () => {
   window.handleEventFormSubmit = (event) => {
     event.preventDefault();
     const name = document.getElementById('eventContactName')?.value || 'Client';
-    const email = document.getElementById('eventContactEmail')?.value || '';
-    const phone = document.getElementById('eventContactPhone')?.value || '';
+    const email = document.getElementById('eventContactEmail')?.value || 'Not provided';
+    const phone = document.getElementById('eventContactPhone')?.value || 'Not provided';
     const typeSelect = document.getElementById('eventTypeSelect');
     const eventType = typeSelect ? typeSelect.options[typeSelect.selectedIndex].text : 'Event';
-    const eventDate = document.getElementById('eventDate')?.value || '';
-    const guestCount = document.getElementById('eventGuestCount')?.value || '0';
+    const eventDate = document.getElementById('eventDate')?.value || 'TBD';
+    const guestCount = document.getElementById('eventGuestCount')?.value || 'TBD';
     const notes = document.getElementById('eventNotes')?.value || 'None';
+
+    const message = `*ART HOUSE ANGOLA - EVENT PROPOSAL REQUEST*\n\n` +
+      `• *Name:* ${name}\n` +
+      `• *Email:* ${email}\n` +
+      `• *Phone:* ${phone}\n` +
+      `• *Event Type:* ${eventType}\n` +
+      `• *Preferred Date:* ${eventDate}\n` +
+      `• *Guest Count:* ${guestCount}\n` +
+      `• *Details / Requirements:* ${notes}\n\n` +
+      `Hello! I would like to request a custom event proposal with these details. Thank you!`;
+
+    const encodedMsg = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/244923000000?text=${encodedMsg}`;
+
+    window.open(whatsappUrl, '_blank');
 
     const formBox = document.getElementById('eventInquiryForm');
     if (formBox) {
       formBox.innerHTML = `
         <div style="text-align: center; padding: 2.5rem 1rem;">
-          <div style="width: 64px; height: 64px; background: #C5A059; color: #0D0D0D; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 2rem; font-weight: bold;">✓</div>
-          <h3 style="font-family: var(--font-serif); font-size: 1.85rem; margin-bottom: 0.5rem; color: var(--color-primary);">Proposal Request Sent</h3>
-          <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-            Thank you, <strong>${name}</strong>! Our Event Director has received your request for <strong>${eventType}</strong> on <strong>${eventDate}</strong> (${guestCount} guests).
+          <div style="width: 64px; height: 64px; background: #25D366; color: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 2rem; font-weight: bold; box-shadow: 0 8px 24px rgba(37,211,102,0.3);">✓</div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.85rem; margin-bottom: 0.5rem; color: var(--color-primary);">Redirecting to WhatsApp</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; max-width: 520px; margin-left: auto; margin-right: auto;">
+            Thank you, <strong>${name}</strong>! Your event proposal request for <strong>${eventType}</strong> on <strong>${eventDate}</strong> (${guestCount} guests) has been formatted for our WhatsApp concierge.
           </p>
-          <div style="background: var(--color-bg-alt); padding: 1.25rem; border-radius: var(--radius-md); text-align: left; margin-bottom: 1.5rem; font-size: 0.9375rem; border-left: 3px solid var(--color-gold);">
-            <p><strong>Next Steps:</strong> We will review venue availability and email a tailored proposal to <strong>${email}</strong> within 24 hours.</p>
+          <div style="background: var(--color-bg-alt); padding: 1.25rem; border-radius: var(--radius-md); text-align: left; margin-bottom: 1.5rem; font-size: 0.9375rem; border-left: 3px solid #25D366;">
+            <p style="margin: 0;">If WhatsApp didn't open automatically, click the button below to connect directly with our Event Director:</p>
           </div>
-          <a href="/index.html" class="btn btn-primary btn-lg">Return to Home</a>
+          <a href="${whatsappUrl}" target="_blank" class="btn btn-primary btn-lg" style="background-color: #25D366; border-color: #25D366; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 001.333 4.993L2 22l5.233-1.237a9.96 9.96 0 004.779 1.221h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2z"/></svg>
+            Open WhatsApp Chat
+          </a>
         </div>
       `;
     }
