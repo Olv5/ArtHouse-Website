@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suites & Accommodations | Art House Angola</title>
+  
+  <meta name="description" content="Discover our luxury suite collection at Art House Luanda. Master Art Suites, Garden Villas with private plunge pools, and Executive Studios in Angola." />
+  <meta name="keywords" content="Art House Angola suites, luxury hotel rooms Luanda, Art House accommodation, hotel rooms Angola" />
+  <meta name="author" content="Art House Angola" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C5A059'/><text x='50%' y='65%' font-family='serif' font-size='50' font-weight='bold' fill='%230D0D0D' text-anchor='middle'>AH</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="/index.html" class="logo" id="headerLogo">
+        <div class="logo-mark">AH</div>
+        <div class="logo-text">
+          ART HOUSE
+          <span>ANGOLA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="/index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="/rooms.html" class="nav-link active" data-i18n="navRooms">Suites</a>
+        <a href="/about.html" class="nav-link" data-i18n="navAbout">About</a>
+        <a href="/events.html" class="nav-link" data-i18n="navEvents">Events</a>
+        <a href="/gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+        <a href="/contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" aria-label="Toggle Language EN / PT" title="Switch Language">
+          <span data-lang="en" class="active">EN</span>
+          <span>/</span>
+          <span data-lang="pt">PT</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openBookingModal()" data-i18n="btnReserve">
+          Reserve a Stay
+        </button>
+
+        <button class="mobile-toggle" aria-label="Open Navigation Menu" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="logo" style="margin-bottom: var(--spacing-lg);">
+        <div class="logo-mark">AH</div>
+        <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+      </div>
+
+      <nav class="mobile-nav-list">
+        <a href="/index.html" class="mobile-nav-link" data-i18n="navHome">Home <span>→</span></a>
+        <a href="/rooms.html" class="mobile-nav-link" data-i18n="navRooms">Suites <span>→</span></a>
+        <a href="/about.html" class="mobile-nav-link" data-i18n="navAbout">About <span>→</span></a>
+        <a href="/events.html" class="mobile-nav-link" data-i18n="navEvents">Events <span>→</span></a>
+        <a href="/gallery.html" class="mobile-nav-link" data-i18n="navGallery">Gallery <span>→</span></a>
+        <a href="/contact.html" class="mobile-nav-link" data-i18n="navContact">Contact <span>→</span></a>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-contact-info">
+        <p><strong>Luanda, Angola</strong></p>
+        <p>Tel: +244 923 000 000</p>
+        <p>Email: reservations@thomsonarthouse.com</p>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width: 100%;" onclick="openBookingModal()" data-i18n="btnReserve">
+        Reserve a Stay
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE HERO / BANNER
+       ========================================================================== -->
+  <section class="section" style="padding-top: calc(var(--header-height) + 3rem); background-color: var(--color-bg-dark); border-bottom: 1px solid var(--color-border-subtle);">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="section-tag" style="color: var(--color-gold);">Art House Accommodations</span>
+      <h1 class="section-title" style="color: var(--color-text-inverse); font-size: clamp(2.25rem, 5vw, 3.5rem);">Suites & Private Villas</h1>
+      <p class="section-subtitle" style="color: var(--color-text-muted);">
+        Every room is a private sanctuary featuring bespoke teak woodwork, high-speed fiber internet, original Angolan contemporary art, and personalized concierge care in Luanda.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ROOMS & SUITES CATALOG
+       ========================================================================== -->
+  <section id="rooms" class="section">
+    <div class="container">
+      
+      <!-- Filter Buttons -->
+      <div class="rooms-filter">
+        <button class="filter-btn active" data-filter="all" data-i18n="allRooms">All Suites</button>
+        <button class="filter-btn" data-filter="master">Master Suites</button>
+        <button class="filter-btn" data-filter="villa">Private Villas</button>
+        <button class="filter-btn" data-filter="executive">Executive Studios</button>
+      </div>
+
+      <!-- Rooms Grid -->
+      <div class="rooms-grid">
+        
+        <!-- Room 1: Master Art Suite -->
+        <article class="room-card" data-category="master">
+          <div class="room-img-wrap">
+            <img id="card-img-master" src="/images/master-suite-1.jpg" alt="Master Art Suite Bedroom at Art House Angola" referrerPolicy="no-referrer" />
+            <span class="room-tag">Signature Suite</span>
+            <div class="photo-count-badge">📷 3 Photos</div>
+            <div class="room-card-thumbs">
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/master-suite-1.jpg', 'card-img-master')" title="Bedroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/master-suite-2.jpg', 'card-img-master')" title="Bathroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/master-suite-3.jpg', 'card-img-master')" title="Art Lounge View"></button>
+            </div>
+            <div class="room-price-tag">$280 <span>/ night</span></div>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Master Art Suite</h3>
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+              Expansive king suite featuring floor-to-ceiling windows, private balcony, marble bathroom, and curated master artworks from Angolan artists.
+            </p>
+
+            <div class="room-features-list">
+              <span class="feature-pill">65 m²</span>
+              <span class="feature-pill">Super King Bed</span>
+              <span class="feature-pill">Private Balcony</span>
+              <span class="feature-pill">Fiber Wi-Fi</span>
+              <span class="feature-pill">Artisanal Breakfast</span>
+            </div>
+
+            <div class="room-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')">
+                Explore Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')">
+                Reserve Suite
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 2: Garden Villa Suite -->
+        <article class="room-card" data-category="villa">
+          <div class="room-img-wrap">
+            <img id="card-img-villa" src="/images/garden-villa-1.jpg" alt="Garden Villa Suite with Plunge Pool at Art House Angola" referrerPolicy="no-referrer" />
+            <span class="room-tag">Private Villa</span>
+            <div class="photo-count-badge">📷 3 Photos</div>
+            <div class="room-card-thumbs">
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/garden-villa-1.jpg', 'card-img-villa')" title="Plunge Pool View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/garden-villa-2.jpg', 'card-img-villa')" title="Lounge View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/garden-villa-3.jpg', 'card-img-villa')" title="Courtyard View"></button>
+            </div>
+            <div class="room-price-tag">$340 <span>/ night</span></div>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Garden Villa Suite</h3>
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+              Secluded courtyard villa featuring a private plunge pool, teak sun deck, outdoor rain shower, and intimate botanical lounge.
+            </p>
+
+            <div class="room-features-list">
+              <span class="feature-pill">85 m²</span>
+              <span class="feature-pill">Plunge Pool</span>
+              <span class="feature-pill">Teak Sun Deck</span>
+              <span class="feature-pill">Butler Care</span>
+              <span class="feature-pill">In-Villa Dining</span>
+            </div>
+
+            <div class="room-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')">
+                Explore Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')">
+                Reserve Suite
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 3: Executive Studio -->
+        <article class="room-card" data-category="executive">
+          <div class="room-img-wrap">
+            <img id="card-img-exec" src="/images/executive-suite-1.jpg" alt="Executive Studio Suite at Art House Angola" referrerPolicy="no-referrer" />
+            <span class="room-tag">Business & Leisure</span>
+            <div class="photo-count-badge">📷 3 Photos</div>
+            <div class="room-card-thumbs">
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/executive-suite-1.jpg', 'card-img-exec')" title="Bedroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/executive-suite-2.jpg', 'card-img-exec')" title="Workstation View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/executive-suite-3.jpg', 'card-img-exec')" title="Sculpture View"></button>
+            </div>
+            <div class="room-price-tag">$220 <span>/ night</span></div>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Executive Studio</h3>
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+              Modern studio engineered for high productivity and quiet relaxation, equipped with an ergonomic teak workstation and Nespresso bar.
+            </p>
+
+            <div class="room-features-list">
+              <span class="feature-pill">48 m²</span>
+              <span class="feature-pill">King Bed</span>
+              <span class="feature-pill">Workstation</span>
+              <span class="feature-pill">High-Speed Fiber</span>
+              <span class="feature-pill">Nespresso Bar</span>
+            </div>
+
+            <div class="room-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')">
+                Explore Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')">
+                Reserve Suite
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INCLUSIVE AMENITIES COMPARISON
+       ========================================================================== -->
+  <section class="section" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Included With Every Stay</span>
+        <h2 class="section-title">The Art House Hospitality Standard</h2>
+        <p class="section-subtitle">
+          We ensure every guest experiences effortless comfort with our high-standard inclusions.
+        </p>
+      </div>
+
+      <div class="experience-grid">
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          </div>
+          <h4>Artisanal Courtyard Breakfast</h4>
+          <p>Organic Angolan coffee, tropical fruits, local pastries, and made-to-order warm dishes served daily.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h4>Dedicated Fiber Connectivity</h4>
+          <p>Uninterrupted high-speed Wi-Fi across all suites and outdoor garden lounges for seamless work.</p>
+        </div>
+
+        <div class="exp-card">
+          <div class="exp-icon">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          </div>
+          <h4>Airport Pick-up Assistance</h4>
+          <p>Direct chauffeur service from Quatro de Fevereiro International Airport upon request.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="logo">
+            <div class="logo-mark">AH</div>
+            <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+          </a>
+          <p>A luxury boutique hotel and art sanctuary in Luanda, Angola. Designed for relaxation, privacy, and memorable stays.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="/index.html">Home</a>
+            <a href="/rooms.html">Suites</a>
+            <a href="/about.html">About</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="/contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Contact</h4>
+          <div class="footer-links">
+            <a href="/contact.html">Contact Us</a>
+            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
+            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Luanda Address</h4>
+          <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
+            Thomson Art House<br />
+            Luanda, Angola<br />
+            Tel: +244 923 000 000<br />
+            Email: reservations@thomsonarthouse.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Art House Angola. All rights reserved.</div>
+        <div>Redesigned for Thomson Art House • Luanda, Angola</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals & Quick Contact -->
+  <div class="modal-backdrop" id="roomDetailModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeRoomModal()">✕</button>
+      
+      <!-- Multi-Photo Gallery Container in Modal -->
+      <div class="modal-gallery-container">
+        <img id="modalRoomImg" class="modal-room-img" src="" alt="Suite Image" referrerPolicy="no-referrer" />
+        <button class="room-gallery-arrow prev" onclick="navigateRoomPhoto(-1)" aria-label="Previous Photo" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 2;">‹</button>
+        <button class="room-gallery-arrow next" onclick="navigateRoomPhoto(1)" aria-label="Next Photo" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 2;">›</button>
+        <div id="modalPhotoBadge" class="photo-count-badge">Photo 1 of 3</div>
+      </div>
+
+      <div id="modalRoomThumbnails" class="modal-thumbs-strip"></div>
+
+      <span class="section-tag" id="modalRoomTagline">Suite Category</span>
+      <h3 class="modal-title" id="modalRoomTitle">Master Art Suite</h3>
+      <p id="modalRoomPrice" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-bottom: var(--spacing-sm);"></p>
+      
+      <p id="modalRoomDesc" style="margin-bottom: var(--spacing-md);"></p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-xs); background: var(--color-bg-alt); padding: var(--spacing-sm); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); text-align: center; font-size: 0.8125rem;">
+        <div><strong>Size:</strong> <div id="modalRoomSize"></div></div>
+        <div><strong>Guests:</strong> <div id="modalRoomCapacity"></div></div>
+        <div><strong>Bed:</strong> <div id="modalRoomBed"></div></div>
+      </div>
+
+      <h4 style="font-size: 0.9375rem; margin-bottom: var(--spacing-2xs);">Suite Highlights & Amenities:</h4>
+      <ul id="modalRoomAmenities" class="room-features-list" style="margin-bottom: var(--spacing-lg);"></ul>
+
+      <div style="display: flex; gap: var(--spacing-xs);">
+        <button class="btn btn-secondary" onclick="closeRoomModal()" style="flex: 1;">Close</button>
+        <button class="btn btn-primary" id="modalReserveBtn" onclick="closeRoomModal(); openBookingModal(this.getAttribute('data-room-type'));" style="flex: 2;">Reserve This Suite</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      <span class="section-tag">Direct Stay Inquiry</span>
+      <h3 class="modal-title">Reserve at Art House</h3>
+      <p class="modal-subtitle">Select your suite and details for instant confirmation and concierge assistance.</p>
+
+      <form id="reservationForm">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+          <div>
+            <label class="form-label">Guest Name</label>
+            <input type="text" id="guestName" class="form-control" placeholder="Full Name" required style="padding-left: 0.875rem;" />
+          </div>
+          <div>
+            <label class="form-label">Phone / WhatsApp</label>
+            <input type="tel" id="guestPhone" class="form-control" placeholder="+244 9XX XXX XXX" required style="padding-left: 0.875rem;" />
+          </div>
+        </div>
+
+        <div style="margin-bottom: var(--spacing-sm);">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="guestEmail" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
+        </div>
+
+        <div style="margin-bottom: var(--spacing-sm);">
+          <label class="form-label">Select Suite</label>
+          <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
+            <option value="master-art-suite">Master Art Suite ($280 / night)</option>
+            <option value="garden-villa">Garden Villa Suite ($340 / night)</option>
+            <option value="executive-studio">Executive Studio ($220 / night)</option>
+          </select>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation()" style="width: 100%;">
+            💬 Reserve via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <a href="https://wa.me/244923000000?text=Hello%20Art%20House!%20I%20would%20like%20to%20inquire%20about%20a%20suite%20reservation." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp with Art House Angola" title="Chat on WhatsApp">
+    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.999 4.486-9.999 10.001 0 1.8.48 3.55 1.391 5.097l-1.423 5.203 5.328-1.398c1.492.813 3.178 1.243 4.887 1.243 5.514 0 10.001-4.486 10.001-10.001s-4.487-10.001-10.015-10.001zm5.836 14.195c-.244.688-1.428 1.354-1.98 1.411-.519.054-1.196.082-3.411-.837-2.827-1.171-4.639-4.045-4.781-4.233-.141-.188-1.144-1.522-1.144-2.905 0-1.383.725-2.062.981-2.344.256-.282.559-.352.747-.352.188 0 .376.002.536.01.17.008.399-.064.625.479.244.588.83 2.029.902 2.175.072.146.12.316.024.505-.096.188-.144.306-.288.475-.144.169-.304.377-.435.506-.145.143-.297.301-.128.591.169.29.752 1.238 1.613 2.007 1.109.988 2.046 1.295 2.336 1.437.29.141.459.118.629-.076.169-.194.725-.845.92-1.135.195-.29.39-.241.656-.143.266.098 1.69.797 1.982.942.292.145.487.217.559.34.072.122.072.709-.172 1.397z"/></svg>
+  </a>
+
+  <!-- Script -->
+  <script type="module" src="/js/script.js"></script>
+</body>
+</html>

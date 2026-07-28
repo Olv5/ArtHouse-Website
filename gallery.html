@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery & Visual Atmosphere | Art House Angola</title>
+  
+  <meta name="description" content="Explore the editorial image gallery of Art House Luanda. Architecture, curated Angolan contemporary art, luxury suites, and garden courtyard moments." />
+  <meta name="keywords" content="Art House Angola gallery, Luanda hotel photos, boutique hotel architecture Angola" />
+  <meta name="author" content="Art House Angola" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C5A059'/><text x='50%' y='65%' font-family='serif' font-size='50' font-weight='bold' fill='%230D0D0D' text-anchor='middle'>AH</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="/index.html" class="logo" id="headerLogo">
+        <div class="logo-mark">AH</div>
+        <div class="logo-text">
+          ART HOUSE
+          <span>ANGOLA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="/index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="/rooms.html" class="nav-link" data-i18n="navRooms">Suites</a>
+        <a href="/about.html" class="nav-link" data-i18n="navAbout">About</a>
+        <a href="/events.html" class="nav-link" data-i18n="navEvents">Events</a>
+        <a href="/gallery.html" class="nav-link active" data-i18n="navGallery">Gallery</a>
+        <a href="/contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" aria-label="Toggle Language EN / PT" title="Switch Language">
+          <span data-lang="en" class="active">EN</span>
+          <span>/</span>
+          <span data-lang="pt">PT</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openBookingModal()" data-i18n="btnReserve">
+          Reserve a Stay
+        </button>
+
+        <button class="mobile-toggle" aria-label="Open Navigation Menu" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="logo" style="margin-bottom: var(--spacing-lg);">
+        <div class="logo-mark">AH</div>
+        <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+      </div>
+
+      <nav class="mobile-nav-list">
+        <a href="/index.html" class="mobile-nav-link" data-i18n="navHome">Home <span>→</span></a>
+        <a href="/rooms.html" class="mobile-nav-link" data-i18n="navRooms">Suites <span>→</span></a>
+        <a href="/about.html" class="mobile-nav-link" data-i18n="navAbout">About <span>→</span></a>
+        <a href="/events.html" class="mobile-nav-link" data-i18n="navEvents">Events <span>→</span></a>
+        <a href="/gallery.html" class="mobile-nav-link" data-i18n="navGallery">Gallery <span>→</span></a>
+        <a href="/contact.html" class="mobile-nav-link" data-i18n="navContact">Contact <span>→</span></a>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-contact-info">
+        <p><strong>Luanda, Angola</strong></p>
+        <p>Tel: +244 923 000 000</p>
+        <p>Email: reservations@thomsonarthouse.com</p>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width: 100%;" onclick="openBookingModal()" data-i18n="btnReserve">
+        Reserve a Stay
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE HERO / BANNER
+       ========================================================================== -->
+  <section class="section" style="padding-top: calc(var(--header-height) + 3rem); background-color: var(--color-bg-dark); border-bottom: 1px solid var(--color-border-subtle);">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="section-tag" style="color: var(--color-gold);">Visual Atmosphere</span>
+      <h1 class="section-title" style="color: var(--color-text-inverse); font-size: clamp(2.25rem, 5vw, 3.5rem);">Editorial Gallery</h1>
+      <p class="section-subtitle" style="color: var(--color-text-muted);">
+        Click any photograph to enter full-screen editorial lightbox view and immerse yourself in the textures of Art House Luanda.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EDITORIAL GALLERY GRID
+       ========================================================================== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item wide" data-full="/images/hero.jpg">
+          <img src="/images/hero.jpg" alt="Art House Architecture at Sunset" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Architecture</span>
+            <div class="gallery-caption">Main Courtyard at Golden Hour</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-full="/images/master-suite.jpg">
+          <img src="/images/master-suite.jpg" alt="Master Art Suite Interior" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Suites</span>
+            <div class="gallery-caption">Master Art Suite Bedroom</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-full="/images/art-gallery.jpg">
+          <img src="/images/art-gallery.jpg" alt="Lobby Gallery Lounge" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Art Collection</span>
+            <div class="gallery-caption">Main Lounge Exhibition</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-full="/images/garden-villa.jpg">
+          <img src="/images/garden-villa.jpg" alt="Garden Villa Private Pool" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Grounds</span>
+            <div class="gallery-caption">Garden Villa Plunge Pool</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-full="/images/dining.jpg">
+          <img src="/images/dining.jpg" alt="Artisanal Courtyard Breakfast" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Dining</span>
+            <div class="gallery-caption">Courtyard Breakfast Experience</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-full="/images/art-sculpture.jpg">
+          <img src="/images/art-sculpture.jpg" alt="Angolan Bronze Sculpture Detail" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Art Collection</span>
+            <div class="gallery-caption">Angolan Bronze Sculpture Detail</div>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-full="/images/executive-suite.jpg">
+          <img src="/images/executive-suite.jpg" alt="Executive Studio Desk" referrerPolicy="no-referrer" />
+          <div class="gallery-overlay">
+            <span class="gallery-cat">Suites</span>
+            <div class="gallery-caption">Executive Studio Workstation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="logo">
+            <div class="logo-mark">AH</div>
+            <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+          </a>
+          <p>A luxury boutique hotel and art sanctuary in Luanda, Angola. Designed for relaxation, privacy, and memorable stays.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="/index.html">Home</a>
+            <a href="/rooms.html">Suites</a>
+            <a href="/about.html">About</a>
+            <a href="/gallery.html">Gallery</a>
+            <a href="/contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Contact</h4>
+          <div class="footer-links">
+            <a href="/contact.html">Contact Us</a>
+            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
+            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Luanda Address</h4>
+          <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
+            Thomson Art House<br />
+            Luanda, Angola<br />
+            Tel: +244 923 000 000<br />
+            Email: reservations@thomsonarthouse.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Art House Angola. All rights reserved.</div>
+        <div>Redesigned for Thomson Art House • Luanda, Angola</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightboxModal">
+    <button class="lightbox-btn lightbox-close">✕</button>
+    <button class="lightbox-btn lightbox-prev">‹</button>
+    <button class="lightbox-btn lightbox-next">›</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Gallery Preview" referrerPolicy="no-referrer" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div style="color: var(--color-gold); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;" id="lightboxCategory"></div>
+    </div>
+  </div>
+
+  <!-- Booking Modal & WhatsApp -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      <span class="section-tag">Direct Stay Inquiry</span>
+      <h3 class="modal-title">Reserve at Art House</h3>
+      <p class="modal-subtitle">Select your suite and details for instant confirmation and concierge assistance.</p>
+
+      <form id="reservationForm">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+          <div>
+            <label class="form-label">Guest Name</label>
+            <input type="text" id="guestName" class="form-control" placeholder="Full Name" required style="padding-left: 0.875rem;" />
+          </div>
+          <div>
+            <label class="form-label">Phone / WhatsApp</label>
+            <input type="tel" id="guestPhone" class="form-control" placeholder="+244 9XX XXX XXX" required style="padding-left: 0.875rem;" />
+          </div>
+        </div>
+
+        <div style="margin-bottom: var(--spacing-sm);">
+          <label class="form-label">Email Address</label>
+          <input type="email" id="guestEmail" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
+        </div>
+
+        <div style="margin-bottom: var(--spacing-sm);">
+          <label class="form-label">Select Suite</label>
+          <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
+            <option value="master-art-suite">Master Art Suite ($280 / night)</option>
+            <option value="garden-villa">Garden Villa Suite ($340 / night)</option>
+            <option value="executive-studio">Executive Studio ($220 / night)</option>
+          </select>
+        </div>
+
+        <div>
+          <button type="button" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation()" style="width: 100%;">
+            💬 Reserve via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <a href="https://wa.me/244923000000?text=Hello%20Art%20House!%20I%20would%20like%20to%20inquire%20about%20a%20suite%20reservation." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp with Art House Angola" title="Chat on WhatsApp">
+    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.999 4.486-9.999 10.001 0 1.8.48 3.55 1.391 5.097l-1.423 5.203 5.328-1.398c1.492.813 3.178 1.243 4.887 1.243 5.514 0 10.001-4.486 10.001-10.001s-4.487-10.001-10.015-10.001zm5.836 14.195c-.244.688-1.428 1.354-1.98 1.411-.519.054-1.196.082-3.411-.837-2.827-1.171-4.639-4.045-4.781-4.233-.141-.188-1.144-1.522-1.144-2.905 0-1.383.725-2.062.981-2.344.256-.282.559-.352.747-.352.188 0 .376.002.536.01.17.008.399-.064.625.479.244.588.83 2.029.902 2.175.072.146.12.316.024.505-.096.188-.144.306-.288.475-.144.169-.304.377-.435.506-.145.143-.297.301-.128.591.169.29.752 1.238 1.613 2.007 1.109.988 2.046 1.295 2.336 1.437.29.141.459.118.629-.076.169-.194.725-.845.92-1.135.195-.29.39-.241.656-.143.266.098 1.69.797 1.982.942.292.145.487.217.559.34.072.122.072.709-.172 1.397z"/></svg>
+  </a>
+
+  <!-- Script -->
+  <script type="module" src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private Events & Art Exhibitions | Art House Angola</title>
+  
+  <meta name="description" content="Host private events, art exhibitions, corporate retreats, and intimate celebrations at Art House Luanda. Gallery lounge, courtyard garden, and luxury catering in Luanda." />
+  <meta name="keywords" content="Art House Angola events, Luanda venue hire, art exhibitions Luanda, corporate retreats Angola, weddings Luanda" />
+  <meta name="author" content="Art House Angola" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23C5A059'/><text x='50%' y='65%' font-family='serif' font-size='50' font-weight='bold' fill='%230D0D0D' text-anchor='middle'>AH</text></svg>" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="/index.html" class="logo" id="headerLogo">
+        <div class="logo-mark">AH</div>
+        <div class="logo-text">
+          ART HOUSE
+          <span>ANGOLA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="/index.html" class="nav-link" data-i18n="navHome">Home</a>
+        <a href="/rooms.html" class="nav-link" data-i18n="navRooms">Suites</a>
+        <a href="/about.html" class="nav-link" data-i18n="navAbout">About</a>
+        <a href="/events.html" class="nav-link active" data-i18n="navEvents">Events</a>
+        <a href="/gallery.html" class="nav-link" data-i18n="navGallery">Gallery</a>
+        <a href="/contact.html" class="nav-link" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="lang-toggle" aria-label="Toggle Language EN / PT" title="Switch Language">
+          <span data-lang="en" class="active">EN</span>
+          <span>/</span>
+          <span data-lang="pt">PT</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openBookingModal()" data-i18n="btnReserve">
+          Reserve a Stay
+        </button>
+
+        <button class="mobile-toggle" aria-label="Open Navigation Menu" id="mobileMenuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="logo" style="margin-bottom: var(--spacing-lg);">
+        <div class="logo-mark">AH</div>
+        <div class="logo-text">ART HOUSE <span>ANGOLA</span></div>
+      </div>
+
+      <nav class="mobile-nav-list">
+        <a href="/index.html" class="mobile-nav-link" data-i18n="navHome">Home <span>→</span></a>
+        <a href="/rooms.html" class="mobile-nav-link" data-i18n="navRooms">Suites <span>→</span></a>
+        <a href="/about.html" class="mobile-nav-link" data-i18n="navAbout">About <span>→</span></a>
+        <a href="/events.html" class="mobile-nav-link" data-i18n="navEvents">Events <span>→</span></a>
+        <a href="/gallery.html" class="mobile-nav-link" data-i18n="navGallery">Gallery <span>→</span></a>
+        <a href="/contact.html" class="mobile-nav-link" data-i18n="navContact">Contact <span>→</span></a>
+      </nav>
+    </div>
+
+    <div class="mobile-drawer-footer">
+      <div class="drawer-contact-info">
+        <p><strong>Luanda, Angola</strong></p>
+        <p>Tel: +244 923 000 000</p>
+        <p>Email: events@thomsonarthouse.com</p>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width: 100%;" onclick="openBookingModal()" data-i18n="btnReserve">
+        Reserve a Stay
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE HERO / BANNER
+       ========================================================================== -->
+  <section class="section" style="padding-top: calc(var(--header-height) + 3rem); background-color: var(--color-bg-dark); border-bottom: 1px solid var(--color-border-subtle);">
+    <div class="container text-center" style="max-width: 850px;">
+      <span class="section-tag" style="color: var(--color-gold);" data-i18n="eventsTagline">Bespoke Gatherings & Cultural Celebrations</span>
+      <h1 class="section-title" style="color: var(--color-text-inverse); font-size: clamp(2.25rem, 5vw, 3.5rem);" data-i18n="eventsHeroTitle">Private Events & Art Gatherings</h1>
+      <p class="section-subtitle" style="color: var(--color-text-muted);" data-i18n="eventsHeroDesc">
+        From curatorial art vernissages and executive symposia to romantic courtyard galas, Art House Angola offers extraordinary spaces tailored to unforgettable moments in Luanda.
+      </p>
+      <a href="#event-inquiry" class="btn btn-gold btn-lg" style="margin-top: var(--spacing-sm);" data-i18n="btnInquireEvent">
+        Request Event Proposal
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EVENT CATEGORIES & EXPERIENCES
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="eventTypesTag">Tailored Occasions</span>
+        <h2 class="section-title" data-i18n="eventTypesTitle">Curated Event Categories</h2>
+        <p class="section-subtitle" data-i18n="eventTypesDesc">Each event is thoughtfully managed by our dedicated cultural concierge, sommelier, and culinary team.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-lg);">
+        
+        <!-- Card 1: Art Exhibitions -->
+        <article class="experience-card">
+          <div style="position: relative; height: 220px; overflow: hidden; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+            <img src="/images/art-gallery.jpg" alt="Art Exhibition at Art House Angola" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+          </div>
+          <div style="padding: var(--spacing-md);">
+            <span class="section-tag" style="margin-bottom: var(--spacing-2xs);" data-i18n="eventCat1">Cultural Vernissages</span>
+            <h3 style="font-size: 1.25rem; font-family: var(--font-serif); margin-bottom: var(--spacing-xs);">Art Exhibitions & Auctions</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+              Host exclusive art launches, catalog previews, and curatorial galas surrounded by original Angolan and pan-African contemporary masterpieces.
+            </p>
+            <span class="feature-pill">Up to 80 Guests</span>
+            <span class="feature-pill">A/V & Lighting Setup</span>
+          </div>
+        </article>
+
+        <!-- Card 2: Private Galas -->
+        <article class="experience-card">
+          <div style="position: relative; height: 220px; overflow: hidden; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+            <img src="/images/dining.jpg" alt="Courtyard Dining Event" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+          </div>
+          <div style="padding: var(--spacing-md);">
+            <span class="section-tag" style="margin-bottom: var(--spacing-2xs);" data-i18n="eventCat2">Gourmet Hospitality</span>
+            <h3 style="font-size: 1.25rem; font-family: var(--font-serif); margin-bottom: var(--spacing-xs);">Private Galas & Tasting Dinners</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+              Multi-course artisanal dinners under festoon courtyard lights featuring private chef pairings, fine wine selections, and live acoustic music.
+            </p>
+            <span class="feature-pill">Up to 60 Guests</span>
+            <span class="feature-pill">Private Chef Menu</span>
+          </div>
+        </article>
+
+        <!-- Card 3: Executive Retreats -->
+        <article class="experience-card">
+          <div style="position: relative; height: 220px; overflow: hidden; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+            <img src="/images/executive-suite-1.jpg" alt="Executive Meeting Space" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+          </div>
+          <div style="padding: var(--spacing-md);">
+            <span class="section-tag" style="margin-bottom: var(--spacing-2xs);" data-i18n="eventCat3">Corporate Excellence</span>
+            <h3 style="font-size: 1.25rem; font-family: var(--font-serif); margin-bottom: var(--spacing-xs);">Executive Symposia & Retreats</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+              Discreet, serene environment for C-level meetings, diplomatic receptions, board summits, and team strategic planning in Luanda.
+            </p>
+            <span class="feature-pill">Up to 35 Guests</span>
+            <span class="feature-pill">Fiber Wi-Fi & Projection</span>
+          </div>
+        </article>
+
+        <!-- Card 4: Romantic Weddings -->
+        <article class="experience-card">
+          <div style="position: relative; height: 220px; overflow: hidden; border-radius: var(--radius-md) var(--radius-md) 0 0;">
+            <img src="/images/garden-villa-1.jpg" alt="Garden Wedding Venue" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+          </div>
+          <div style="padding: var(--spacing-md);">
+            <span class="section-tag" style="margin-bottom: var(--spacing-2xs);" data-i18n="eventCat4">Bespoke Celebrations</span>
+            <h3 style="font-size: 1.25rem; font-family: var(--font-serif); margin-bottom: var(--spacing-xs);">Weddings & Anniversaries</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+              Intimate tropical wedding ceremonies, vow renewals, and milestone birthday celebrations with custom floral styling and suite buyouts.
+            </p>
+            <span class="feature-pill">Up to 100 Guests</span>
+            <span class="feature-pill">Full Villa Buyout Option</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       VENUE SPACES
+       ========================================================================== -->
+  <section class="section" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="venuesTag">Architectural Spaces</span>
+        <h2 class="section-title" data-i18n="venuesTitle">Event Venue Capabilities</h2>
+        <p class="section-subtitle" data-i18n="venuesDesc">Choose from flexible indoor art lounges and lush open-air botanical garden courtyards.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-md);">
+        
+        <div style="background: var(--color-bg-surface); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);">
+          <h3 style="font-family: var(--font-serif); color: var(--color-primary); font-size: 1.35rem; margin-bottom: var(--spacing-xs);">Tropical Courtyard Garden</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+            Lush botanical garden surrounding our swimming pool, ideal for sunset cocktail receptions and outdoor banquet dining.
+          </p>
+          <ul style="font-size: 0.875rem; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>✓ <strong>Capacity:</strong> Up to 120 Standing / 70 Seated</li>
+            <li>✓ <strong>Atmosphere:</strong> Open-Air, Ambient Festoon Lighting</li>
+            <li>✓ <strong>Features:</strong> Cocktail Bar, Teak Decking, Poolside Stage</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--color-bg-surface); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);">
+          <h3 style="font-family: var(--font-serif); color: var(--color-primary); font-size: 1.35rem; margin-bottom: var(--spacing-xs);">Art Gallery Lounge</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+            Climate-controlled indoor gallery hall displaying rotating exhibitions from Angolan master sculptors and painters.
+          </p>
+          <ul style="font-size: 0.875rem; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>✓ <strong>Capacity:</strong> Up to 80 Guests</li>
+            <li>✓ <strong>Atmosphere:</strong> Modernist Gallery, Architectural Lighting</li>
+            <li>✓ <strong>Features:</strong> High-Resolution Projector, Surround Sound</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--color-bg-surface); padding: var(--spacing-lg); border-radius: var(--radius-lg); border: 1px solid var(--color-border-subtle);">
+          <h3 style="font-family: var(--font-serif); color: var(--color-primary); font-size: 1.35rem; margin-bottom: var(--spacing-xs);">Sunset Rooftop Terrace</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);">
+            Panoramic view of Luanda's skyline and ocean horizon, suited for intimate VIP gatherings and wine tasting sessions.
+          </p>
+          <ul style="font-size: 0.875rem; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px;">
+            <li>✓ <strong>Capacity:</strong> Up to 45 Guests</li>
+            <li>✓ <strong>Atmosphere:</strong> Panoramic Ocean & City Views</li>
+            <li>✓ <strong>Features:</strong> Private Bar, Lounge Furniture, Sunset Views</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EVENT PROPOSAL INQUIRY FORM
+       ========================================================================== -->
+  <section id="event-inquiry" class="section">
+    <div class="container" style="max-width: 800px;">
+      <div style="background-color: var(--color-bg-surface); padding: clamp(1.5rem, 5vw, 3rem); border-radius: var(--radius-lg); border: 1px solid var(--color-border-medium); box-shadow: var(--shadow-card);">
+        
+        <div class="text-center" style="margin-bottom: var(--spacing-lg);">
+          <span class="section-tag" data-i18n="inquiryTag">Direct Concierge Booking</span>
+          <h2 class="section-title" style="margin-bottom: var(--spacing-xs);" data-i18n="inquiryTitle">Request an Event Proposal</h2>
+          <p style="font-size: 0.9375rem; color: var(--color-text-muted);" data-i18n="inquiryDesc">
+            Share details about your upcoming gathering in Luanda, and our Event Director will respond within 24 hours with a custom proposal.
+          </p>
+        </div>
+
+        <form id="eventInquiryForm" onsubmit="handleEventFormSubmit(event)">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+            <div class="form-group">
+              <label for="eventContactName" data-i18n="labelFullName">Full Name *</label>
+              <input type="text" id="eventContactName" class="form-control" placeholder="e.g. Maria Agostinho" required />
+            </div>
+
+            <div class="form-group">
+              <label for="eventContactEmail" data-i18n="labelEmail">Email Address *</label>
+              <input type="email" id="eventContactEmail" class="form-control" placeholder="e.g. maria@company.co.ao" required />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+            <div class="form-group">
+              <label for="eventContactPhone" data-i18n="labelPhone">Phone Number *</label>
+              <input type="tel" id="eventContactPhone" class="form-control" placeholder="+244 923 000 000" required />
+            </div>
+
+            <div class="form-group">
+              <label for="eventTypeSelect" data-i18n="labelEventType">Type of Event *</label>
+              <select id="eventTypeSelect" class="form-control" required>
+                <option value="art-exhibition">Art Exhibition / Vernissage</option>
+                <option value="private-gala">Private Gala / Gourmet Dinner</option>
+                <option value="corporate-retreat">Corporate Symposium / Retreat</option>
+                <option value="wedding">Wedding / Intimate Ceremony</option>
+                <option value="other">Other Cultural Celebration</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--spacing-sm); margin-bottom: var(--spacing-sm);">
+            <div class="form-group">
+              <label for="eventDate" data-i18n="labelEventDate">Preferred Event Date *</label>
+              <input type="date" id="eventDate" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+              <label for="eventGuestCount" data-i18n="labelGuestCount">Estimated Guest Count *</label>
+              <input type="number" id="eventGuestCount" class="form-control" min="5" max="150" placeholder="e.g. 40" required />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: var(--spacing-md);">
+            <label for="eventNotes" data-i18n="labelSpecialReq">Event Details & Special Catering Requirements</label>
+            <textarea id="eventNotes" class="form-control" rows="4" placeholder="Tell us about your catering preferences, audiovisual requirements, or decoration vision..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; font-size: 1.0625rem;" data-i18n="btnSendEventRequest">
+            Submit Event Proposal Request
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="margin-bottom: var(--spacing-sm);">
+            <div class="logo-mark">AH</div>
+            <div class="logo-text">
+              ART HOUSE
+              <span>ANGOLA</span>
+            </div>
+          </div>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">
+            A luxury boutique hotel, private garden sanctuary, and art exhibition space in Luanda, Angola.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <div class="footer-links">
+            <a href="/index.html" data-i18n="navHome">Home</a>
+            <a href="/rooms.html" data-i18n="navRooms">Suites</a>
+            <a href="/about.html" data-i18n="navAbout">About</a>
+            <a href="/events.html" data-i18n="navEvents">Events</a>
+            <a href="/gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="/contact.html" data-i18n="navContact">Contact</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Legal & Contact</h4>
+          <div class="footer-links">
+            <a href="/contact.html">Contact Us</a>
+            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
+            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Luanda Address</h4>
+          <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
+            Thomson Art House<br />
+            Luanda, Angola<br />
+            Tel: +244 923 000 000<br />
+            Email: events@thomsonarthouse.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Art House Angola. All rights reserved.</div>
+        <div>Thomson Art House • Luanda, Angola</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & OVERLAYS
+       ========================================================================== -->
+
+  <!-- Room Detail Modal -->
+  <div class="modal-backdrop" id="roomDetailModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeRoomModal()">✕</button>
+      
+      <!-- Multi-Photo Gallery Container in Modal -->
+      <div class="modal-gallery-container">
+        <img id="modalRoomImg" class="modal-room-img" src="" alt="Suite Image" referrerPolicy="no-referrer" />
+        <button class="room-gallery-arrow prev" onclick="navigateRoomPhoto(-1)" aria-label="Previous Photo" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 2;">‹</button>
+        <button class="room-gallery-arrow next" onclick="navigateRoomPhoto(1)" aria-label="Next Photo" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; z-index: 2;">›</button>
+        <div id="modalPhotoBadge" class="photo-count-badge">Photo 1 of 3</div>
+      </div>
+
+      <div id="modalRoomThumbnails" class="modal-thumbs-strip"></div>
+
+      <span class="section-tag" id="modalRoomTagline">Suite Category</span>
+      <h3 class="modal-title" id="modalRoomTitle">Master Art Suite</h3>
+      <p id="modalRoomPrice" style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-primary); margin-bottom: var(--spacing-sm);"></p>
+      
+      <p id="modalRoomDesc" style="margin-bottom: var(--spacing-md);"></p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-xs); background: var(--color-bg-alt); padding: var(--spacing-sm); border-radius: var(--radius-md); margin-bottom: var(--spacing-md); text-align: center; font-size: 0.8125rem;">
+        <div><strong>Size:</strong> <div id="modalRoomSize"></div></div>
+        <div><strong>Guests:</strong> <div id="modalRoomCapacity"></div></div>
+        <div><strong>Bed:</strong> <div id="modalRoomBed"></div></div>
+      </div>
+
+      <h4 style="font-size: 0.9375rem; margin-bottom: var(--spacing-2xs);">Suite Highlights & Amenities:</h4>
+      <ul id="modalRoomAmenities" class="room-features-list" style="margin-bottom: var(--spacing-lg);"></ul>
+
+      <div style="display: flex; gap: var(--spacing-xs);">
+        <button class="btn btn-secondary" onclick="closeRoomModal()" style="flex: 1;">Close</button>
+        <button class="btn btn-primary" id="modalReserveBtn" onclick="closeRoomModal(); openBookingModal(this.getAttribute('data-room-type'));" style="flex: 2;">Reserve This Suite</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Modal -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeBookingModal()">✕</button>
+      <span class="section-tag" data-i18n="bookingModalTag">Direct Hotel Booking</span>
+      <h3 class="modal-title" data-i18n="bookingModalTitle">Reserve Your Art House Stay</h3>
+      <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md);" data-i18n="bookingModalDesc">
+        Select dates and suite preference to connect directly with our reservations team in Luanda via WhatsApp or Email.
+      </p>
+
+      <form id="modalBookingForm" onsubmit="handleModalBookingSubmit(event)">
+        <div class="form-group" style="margin-bottom: var(--spacing-xs);">
+          <label for="modalRoomSelect" data-i18n="roomType">Suite Category</label>
+          <select id="modalRoomSelect" class="form-control" required>
+            <option value="master-art-suite">Master Art Suite ($280/night)</option>
+            <option value="garden-villa">Garden Villa Suite ($340/night)</option>
+            <option value="executive-studio">Executive Studio ($220/night)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-xs);">
+          <div class="form-group">
+            <label for="modalCheckIn" data-i18n="arrival">Check-in</label>
+            <input type="date" id="modalCheckIn" class="form-control" required />
+          </div>
+
+          <div class="form-group">
+            <label for="modalCheckOut" data-i18n="departure">Check-out</label>
+            <input type="date" id="modalCheckOut" class="form-control" required />
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+          <div class="form-group">
+            <label for="modalGuests" data-i18n="guests">Guests</label>
+            <select id="modalGuests" class="form-control">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="modalName">Your Name</label>
+            <input type="text" id="modalName" class="form-control" placeholder="Full name" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="btnConfirmWhatsApp">
+          Send Reservation Request via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="/js/script.js"></script>
+</body>
+</html>

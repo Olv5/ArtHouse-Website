@@ -1,0 +1,6 @@
+{
+  "name": "Art House - Luxury Hotel & Boutique Accommodation",
+  "description": "Official modern website for Art House, a luxury boutique hotel in Angola featuring elegant rooms, gallery, experience showcase, and reservation engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
