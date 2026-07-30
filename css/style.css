@@ -1022,13 +1022,18 @@ form .btn.btn-lg {
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--spacing-xs);
-  background: #0d0d0d;
+  background: var(--color-bg-alt);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-room-img {
   width: 100%;
-  height: 280px;
+  aspect-ratio: 4 / 5;
+  max-height: 480px;
   object-fit: cover;
+  object-position: center bottom;
   transition: opacity 0.25s ease-in-out;
 }
 
@@ -1142,6 +1147,7 @@ form .btn.btn-lg {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center bottom;
   transition: transform var(--transition-slow);
 }
 
@@ -2334,7 +2340,8 @@ html, body {
   }
 
   .modal-room-img {
-    height: 200px;
+    max-height: 380px;
+    aspect-ratio: 4 / 5;
   }
 
   .modal-thumb-btn {
