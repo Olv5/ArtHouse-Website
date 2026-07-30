@@ -246,7 +246,7 @@
       <h3 class="modal-title">Reserve at Art House</h3>
       <p class="modal-subtitle">Select your suite and details for instant confirmation and concierge assistance.</p>
 
-      <form id="reservationForm">
+      <form id="reservationForm" onsubmit="sendWhatsAppReservation(event); return false;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
           <div>
             <label class="form-label">Guest Name</label>
@@ -267,13 +267,13 @@
           <label class="form-label">Select Suite</label>
           <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
             <option value="master-art-suite">Master Art Suite ($280 / night)</option>
-            <option value="garden-villa">Garden Villa Suite ($340 / night)</option>
-            <option value="executive-studio">Executive Studio ($220 / night)</option>
+            <option value="garden-villa">Twin Rooms ($340 / night)</option>
+            <option value="executive-studio">Sea View Studio ($220 / night)</option>
           </select>
         </div>
 
         <div>
-          <button type="button" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation()" style="width: 100%;">
+          <button type="submit" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation(event)" style="width: 100%;">
             💬 Reserve via WhatsApp
           </button>
         </div>

@@ -279,9 +279,9 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Our crown jewel suite features floor-to-ceiling panoramic views, custom teak furnishings, private art curation from Angolan masters, and an expansive marble bathroom with double rain showers and soaking tub.',
       amenities: ['Private Balcony with Garden View', 'Curated Angolan Art Collection', 'Marble Bathroom with Soaking Tub', 'High-Speed Fiber Wi-Fi', 'Artisanal Breakfast Included', 'Espresso & Tea Station', 'Chauffeur Airport Transfer'],
       images: [
-        { url: '/images/master-suite-1.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
-        { url: '/images/master-suite-2.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
-        { url: '/images/master-suite-3.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
+        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
+        { url: '/images/MasterSuite2.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
+        { url: '/images/MasterSuite3.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
       ]
     },
     'garden-villa': {
@@ -295,9 +295,9 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Nestled in our private tropical courtyard, the Garden Villa offers complete privacy with a private plunge pool, teak sun deck, outdoor rainfall shower, and intimate lounge area.',
       amenities: ['Private Plunge Pool', 'Private Teak Sun Deck', 'Outdoor Rainfall Shower', 'In-Villa Dining Service', 'Organic Bath Products', 'Smart Sound System', 'Private Butler Service'],
       images: [
-        { url: '/images/garden-villa-1.jpg', caption: 'Private Plunge Pool & Tropical Sun Deck' },
-        { url: '/images/garden-villa-2.jpg', caption: 'Botanical Interior Lounge & Teak Decor' },
-        { url: '/images/garden-villa-3.jpg', caption: 'Courtyard Dining & Poolside Terrace' }
+        { url: '/images/Twins.jpg', caption: 'Twin Bedroom & Courtyard View' },
+        { url: '/images/SeaView1.jpg', caption: 'Ocean & Coastline View' },
+        { url: '/images/SeaView2.jpg', caption: 'Lounge & Balcony Ocean Outlook' }
       ]
     },
     'executive-studio': {
@@ -311,9 +311,9 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Engineered for discerning executives and travelers, combining an ergonomic workstation, original art pieces, peaceful ambient lighting, and high-speed fiber connectivity.',
       amenities: ['Ergonomic Workstation', 'High-Speed Fiber Internet', 'Nespresso Coffee Machine', 'Spacious Dressing Area', 'In-Room Safe', 'Daily Housekeeping', 'Lounge Access'],
       images: [
-        { url: '/images/executive-suite-1.jpg', caption: 'Executive Suite Bedroom & Ambient Cove Lighting' },
-        { url: '/images/executive-suite-2.jpg', caption: 'Ergonomic Teak Workstation & Business Desk' },
-        { url: '/images/executive-suite-3.jpg', caption: 'Contemporary Sculpture Art Nook' }
+        { url: '/images/CityView1.jpg', caption: 'Executive Suite Bedroom & City View' },
+        { url: '/images/CityView2.jpg', caption: 'Ergonomic Teak Workstation & Business Desk' },
+        { url: '/images/CityView3.jpg', caption: 'Contemporary Sculpture Art Nook' }
       ]
     }
   };
@@ -576,27 +576,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  window.handleModalBookingSubmit = (event) => {
-    event.preventDefault();
-    const name = document.getElementById('modalName')?.value || 'Guest';
-    const checkin = document.getElementById('modalCheckIn')?.value || 'TBD';
-    const checkout = document.getElementById('modalCheckOut')?.value || 'TBD';
-    const guests = document.getElementById('modalGuests')?.value || '2';
+  window.sendWhatsAppReservation = window.handleModalBookingSubmit = (event) => {
+    if (event && typeof event.preventDefault === 'function') {
+      event.preventDefault();
+    }
+    const nameInput = document.getElementById('guestName') || document.getElementById('modalName');
+    const phoneInput = document.getElementById('guestPhone');
+    const emailInput = document.getElementById('guestEmail');
     const roomSelect = document.getElementById('modalRoomSelect');
-    const roomName = roomSelect ? roomSelect.options[roomSelect.selectedIndex].text : 'Suite';
 
-    const message = `*ART HOUSE ANGOLA - RESERVATION REQUEST*\n\n` +
-      `• *Name:* ${name}\n` +
-      `• *Suite:* ${roomName}\n` +
-      `• *Check-in:* ${checkin}\n` +
-      `• *Check-out:* ${checkout}\n` +
-      `• *Guests:* ${guests}\n\n` +
-      `I would like to check availability for these dates. Thank you!`;
+    const name = nameInput?.value?.trim() || 'Guest';
+    const phone = phoneInput?.value?.trim() || 'Not provided';
+    const email = emailInput?.value?.trim() || 'Not provided';
+    const roomName = (roomSelect && roomSelect.selectedIndex >= 0) ? roomSelect.options[roomSelect.selectedIndex].text : 'Suite';
+
+    const checkin = document.getElementById('modalCheckIn')?.value?.trim() || '';
+    const checkout = document.getElementById('modalCheckOut')?.value?.trim() || '';
+    const guests = document.getElementById('modalGuests')?.value?.trim() || '';
+
+    let message = `*ART HOUSE ANGOLA - RESERVATION REQUEST*\n\n` +
+      `• *Guest Name:* ${name}\n` +
+      `• *Phone / WhatsApp:* ${phone}\n` +
+      `• *Email:* ${email}\n` +
+      `• *Selected Suite:* ${roomName}\n`;
+
+    if (checkin) message += `• *Check-in:* ${checkin}\n`;
+    if (checkout) message += `• *Check-out:* ${checkout}\n`;
+    if (guests) message += `• *Guests:* ${guests}\n`;
+
+    message += `\nHello! I would like to check availability and request a reservation. Thank you!`;
 
     const encodedMsg = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/244923000000?text=${encodedMsg}`;
 
-    window.open(whatsappUrl, '_blank');
+    try {
+      const win = window.open(whatsappUrl, '_blank');
+      if (!win || win.closed || typeof win.closed === 'undefined') {
+        window.location.href = whatsappUrl;
+      }
+    } catch (e) {
+      window.location.href = whatsappUrl;
+    }
+
     closeBookingModal();
   };
 
