@@ -146,37 +146,37 @@
         <div class="brand-image-stack">
           <img src="/images/Corridor's art.jpg" alt="Art House Hotel Gallery Lobby Lounge" class="brand-main-img" referrerPolicy="no-referrer" />
           <div class="brand-accent-card">
-            <h4>Curated Angolan Art</h4>
-            <p>We love local art, Angolan culture, and showing foreigners what our country has to offer!.</p>
+            <h4 data-i18n="cardCuratedArtTitle">Curated Angolan Art</h4>
+            <p data-i18n="cardCuratedArtDesc">We love local art, Angolan culture, and showing foreigners what our country has to offer!</p>
           </div>
         </div>
 
         <div>
-          <div class="section-tag">Experience the Soul of Luanda</div>
-          <h3 class="section-title">Through Art, Culture and Genuine Hospitality</h3>
-          <p style="margin-bottom: var(--spacing-md);">
+          <div class="section-tag" data-i18n="aboutTag">Experience the Soul of Luanda</div>
+          <h3 class="section-title" data-i18n="aboutTitle">Through Art, Culture and Genuine Hospitality</h3>
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP1">
             Thomson Art House is a beach front boutique hotel located in Luanda's entertainment district, created to offer travelers an authentic connection with Luanda through art, culture, and genuine Angolan hospitality.
           </p>
-          <p style="margin-bottom: var(--spacing-md);">
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP2">
             Our friendly English-speaking team is always ready to ensure you feel at home from the moment you arrive.
           </p>
 
           <div class="philosophy-pills">
             <div class="philosophy-item">
-              <h4>Tailored Privacy</h4>
-              <p>Exclusive suites designed for ultimate peace and quiet.</p>
+              <h4 data-i18n="philo1Title">Tailored Privacy</h4>
+              <p data-i18n="philo1Desc">Exclusive suites designed for ultimate peace and quiet.</p>
             </div>
             <div class="philosophy-item">
-              <h4>Cultural Depth</h4>
-              <p>Living art collection integrated seamlessly into design.</p>
+              <h4 data-i18n="philo2Title">Cultural Depth</h4>
+              <p data-i18n="philo2Desc">Living art collection integrated seamlessly into design.</p>
             </div>
             <div class="philosophy-item">
-              <h4>Bespoke Care</h4>
-              <p>24/7 dedicated team</p>
+              <h4 data-i18n="philo3Title">Bespoke Care</h4>
+              <p data-i18n="philo3Desc">24/7 dedicated team</p>
             </div>
             <div class="philosophy-item">
-              <h4>Sea view</h4>
-              <p>breathtaking sunsets over the Atlantic</p>
+              <h4 data-i18n="philo4Title">Sea view</h4>
+              <p data-i18n="philo4Desc">breathtaking sunsets over the Atlantic</p>
             </div>
           </div>
         </div>
@@ -190,9 +190,9 @@
   <section id="rooms" class="section" style="background-color: var(--color-bg-alt);">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Accommodations</span>
-        <h2 class="section-title">Our Room Collection</h2>
-        <p class="section-subtitle">
+        <span class="section-tag" data-i18n="roomsTag">Accommodations</span>
+        <h2 class="section-title" data-i18n="roomsTitle">Our Room Collection</h2>
+        <p class="section-subtitle" data-i18n="roomsSubtitle">
            Each one of our rooms features a one-of-a-kind theme inspired by our Angolan community and local artists.
         </p>
       </div>
@@ -200,9 +200,9 @@
       <!-- Filter Buttons -->
       <div class="rooms-filter">
         <button class="filter-btn active" data-filter="all" data-i18n="allRooms">All rooms</button>
-        <button class="filter-btn" data-filter="master">Master Suites</button>
-        <button class="filter-btn" data-filter="villa">Twin rooms</button>
-        <button class="filter-btn" data-filter="executive">Sea View</button>
+        <button class="filter-btn" data-filter="master" data-i18n="filterMaster">Master Suites</button>
+        <button class="filter-btn" data-filter="villa" data-i18n="filterTwin">Twin rooms</button>
+        <button class="filter-btn" data-filter="executive" data-i18n="filterSeaView">Sea View</button>
       </div>
 
       <!-- Rooms Grid -->
@@ -211,27 +211,27 @@
         <!-- Room 1: Master Art Suite -->
         <article class="room-card" data-category="master">
           <div class="room-img-wrap">
-            <img id="card-img-home-master" src="/images/MasterSuite1.jpg" alt="Master Art Suite Bedroom at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-master" src="/images/MasterSuite.jpg" alt="Master Art Suite Bedroom at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
             <div class="room-card-thumbs">
-              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/MasterSuite1.jpg', 'card-img-home-master')" title="Bedroom View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/MasterSuite2.jpg', 'card-img-home-master')" title="Bathroom View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/MasterSuite3.jpg', 'card-img-home-master')" title="Art Lounge View"></button>
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/MasterSuite.jpg', 'card-img-home-master')" title="Bedroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/MasterSuite1.jpg', 'card-img-home-master')" title="Bathroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/MasterSuite2.jpg', 'card-img-home-master')" title="Art Lounge View"></button>
             </div>
           </div>
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Signature Suite</span>
-                <h3 class="room-title">Master Art Suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="cardSignatureTag">Signature Suite</span>
+                <h3 class="room-title" data-i18n="masterSuite">Master Art Suite</h3>
               </div>
               <div class="room-card-price">
-                $280 <span>/ night</span>
+                $280 <span data-i18n="night">/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="cardMasterDesc">
               Expansive king suite featuring floor-to-ceiling windows, private balcony, marble bathroom, and curated master artworks.
             </p>
 
@@ -244,10 +244,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')" data-i18n="btnExploreSuite">
                 Explore Suite
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')" data-i18n="btnReserveSuite">
                 Reserve
               </button>
             </div>
@@ -270,14 +270,14 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Private Villa</span>
-                <h3 class="room-title">Garden Villa Suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="cardVillaTag">Private Villa</span>
+                <h3 class="room-title" data-i18n="gardenVilla">Garden Villa Suite</h3>
               </div>
               <div class="room-card-price">
-                $340 <span>/ night</span>
+                $340 <span data-i18n="night">/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="cardVillaDesc">
               Secluded courtyard villa featuring a private plunge pool, teak sun deck, outdoor rain shower, and intimate lounge.
             </p>
 
@@ -290,10 +290,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')" data-i18n="btnExploreSuite">
                 Explore Suite
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')" data-i18n="btnReserveSuite">
                 Reserve
               </button>
             </div>
@@ -316,14 +316,14 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Business & Leisure</span>
-                <h3 class="room-title">Executive Studio</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="cardExecTag">Business & Leisure</span>
+                <h3 class="room-title" data-i18n="executiveStudio">Executive Studio</h3>
               </div>
               <div class="room-card-price">
-                $220 <span>/ night</span>
+                $220 <span data-i18n="night">/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="cardExecDesc">
               Modern studio designed for high productivity and relaxation, equipped with an ergonomic workstation and Nespresso bar.
             </p>
 
@@ -336,10 +336,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')" data-i18n="btnExploreSuite">
                 Explore Suite
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')" data-i18n="btnReserveSuite">
                 Reserve
               </button>
             </div>
@@ -356,9 +356,9 @@
   <section id="experiences" class="section experience-bg">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag" style="color: var(--color-gold);">Something you won't forget</span>
-        <h2 class="section-title">The Art House Experience</h2>
-        <p class="section-subtitle">
+        <span class="section-tag" style="color: var(--color-gold);" data-i18n="expTag">Something you won't forget</span>
+        <h2 class="section-title" data-i18n="expTitle">The Art House Experience</h2>
+        <p class="section-subtitle" data-i18n="expSubtitle">
           Art House puts you at the heart of Ilha do Cabo, surrounded by the ocean, local culture, restaurants, bars, and some of Luanda's best entertainment. Inside, you'll find a peaceful place to slow down, with a team ready to make your stay effortless..
         </p>
       </div>
@@ -368,48 +368,48 @@
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           </div>
-          <h4>Art Around Every Corner</h4>
-          <p>Discover a collection of local artwork throughout the hotel, with spaces that celebrate the creativity and cultural character of Angola.</p>
+          <h4 data-i18n="exp1Title">Art Around Every Corner</h4>
+          <p data-i18n="exp1Desc">Discover a collection of local artwork throughout the hotel, with spaces that celebrate the creativity and cultural character of Angola.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           </div>
-          <h4>The view is part of the stay</h4>
-          <p>As the day winds down, the sky opens up over the water and gives you a front-row seat to some unforgettable sunsets.</p>
+          <h4 data-i18n="exp2Title">The view is part of the stay</h4>
+          <p data-i18n="exp2Desc">As the day winds down, the sky opens up over the water and gives you a front-row seat to some unforgettable sunsets.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
-          <h4>Feel at Home</h4>
-          <p>Our English-speaking team and 24/7 concierge are here to make your stay comfortable, from the little details to everything you need around the city.</p>
+          <h4 data-i18n="exp3Title">Feel at Home</h4>
+          <p data-i18n="exp3Desc">Our English-speaking team and 24/7 concierge are here to make your stay comfortable, from the little details to everything you need around the city.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           </div>
-          <h4>Here When You Need Us</h4>
-          <p>Our reception is open around the clock, with concierge assistance, luggage storage, currency exchange, and local recommendations whenever you need them.</p>
+          <h4 data-i18n="exp4Title">Here When You Need Us</h4>
+          <p data-i18n="exp4Desc">Our reception is open around the clock, with concierge assistance, luggage storage, currency exchange, and local recommendations whenever you need them.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
-          <h4>Free Wi-Fi & Security</h4>
-          <p>Dedicated high-speed Wi-Fi and round-the-clock security team.</p>
+          <h4 data-i18n="exp5Title">Free Wi-Fi & Security</h4>
+          <p data-i18n="exp5Desc">Dedicated high-speed Wi-Fi and round-the-clock security team.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h4m-4 0V5"></path></svg>
           </div>
-          <h4>In the Heart of the Action</h4>
-          <p>Located in Luanda's entertainment district, you're never far from the city's best bars, restaurants, nightlife, and seaside spots.</p>
+          <h4 data-i18n="exp6Title">In the Heart of the Action</h4>
+          <p data-i18n="exp6Desc">Located in Luanda's entertainment district, you're never far from the city's best bars, restaurants, nightlife, and seaside spots.</p>
         </div>
       </div>
     </div>
@@ -421,9 +421,9 @@
   <section id="gallery" class="section">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Visual Atmosphere</span>
-        <h2 class="section-title">The Gallery</h2>
-        <p class="section-subtitle">
+        <span class="section-tag" data-i18n="galleryTag">Visual Atmosphere</span>
+        <h2 class="section-title" data-i18n="galleryTitle">The Gallery</h2>
+        <p class="section-subtitle" data-i18n="gallerySubtitle">
           Explore the architecture, interior details, and artistic moments that define Art House Angola.
         </p>
       </div>
@@ -523,9 +523,9 @@
     <div class="container">
       <div class="contact-grid">
         <div>
-          <div class="section-tag">Reach Out</div>
-          <h2 class="section-title">Location & Contact</h2>
-          <p style="margin-bottom: var(--spacing-md);">
+          <div class="section-tag" data-i18n="contactTag">Reach Out</div>
+          <h2 class="section-title" data-i18n="contactTitle">Location & Contact</h2>
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="contactDesc">
             We look forward to welcoming you to Art House in Luanda, Angola. Contact our concierge team for reservations, private events, or special requests.
           </p>
 
@@ -535,7 +535,7 @@
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
               </div>
               <div class="contact-details">
-                <h4>Address</h4>
+                <h4 data-i18n="labelAddress">Address</h4>
                 <p>Thomson House, Av. Murtala Mohammed, Luanda, Angola</p>
               </div>
             </div>
@@ -545,7 +545,7 @@
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
               </div>
               <div class="contact-details">
-                <h4>Telephone / WhatsApp</h4>
+                <h4 data-i18n="labelPhone">Telephone / WhatsApp</h4>
                 <p>+244 933 694 600</p>
               </div>
             </div>
@@ -555,7 +555,7 @@
                 <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
               </div>
               <div class="contact-details">
-                <h4>Email</h4>
+                <h4 data-i18n="labelEmail">Email</h4>
                 <p>reservations@thomsonarthouse.com</p>
               </div>
             </div>
@@ -580,28 +580,28 @@
         </div>
 
         <div class="contact-form-card">
-          <h3 style="margin-bottom: var(--spacing-xs);">Send an Inquiry</h3>
-          <p style="font-size: 0.875rem; margin-bottom: var(--spacing-md);">
+          <h3 style="margin-bottom: var(--spacing-xs);" data-i18n="formInquiryTitle">Send an Inquiry</h3>
+          <p style="font-size: 0.875rem; margin-bottom: var(--spacing-md);" data-i18n="formInquiryDesc">
             Fill in your details below and our team will get back to you promptly.
           </p>
 
           <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to Art House team.');">
             <div class="form-group" style="margin-bottom: var(--spacing-sm);">
-              <label class="form-label">Your Name</label>
+              <label class="form-label" data-i18n="labelYourName">Your Name</label>
               <input type="text" class="form-control" placeholder="e.g. Maria Santos" required style="padding-left: 0.875rem;" />
             </div>
 
             <div class="form-group" style="margin-bottom: var(--spacing-sm);">
-              <label class="form-label">Email Address</label>
+              <label class="form-label" data-i18n="labelEmailAddr">Email Address</label>
               <input type="email" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
             </div>
 
             <div class="form-group" style="margin-bottom: var(--spacing-sm);">
-              <label class="form-label">Message or Special Request</label>
+              <label class="form-label" data-i18n="labelMessage">Message or Special Request</label>
               <textarea class="form-control" rows="4" placeholder="How can we assist your stay in Angola?" required style="padding-left: 0.875rem; padding-top: 0.75rem;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="btnSendMessage">
               Send Message
             </button>
           </form>
@@ -616,9 +616,9 @@
   <section class="section" style="background-color: var(--color-bg-alt);">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Essential Information</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
+        <span class="section-tag" data-i18n="faqTag">Essential Information</span>
+        <h2 class="section-title" data-i18n="faqTitle">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-i18n="faqSubtitle">
           Everything you need to know about staying at Thomson Art House in Luanda.
         </p>
       </div>
@@ -626,72 +626,72 @@
       <div class="faq-grid">
         <details class="faq-item" open>
           <summary class="faq-summary">
-            <span>What are the check-in and check-out times?</span>
+            <span data-i18n="faqQ1">What are the check-in and check-out times?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </summary>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n-html="faqA1">
             Standard check-in is from 14:00 (2:00 PM) onwards, and check-out is until 12:00 (12:00 PM). Early check-in or late check-out options can be arranged depending on suite availability — simply notify our concierge in advance.
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <span>Where is Thomson Art House located in Luanda?</span>
+            <span data-i18n="faqQ2">Where is Thomson Art House located in Luanda?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </summary>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n-html="faqA2">
             We are located at <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, right along the scenic Ilha do Cabo coastline. We are surrounded by fine dining, beach lounges, and just 15 minutes from Quatro de Fevereiro International Airport (LAD).
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <span>Is airport transfer or chauffeur pickup available?</span>
+            <span data-i18n="faqQ3">Is airport transfer or chauffeur pickup available?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </summary>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faqA3">
             Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our 24/7 reception team.
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <span>Is breakfast included with my suite reservation?</span>
+            <span data-i18n="faqQ4">Is breakfast included with my suite reservation?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </summary>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faqA4">
             Yes! All direct bookings include a daily gourmet artisanal breakfast served in our tranquil courtyard garden, featuring fresh local Angolan produce, tropical fruits, freshly baked pastries, and specialty espresso coffees.
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <span>How can I make a direct booking or contact via WhatsApp?</span>
+            <span data-i18n="faqQ5">How can I make a direct booking or contact via WhatsApp?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </summary>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n-html="faqA5">
             You can reserve your suite online using our booking modal or send us a direct message on WhatsApp at <strong>+244 933 694 600</strong> for immediate confirmation and custom requests.
           </div>
         </details>
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <span>Do you host private events, weddings, or business gatherings?</span>
+            <span data-i18n="faqQ6">Do you host private events, weddings, or business gatherings?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
           </summary>
-          <div class="faq-answer">
+          <div class="faq-answer" data-i18n="faqA6">
             Yes, our lush courtyard and art gallery venues host private multi-course dinners, cocktail receptions, executive summits, and cultural celebrations. Visit our Events page or inquire via WhatsApp to receive a customized proposal.
           </div>
         </details>
@@ -704,9 +704,9 @@
        ========================================================================== -->
   <section class="section" style="background-color: var(--color-bg-dark); color: var(--color-text-inverse); text-align: center;">
     <div class="container" style="max-width: 720px;">
-      <span class="section-tag" style="color: var(--color-gold);">Plan Your Visit</span>
-      <h2 class="section-title" style="color: var(--color-text-inverse);">Experience the Art of Staying</h2>
-      <p style="color: var(--color-text-light); margin-left: auto; margin-right: auto; margin-bottom: var(--spacing-lg);">
+      <span class="section-tag" style="color: var(--color-gold);" data-i18n="ctaTag">Plan Your Visit</span>
+      <h2 class="section-title" style="color: var(--color-text-inverse);" data-i18n="ctaTitle">Experience the Art of Staying</h2>
+      <p style="color: var(--color-text-light); margin-left: auto; margin-right: auto; margin-bottom: var(--spacing-lg);" data-i18n="ctaSubtitle">
         Discover quiet luxury, contemporary art, and authentic hospitality in Luanda, Angola.
       </p>
       <button class="btn btn-gold btn-lg" onclick="openBookingModal()" data-i18n="btnReserve">
@@ -725,31 +725,31 @@
           <a href="/index.html" class="footer-logo" aria-label="Art House Hotel & Rooftop Bar">
             <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="footer-logo-img" />
           </a>
-          <p>A luxury boutique hotel and art sanctuary in Luanda, Angola. Designed for relaxation, privacy, and memorable stays.</p>
+          <p data-i18n="footerDesc">A luxury boutique hotel and art sanctuary in Luanda, Angola. Designed for relaxation, privacy, and memorable stays.</p>
         </div>
 
         <div>
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footerNav">Navigation</h4>
           <div class="footer-links">
-            <a href="/index.html">Home</a>
-            <a href="/rooms.html">Suites</a>
-            <a href="/about.html">About</a>
-            <a href="/gallery.html">Gallery</a>
-            <a href="/contact.html">Contact Us</a>
+            <a href="/index.html" data-i18n="navHome">Home</a>
+            <a href="/rooms.html" data-i18n="navRooms">Suites</a>
+            <a href="/about.html" data-i18n="navAbout">About</a>
+            <a href="/gallery.html" data-i18n="navGallery">Gallery</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Legal & Contact</h4>
+          <h4 class="footer-title" data-i18n="footerLegal">Legal & Contact</h4>
           <div class="footer-links">
-            <a href="#contact">Contact Us</a>
+            <a href="#contact" data-i18n="navContact">Contact Us</a>
             <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
             <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Luanda Address</h4>
+          <h4 class="footer-title" data-i18n="footerAddressTitle">Luanda Address</h4>
           <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
             Thomson Art House<br />
             Luanda, Angola<br />
@@ -760,7 +760,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Art House Angola. All rights reserved.</div>
+        <div data-i18n="footerRights">© 2026 Art House Angola. All rights reserved.</div>
         <div></div>
       </div>
     </div>
@@ -823,29 +823,29 @@
   <div class="modal-backdrop" id="bookingModal">
     <div class="modal-box">
       <button class="modal-close" onclick="closeBookingModal()">✕</button>
-      <span class="section-tag">Direct Availability Inquiry</span>
-      <h3 class="modal-title">Reserve at Art House</h3>
-      <p class="modal-subtitle">Select your stay details for direct concierge reservation assistance.</p>
+      <span class="section-tag" data-i18n="bookingModalTag">Direct Availability Inquiry</span>
+      <h3 class="modal-title" data-i18n="bookingModalTitle">Reserve at Art House</h3>
+      <p class="modal-subtitle" data-i18n="bookingModalDesc">Select your stay details for direct concierge reservation assistance.</p>
 
       <form id="reservationForm" onsubmit="sendWhatsAppReservation(event); return false;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
           <div>
-            <label class="form-label">Guest Name</label>
+            <label class="form-label" data-i18n="labelGuestName">Guest Name</label>
             <input type="text" id="guestName" class="form-control" placeholder="Full Name" required style="padding-left: 0.875rem;" />
           </div>
           <div>
-            <label class="form-label">Phone / WhatsApp</label>
+            <label class="form-label" data-i18n="labelGuestPhone">Phone / WhatsApp</label>
             <input type="tel" id="guestPhone" class="form-control" placeholder="+244 9XX XXX XXX" required style="padding-left: 0.875rem;" />
           </div>
         </div>
 
         <div style="margin-bottom: var(--spacing-sm);">
-          <label class="form-label">Email Address</label>
+          <label class="form-label" data-i18n="labelEmailAddr">Email Address</label>
           <input type="email" id="guestEmail" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
         </div>
 
         <div style="margin-bottom: var(--spacing-sm);">
-          <label class="form-label">Select Suite</label>
+          <label class="form-label" data-i18n="labelSelectSuite">Select Suite</label>
           <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
             <option value="master-art-suite">Master Art Suite ($280 / night)</option>
             <option value="garden-villa">Twin Rooms ($340 / night)</option>
@@ -854,7 +854,7 @@
         </div>
 
         <div>
-          <button type="submit" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation(event)" style="width: 100%;">
+          <button type="submit" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation(event)" style="width: 100%;" data-i18n="btnReserveWhatsApp">
             💬 Reserve via WhatsApp
           </button>
         </div>

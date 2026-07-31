@@ -20,24 +20,116 @@ document.addEventListener('DOMContentLoaded', () => {
       navExperiences: "Experiences",
       navContact: "Contact",
       btnReserve: "Reserve a Stay",
-      btnExplore: "Explore Collection",
-      heroBadge: "Boutique Hotel & Art Sanctuary • Luanda, Angola",
+      btnExplore: "Explore Rooms",
+      heroBadge: "✦ Boutique Hotel • Luanda, Angola",
       heroTitle: "Your space to relax, reconnect, and stay awhile.",
-      heroDesc: "A serene haven blending contemporary Angolan art, modern architectural elegance, and bespoke hospitality in the heart of Luanda.",
+      heroDesc: "A serene sanctuary blending contemporary Angolan art, modern architectural elegance, and bespoke hospitality in the heart of Luanda.",
       checkAvail: "Check Availability",
       arrival: "Check-in Date",
       departure: "Check-out Date",
       guests: "Guests",
       roomType: "Suite Category",
-      allRooms: "All Suites",
+      allRooms: "All rooms",
+      filterMaster: "Master Suites",
+      filterTwin: "Twin rooms",
+      filterSeaView: "Sea View",
       masterSuite: "Master Art Suite",
       gardenVilla: "Garden Villa Suite",
       executiveStudio: "Executive Studio",
+      oceanfrontSuite: "Atlantic Oceanfront Suite",
+      heritageSuite: "Heritage Gallery Suite",
+      courtyardTwinSuite: "Courtyard Deluxe Twin Suite",
       penthouse: "Art House Penthouse",
       night: "/ night",
       currencySymbol: "$",
       whatsappMsgIntro: "Hello Art House! I would like to request a reservation at your hotel in Luanda, Angola.",
-      
+
+      // Brand & Philosophy
+      cardCuratedArtTitle: "Curated Angolan Art",
+      cardCuratedArtDesc: "We love local art, Angolan culture, and showing foreigners what our country has to offer!",
+      aboutTag: "Experience the Soul of Luanda",
+      aboutTitle: "Through Art, Culture and Genuine Hospitality",
+      aboutP1: "Thomson Art House is a beach front boutique hotel located in Luanda's entertainment district, created to offer travelers an authentic connection with Luanda through art, culture, and genuine Angolan hospitality.",
+      aboutP2: "Our friendly English-speaking team is always ready to ensure you feel at home from the moment you arrive.",
+      philo1Title: "Tailored Privacy",
+      philo1Desc: "Exclusive suites designed for ultimate peace and quiet.",
+      philo2Title: "Cultural Depth",
+      philo2Desc: "Living art collection integrated seamlessly into design.",
+      philo3Title: "Bespoke Care",
+      philo3Desc: "24/7 dedicated team",
+      philo4Title: "Sea view",
+      philo4Desc: "breathtaking sunsets over the Atlantic",
+
+      // Rooms Section
+      roomsTag: "Accommodations",
+      roomsTitle: "Our Room Collection",
+      roomsSubtitle: "Each one of our rooms features a one-of-a-kind theme inspired by our Angolan community and local artists.",
+      btnExploreSuite: "Explore Suite",
+      btnReserveSuite: "Reserve",
+
+      // Experiences Section
+      expTag: "Something you won't forget",
+      expTitle: "The Art House Experience",
+      expSubtitle: "Art House puts you at the heart of Ilha do Cabo, surrounded by the ocean, local culture, restaurants, bars, and some of Luanda's best entertainment. Inside, you'll find a peaceful place to slow down, with a team ready to make your stay effortless..",
+      exp1Title: "Art Around Every Corner",
+      exp1Desc: "Discover a collection of local artwork throughout the hotel, with spaces that celebrate the creativity and cultural character of Angola.",
+      exp2Title: "The view is part of the stay",
+      exp2Desc: "As the day winds down, the sky opens up over the water and gives you a front-row seat to some unforgettable sunsets.",
+      exp3Title: "Feel at Home",
+      exp3Desc: "Our English-speaking team and 24/7 concierge are here to make your stay comfortable, from the little details to everything you need around the city.",
+      exp4Title: "Here When You Need Us",
+      exp4Desc: "Our reception is open around the clock, with concierge assistance, luggage storage, currency exchange, and local recommendations whenever you need them.",
+      exp5Title: "Free Wi-Fi & Security",
+      exp5Desc: "Dedicated high-speed Wi-Fi and round-the-clock security team.",
+      exp6Title: "In the Heart of the Action",
+      exp6Desc: "Located in Luanda's entertainment district, you're never far from the city's best bars, restaurants, nightlife, and seaside spots.",
+
+      // Gallery Section
+      galleryTag: "Visual Atmosphere",
+      galleryTitle: "The Gallery",
+      gallerySubtitle: "Explore the architecture, interior details, and artistic moments that define Art House Angola.",
+
+      // Contact Section
+      contactTag: "Reach Out",
+      contactTitle: "Location & Contact",
+      contactDesc: "We look forward to welcoming you to Art House in Luanda, Angola. Contact our concierge team for reservations, private events, or special requests.",
+      labelAddress: "Address",
+      labelPhone: "Telephone / WhatsApp",
+      labelEmail: "Email",
+      formInquiryTitle: "Send an Inquiry",
+      formInquiryDesc: "Fill in your details below and our team will get back to you promptly.",
+      labelYourName: "Your Name",
+      labelEmailAddr: "Email Address",
+      labelMessage: "Message or Special Request",
+      btnSendMessage: "Send Message",
+
+      // FAQ Section
+      faqTag: "Essential Information",
+      faqTitle: "Frequently Asked Questions",
+      faqSubtitle: "Everything you need to know about staying at Thomson Art House in Luanda.",
+      faqQ1: "What are the check-in and check-out times?",
+      faqA1: "Standard check-in is from 14:00 (2:00 PM) onwards, and check-out is until 12:00 (12:00 PM). Early check-in or late check-out options can be arranged depending on suite availability — simply notify our concierge in advance.",
+      faqQ2: "Where is Thomson Art House located in Luanda?",
+      faqA2: "We are located at <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, right along the scenic Ilha do Cabo coastline. We are surrounded by fine dining, beach lounges, and just 15 minutes from Quatro de Fevereiro International Airport (LAD).",
+      faqQ3: "Is airport transfer or chauffeur pickup available?",
+      faqA3: "Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our 24/7 reception team.",
+      faqQ4: "Is breakfast included with my suite reservation?",
+      faqA4: "Yes! All direct bookings include a daily gourmet artisanal breakfast served in our tranquil courtyard garden, featuring fresh local Angolan produce, tropical fruits, freshly baked pastries, and specialty espresso coffees.",
+      faqQ5: "How can I make a direct booking or contact via WhatsApp?",
+      faqA5: "You can reserve your suite online using our booking modal or send us a direct message on WhatsApp at <strong>+244 933 694 600</strong> for immediate confirmation and custom requests.",
+      faqQ6: "Do you host private events, weddings, or business gatherings?",
+      faqA6: "Yes, our lush courtyard and art gallery venues host private multi-course dinners, cocktail receptions, executive summits, and cultural celebrations. Visit our Events page or inquire via WhatsApp to receive a customized proposal.",
+
+      // CTA & Footer
+      ctaTag: "Plan Your Visit",
+      ctaTitle: "Experience the Art of Staying",
+      ctaSubtitle: "Discover quiet luxury, contemporary art, and authentic hospitality in Luanda, Angola.",
+      footerDesc: "A luxury boutique hotel and art sanctuary in Luanda, Angola. Designed for relaxation, privacy, and memorable stays.",
+      footerNav: "Navigation",
+      footerLegal: "Legal & Contact",
+      footerAddressTitle: "Luanda Address",
+      footerRights: "© 2026 Art House Angola. All rights reserved.",
+
       // Events Page Translations
       eventsTagline: "Bespoke Gatherings & Cultural Celebrations",
       eventsHeroTitle: "Private Events & Art Gatherings",
@@ -57,13 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
       inquiryTitle: "Request an Event Proposal",
       inquiryDesc: "Share details about your upcoming gathering in Luanda, and our Event Director will respond within 24 hours with a custom proposal.",
       labelFullName: "Full Name *",
-      labelEmail: "Email Address *",
-      labelPhone: "Phone Number *",
-      labelEventType: "Type of Event *",
-      labelEventDate: "Preferred Event Date *",
-      labelGuestCount: "Estimated Guest Count *",
-      labelSpecialReq: "Event Details & Special Catering Requirements",
-      btnSendEventRequest: "Submit Event Proposal via WhatsApp",
 
       // Reviews & Testimonials Translations EN
       reviewsTag: "Guest Ratings & Feedback",
@@ -79,10 +164,13 @@ document.addEventListener('DOMContentLoaded', () => {
       filterAllReviews: "All Reviews",
 
       // Modal & Booking Translations
-      bookingModalTag: "Direct Hotel Booking",
-      bookingModalTitle: "Reserve Your Art House Stay",
-      bookingModalDesc: "Select dates and suite preference to connect directly with our reservations team in Luanda via WhatsApp or Email.",
-      btnConfirmWhatsApp: "Send Reservation Request via WhatsApp"
+      bookingModalTag: "Direct Availability Inquiry",
+      bookingModalTitle: "Reserve at Art House",
+      bookingModalDesc: "Select your stay details for direct concierge reservation assistance.",
+      labelGuestName: "Guest Name",
+      labelGuestPhone: "Phone / WhatsApp",
+      labelSelectSuite: "Select Suite",
+      btnReserveWhatsApp: "💬 Reserve via WhatsApp"
     },
     pt: {
       navHome: "Início",
@@ -93,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
       navExperiences: "Experiências",
       navContact: "Contacto",
       btnReserve: "Reservar Estadia",
-      btnExplore: "Explorar Coleção",
-      heroBadge: "Hotel Boutique e Refúgio de Arte • Luanda, Angola",
+      btnExplore: "Explorar Suítes",
+      heroBadge: "✦ Hotel Boutique • Luanda, Angola",
       heroTitle: "O seu espaço para relaxar, reconectar e permanecer.",
       heroDesc: "Um refúgio sereno que combina arte contemporânea angolana, elegância arquitetónica e hospitalidade personalizada no coração de Luanda.",
       checkAvail: "Verificar Disponibilidade",
@@ -102,14 +190,106 @@ document.addEventListener('DOMContentLoaded', () => {
       departure: "Data de Saída",
       guests: "Hóspedes",
       roomType: "Categoria de Suíte",
-      allRooms: "Todas as Suítes",
+      allRooms: "Todos os quartos",
+      filterMaster: "Suítes Master",
+      filterTwin: "Quartos Twin",
+      filterSeaView: "Vista Mar",
       masterSuite: "Suíte Master Art",
       gardenVilla: "Suíte Garden Villa",
       executiveStudio: "Estúdio Executivo",
+      oceanfrontSuite: "Suíte Frente ao Mar Atlântico",
+      heritageSuite: "Suíte Galeria Heritage",
+      courtyardTwinSuite: "Suíte Twin Deluxe Pátio",
       penthouse: "Cobertura Art House",
       night: "/ noite",
       currencySymbol: "$",
       whatsappMsgIntro: "Olá Art House! Gostaria de solicitar uma reserva para o vosso hotel em Luanda, Angola.",
+
+      // Brand & Philosophy
+      cardCuratedArtTitle: "Arte Angolana Curada",
+      cardCuratedArtDesc: "Amamos a arte local, a cultura angolana e mostrar aos visitantes o melhor que o nosso país tem para oferecer!",
+      aboutTag: "Viva a Alma de Luanda",
+      aboutTitle: "Através da Arte, Cultura e Hospitalidade Genuína",
+      aboutP1: "O Thomson Art House é um hotel boutique à beira-mar localizado no distrito de entretenimento de Luanda, criado para oferecer uma conexão autêntica através da arte, cultura e genuína hospitalidade angolana.",
+      aboutP2: "A nossa equipa acolhedora está sempre pronta para garantir que se sinta em casa desde o momento em que chega.",
+      philo1Title: "Privacidade Exclusiva",
+      philo1Desc: "Suítes exclusivas desenhadas para máxima tranquilidade e descanso.",
+      philo2Title: "Profundidade Cultural",
+      philo2Desc: "Coleção viva de arte integrada perfeitamente na arquitetura.",
+      philo3Title: "Atendimento Personalizado",
+      philo3Desc: "Equipa dedicada 24 horas por dia",
+      philo4Title: "Vista para o Mar",
+      philo4Desc: "Pôr do sol deslumbrante sobre as águas do Atlântico",
+
+      // Rooms Section
+      roomsTag: "Acomodações",
+      roomsTitle: "A Nossa Coleção de Suítes",
+      roomsSubtitle: "Cada um dos nossos quartos apresenta um tema único inspirado na nossa comunidade angolana e artistas locais.",
+      btnExploreSuite: "Ver Detalhes",
+      btnReserveSuite: "Reservar",
+
+      // Experiences Section
+      expTag: "Algo Inesquecível",
+      expTitle: "A Experiência Art House",
+      expSubtitle: "O Art House coloca-o no coração da Ilha do Cabo, cercado pelo oceano, cultura local, restaurantes e entretenimento. No interior, encontrará um lugar tranquilo para desacelerar com uma equipa pronta a tornar a sua estadia perfeita.",
+      exp1Title: "Arte em Cada Canto",
+      exp1Desc: "Descubra uma coleção de obras de arte locais por todo o hotel, celebrando a criatividade e o caráter cultural de Angola.",
+      exp2Title: "A Vista Faz Parte da Estadia",
+      exp2Desc: "Ao final do dia, o céu abre-se sobre as águas do Atlântico, oferecendo um lugar de primeira fila para pores do sol inesquecíveis.",
+      exp3Title: "Sinta-se em Casa",
+      exp3Desc: "A nossa equipa e o serviço de concierge 24/7 estão disponíveis para tornar a sua estadia confortável em todos os detalhes.",
+      exp4Title: "Sempre Aqui para Si",
+      exp4Desc: "A nossa receção funciona 24 horas por dia, com assistência de concierge, guarda de bagagem, câmbio e recomendações locais.",
+      exp5Title: "Wi-Fi Gratuito & Segurança",
+      exp5Desc: "Wi-Fi de alta velocidade dedicado e equipa de segurança 24 horas por dia.",
+      exp6Title: "No Coração de Luanda",
+      exp6Desc: "Localizado no distrito de entretenimento de Luanda, perto dos melhores bares, restaurantes e atrações beira-mar da cidade.",
+
+      // Gallery Section
+      galleryTag: "Atmosfera Visual",
+      galleryTitle: "A Galeria",
+      gallerySubtitle: "Explore a arquitetura, detalhes de interiores e momentos artísticos que definem o Art House Angola.",
+
+      // Contact Section
+      contactTag: "Contacte-nos",
+      contactTitle: "Localização & Contacto",
+      contactDesc: "Estamos ansiosos por recebê-lo no Art House em Luanda, Angola. Entre em contacto com a nossa equipa para reservas, eventos privados ou pedidos especiais.",
+      labelAddress: "Endereço",
+      labelPhone: "Telefone / WhatsApp",
+      labelEmail: "Correio Eletrónico",
+      formInquiryTitle: "Enviar uma Mensagem",
+      formInquiryDesc: "Preencha os seus dados abaixo e a nossa equipa responderá com brevidade.",
+      labelYourName: "O seu Nome",
+      labelEmailAddr: "Endereço de Correio Eletrónico",
+      labelMessage: "Mensagem ou Pedido Especial",
+      btnSendMessage: "Enviar Mensagem",
+
+      // FAQ Section
+      faqTag: "Informações Essenciais",
+      faqTitle: "Perguntas Frequentes",
+      faqSubtitle: "Tudo o que precisa de saber sobre a sua estadia no Thomson Art House em Luanda.",
+      faqQ1: "Quais são os horários de check-in e check-out?",
+      faqA1: "O check-in padrão é a partir das 14:00 e o check-out até às 12:00. O check-in antecipado ou late check-out pode ser organizado sujeito à disponibilidade das suítes — basta avisar a receção com antecedência.",
+      faqQ2: "Onde fica localizado o Thomson Art House em Luanda?",
+      faqA2: "Estamos localizados no <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, ao longo da costa da Ilha do Cabo, cercados por restaurantes, beach lounges e a apenas 15 minutos do Aeroporto Internacional Quatro de Fevereiro.",
+      faqQ3: "O serviço de transporte para o aeroporto está disponível?",
+      faqA3: "Sim, o transporte privado de/para o aeroporto está incluído para os hóspedes das nossas suítes. Transferes e deslocações na cidade também podem ser coordenados diretamente com a nossa receção 24/7.",
+      faqQ4: "O pequeno-almoço está incluído na reserva da suíte?",
+      faqA4: "Sim! Todas as reservas diretas incluem pequeno-almoço gourmet artesanal servido diariamente no nosso jardim interior, com produtos locais angolanos, frutas tropicais e cafés espresso.",
+      faqQ5: "Como posso fazer uma reserva direta ou contactar por WhatsApp?",
+      faqA5: "Pode reservar a sua suíte online através do nosso formulário ou enviar uma mensagem direta por WhatsApp para <strong>+244 933 694 600</strong> para confirmação imediata.",
+      faqQ6: "Realizam eventos privados, casamentos ou reuniões de negócios?",
+      faqA6: "Sim, o nosso pátio arborizado e galeria de arte acolhem jantares privados, receções de cocktail, reuniões executivas e celebrações culturais. Visite a página de Eventos ou contacte-nos por WhatsApp.",
+
+      // CTA & Footer
+      ctaTag: "Planeie a Sua Visita",
+      ctaTitle: "Viva a Arte de Se Hospedar",
+      ctaSubtitle: "Descubra o luxo discreto, a arte contemporânea e a hospitalidade autêntica em Luanda, Angola.",
+      footerDesc: "Um hotel boutique de luxo e santuário de arte em Luanda, Angola. Projetado para relaxamento, privacidade e estadias inesquecíveis.",
+      footerNav: "Navegação",
+      footerLegal: "Informações Legais",
+      footerAddressTitle: "Endereço em Luanda",
+      footerRights: "© 2026 Art House Angola. Todos os direitos reservados.",
 
       // Events Page Translations PT
       eventsTagline: "Encontros Exclusivos & Celebrações Culturais",
@@ -130,13 +310,6 @@ document.addEventListener('DOMContentLoaded', () => {
       inquiryTitle: "Solicitar Proposta de Evento",
       inquiryDesc: "Partilhe os detalhes da sua reunião em Luanda e o nosso Diretor de Eventos responderá dentro de 24 horas com uma proposta personalizada.",
       labelFullName: "Nome Completo *",
-      labelEmail: "Endereço de Correio Eletrónico *",
-      labelPhone: "Número de Telefone / WhatsApp *",
-      labelEventType: "Tipo de Evento *",
-      labelEventDate: "Data Preferencial do Evento *",
-      labelGuestCount: "Número Estimado de Hóspedes *",
-      labelSpecialReq: "Detalhes do Evento & Requisitos de Catering",
-      btnSendEventRequest: "Enviar Pedido de Proposta via WhatsApp",
 
       // Reviews & Testimonials Translations PT
       reviewsTag: "Avaliações de Hóspedes Verificados",
@@ -152,10 +325,13 @@ document.addEventListener('DOMContentLoaded', () => {
       filterAllReviews: "Todas as Avaliações",
 
       // Modal & Booking Translations PT
-      bookingModalTag: "Reserva Direta de Hotel",
-      bookingModalTitle: "Reserve a sua Estadia no Art House",
-      bookingModalDesc: "Selecione as datas e a categoria de suíte para entrar em contacto direto com a nossa equipa de reservas em Luanda via WhatsApp ou Email.",
-      btnConfirmWhatsApp: "Enviar Pedido de Reserva via WhatsApp"
+      bookingModalTag: "Consulta de Disponibilidade Direta",
+      bookingModalTitle: "Reservar no Art House",
+      bookingModalDesc: "Selecione os detalhes da sua estadia para assistência direta de reserva com o concierge.",
+      labelGuestName: "Nome do Hóspede",
+      labelGuestPhone: "Telefone / WhatsApp",
+      labelSelectSuite: "Selecionar Suíte",
+      btnReserveWhatsApp: "💬 Reservar via WhatsApp"
     }
   };
 
@@ -165,15 +341,14 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ==========================================================================
      2. LANGUAGE SWITCHER IMPLEMENTATION
      ========================================================================== */
-  const langToggleBtn = document.querySelector('.lang-toggle');
-  
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('arthouse_lang', lang);
+    document.documentElement.lang = lang;
     const t = translations[lang];
     if (!t) return;
 
-    // Update active lang visual switch indicators
+    // Update active lang visual switch indicators on ALL language toggles
     document.querySelectorAll('.lang-toggle span').forEach(el => {
       if (el.dataset.lang === lang) {
         el.classList.add('active');
@@ -187,6 +362,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const key = el.getAttribute('data-i18n');
       if (t[key]) {
         el.textContent = t[key];
+      }
+    });
+
+    // Update HTML elements with data-i18n-html attribute
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (t[key]) {
+        el.innerHTML = t[key];
       }
     });
 
@@ -204,13 +387,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Bind language toggle click
-  if (langToggleBtn) {
-    langToggleBtn.addEventListener('click', () => {
-      const newLang = currentLang === 'en' ? 'pt' : 'en';
-      applyLanguage(newLang);
+  // Bind language toggle click on all language toggles
+  document.querySelectorAll('.lang-toggle').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetSpan = e.target.closest('span[data-lang]');
+      if (targetSpan && targetSpan.dataset.lang) {
+        applyLanguage(targetSpan.dataset.lang);
+      } else {
+        const newLang = currentLang === 'en' ? 'pt' : 'en';
+        applyLanguage(newLang);
+      }
     });
-  }
+  });
 
   // Initial language application
   applyLanguage(currentLang);
@@ -300,31 +488,43 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const roomsData = {
     'master-art-suite': {
-      title: 'Master Art Suite',
-      tagline: 'Signature Luxury & Curated Contemporary Art',
+      title: { en: 'Master Art Suite', pt: 'Suíte Master Art' },
+      tagline: { en: 'Signature Luxury & Curated Contemporary Art', pt: 'Luxo de Assinatura & Arte Contemporânea Curada' },
       priceUSD: 280,
       priceAOA: '185,000 Kz',
       size: '65 m² / 700 sq ft',
-      capacity: '2 Adults, 1 Child',
-      bed: 'Super King-size Custom Wood Bed',
-      description: 'Our crown jewel suite features floor-to-ceiling panoramic views, custom teak furnishings, private art curation from Angolan masters, and an expansive marble bathroom with double rain showers and soaking tub.',
-      amenities: ['Private Balcony with Garden View', 'Curated Angolan Art Collection', 'Marble Bathroom with Soaking Tub', 'High-Speed Fiber Wi-Fi', 'Artisanal Breakfast Included', 'Espresso & Tea Station', 'Chauffeur Airport Transfer'],
+      capacity: { en: '2 Adults, 1 Child', pt: '2 Adultos, 1 Criança' },
+      bed: { en: 'Super King-size Custom Wood Bed', pt: 'Cama Super King em Madeira Personalizada' },
+      description: {
+        en: 'Our crown jewel suite features floor-to-ceiling panoramic views, custom teak furnishings, private art curation from Angolan masters, and an expansive marble bathroom with double rain showers and soaking tub.',
+        pt: 'A nossa suíte principal oferece vistas panorâmicas com janelas do chão ao teto, mobiliário em teca personalizado, coleção privada de arte de mestres angolanos e casa de banho em mármore com chuveiro de teto e banheira.'
+      },
+      amenities: {
+        en: ['Private Balcony with Garden View', 'Curated Angolan Art Collection', 'Marble Bathroom with Soaking Tub', 'High-Speed Fiber Wi-Fi', 'Artisanal Breakfast Included', 'Espresso & Tea Station', 'Chauffeur Airport Transfer'],
+        pt: ['Varanda Privada com Vista Jardim', 'Coleção Curada de Arte Angolana', 'Casa de Banho em Mármore com Banheira', 'Wi-Fi de Alta Velocidade por Fibra', 'Pequeno-Almoço Artesanal Incluído', 'Máquina de Café Espresso & Chá', 'Transporte Privado do Aeroporto']
+      },
       images: [
-        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
-        { url: '/images/MasterSuite2.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
-        { url: '/images/MasterSuite3.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
+        { url: '/images/MasterSuite.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
+        { url: '/images/MasterSuite1.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
+        { url: '/images/MasterSuite2.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
       ]
     },
     'garden-villa': {
-      title: 'Garden Villa Suite',
-      tagline: 'Secluded Botanical Haven with Plunge Pool',
+      title: { en: 'Garden Villa Suite', pt: 'Suíte Garden Villa' },
+      tagline: { en: 'Secluded Botanical Haven with Plunge Pool', pt: 'Refúgio Botânico Reservado com Piscina Privativa' },
       priceUSD: 340,
       priceAOA: '225,000 Kz',
       size: '85 m² / 915 sq ft',
-      capacity: '2 Adults',
-      bed: 'King-size Pillowtop Bed',
-      description: 'Nestled in our private tropical courtyard, the Garden Villa offers complete privacy with a private plunge pool, teak sun deck, outdoor rainfall shower, and intimate lounge area.',
-      amenities: ['Private Plunge Pool', 'Private Teak Sun Deck', 'Outdoor Rainfall Shower', 'In-Villa Dining Service', 'Organic Bath Products', 'Smart Sound System', 'Private Butler Service'],
+      capacity: { en: '2 Adults', pt: '2 Adultos' },
+      bed: { en: 'King-size Pillowtop Bed', pt: 'Cama King-size de Alto Conforto' },
+      description: {
+        en: 'Nestled in our private tropical courtyard, the Garden Villa offers complete privacy with a private plunge pool, teak sun deck, outdoor rainfall shower, and intimate lounge area.',
+        pt: 'Aninhada no nosso pátio tropical privado, a Garden Villa oferece privacidade absoluta com piscina privativa, terraço em teca, chuveiro exterior e zona de estar íntima.'
+      },
+      amenities: {
+        en: ['Private Plunge Pool', 'Private Teak Sun Deck', 'Outdoor Rainfall Shower', 'In-Villa Dining Service', 'Organic Bath Products', 'Smart Sound System', 'Private Butler Service'],
+        pt: ['Piscina Privativa', 'Terraço Privado em Teca', 'Chuveiro Exterior de Teto', 'Serviço de Refeições na Villa', 'Produtos de Banho Orgânicos', 'Sistema de Som Inteligente', 'Serviço de Mordomo Privado']
+      },
       images: [
         { url: '/images/Twins.jpg', caption: 'Twin Bedroom & Courtyard View' },
         { url: '/images/SeaView1.jpg', caption: 'Ocean & Coastline View' },
@@ -332,15 +532,21 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'executive-studio': {
-      title: 'Executive Studio',
-      tagline: 'Refined Comfort for Business & Leisure',
+      title: { en: 'Executive Studio', pt: 'Estúdio Executivo' },
+      tagline: { en: 'Refined Comfort for Business & Leisure', pt: 'Conforto Refinado para Negócios & Lazer' },
       priceUSD: 220,
       priceAOA: '145,000 Kz',
       size: '48 m² / 515 sq ft',
-      capacity: '2 Adults',
-      bed: 'King-size Luxury Bed',
-      description: 'Engineered for discerning executives and travelers, combining an ergonomic workstation, original art pieces, peaceful ambient lighting, and high-speed fiber connectivity.',
-      amenities: ['Ergonomic Workstation', 'High-Speed Fiber Internet', 'Nespresso Coffee Machine', 'Spacious Dressing Area', 'In-Room Safe', 'Daily Housekeeping', 'Lounge Access'],
+      capacity: { en: '2 Adults', pt: '2 Adultos' },
+      bed: { en: 'King-size Luxury Bed', pt: 'Cama King-size de Luxo' },
+      description: {
+        en: 'Engineered for discerning executives and travelers, combining an ergonomic workstation, original art pieces, peaceful ambient lighting, and high-speed fiber connectivity.',
+        pt: 'Projetado para executivos e viajantes exigentes, combinando uma estação de trabalho ergonómica, obras de arte originais, iluminação ambiente serena e ligação de fibra rápida.'
+      },
+      amenities: {
+        en: ['Ergonomic Workstation', 'High-Speed Fiber Internet', 'Nespresso Coffee Machine', 'Spacious Dressing Area', 'In-Room Safe', 'Daily Housekeeping', 'Lounge Access'],
+        pt: ['Estação de Trabalho Ergonómica', 'Internet de Fibra de Alta Velocidade', 'Máquina de Café Nespresso', 'Zona de Vestiarieiro Espaçosa', 'Cofre no Quarto', 'Serviço Diário de Limpeza', 'Acesso ao Lounge']
+      },
       images: [
         { url: '/images/CityView1.jpg', caption: 'Executive Suite Bedroom & City View' },
         { url: '/images/CityView2.jpg', caption: 'Ergonomic Teak Workstation & Business Desk' },
@@ -348,15 +554,21 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'oceanfront-suite': {
-      title: 'Atlantic Oceanfront Suite',
-      tagline: 'Panoramic Ocean Views & Private Coastal Balcony',
+      title: { en: 'Atlantic Oceanfront Suite', pt: 'Suíte Frente ao Mar Atlântico' },
+      tagline: { en: 'Panoramic Ocean Views & Private Coastal Balcony', pt: 'Vistas Panorâmicas sobre o Oceano & Varanda Privativa' },
       priceUSD: 260,
       priceAOA: '170,000 Kz',
       size: '58 m² / 625 sq ft',
-      capacity: '2 Adults',
-      bed: 'King-size Premium Ocean Bed',
-      description: 'Overlooking Luanda Bay and the Atlantic horizon, this open suite features custom handcrafted furniture, a broad teak terrace, and bespoke Angolan artwork.',
-      amenities: ['Panoramic Ocean Balcony', 'Custom Angolan Textiles', 'Rainfall Shower', 'Teak Daybed Lounge', 'High-Speed Fiber Wi-Fi', 'Courtyard Breakfast Included'],
+      capacity: { en: '2 Adults', pt: '2 Adultos' },
+      bed: { en: 'King-size Premium Ocean Bed', pt: 'Cama King Premium com Vista Mar' },
+      description: {
+        en: 'Overlooking Luanda Bay and the Atlantic horizon, this open suite features custom handcrafted furniture, a broad teak terrace, and bespoke Angolan artwork.',
+        pt: 'Com vista para a Baía de Luanda e o horizonte do Atlântico, esta suíte acolhedora apresenta mobiliário feito à mão, amplo terraço em teca e arte angolana personalizada.'
+      },
+      amenities: {
+        en: ['Panoramic Ocean Balcony', 'Custom Angolan Textiles', 'Rainfall Shower', 'Teak Daybed Lounge', 'High-Speed Fiber Wi-Fi', 'Courtyard Breakfast Included'],
+        pt: ['Varanda Panorâmica com Vista Mar', 'Têxteis Angolanos Personalizados', 'Chuveiro de Teto', 'Zona de Relaxamento em Teca', 'Wi-Fi de Fibra de Alta Velocidade', 'Pequeno-Almoço no Pátio Incluído']
+      },
       images: [
         { url: '/images/SeaView3.jpg', caption: 'Atlantic Coastline Horizon View' },
         { url: '/images/SeaView4.jpg', caption: 'Private Balcony & Sunset Terrace' },
@@ -364,15 +576,21 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'heritage-gallery-suite': {
-      title: 'Heritage Gallery Suite',
-      tagline: 'Private Art Curation & Sculptural Lounge',
+      title: { en: 'Heritage Gallery Suite', pt: 'Suíte Galeria Heritage' },
+      tagline: { en: 'Private Art Curation & Sculptural Lounge', pt: 'Curadoria de Arte Privada & Lounge de Esculturas' },
       priceUSD: 240,
       priceAOA: '158,000 Kz',
       size: '52 m² / 560 sq ft',
-      capacity: '2 Adults',
-      bed: 'Queen Plush Canopy Bed',
-      description: 'Surrounded by curated sculptures and classic contemporary Angolan canvases, this suite offers a serene, museum-quality atmosphere with a plush reading alcove.',
-      amenities: ['Private In-Suite Sculptures', 'Plush Reading & Art Alcove', 'Queen Canopy Bed', 'Nespresso Espresso Bar', 'Artisan Soaking Tub', 'Fiber Wi-Fi'],
+      capacity: { en: '2 Adults', pt: '2 Adultos' },
+      bed: { en: 'Queen Plush Canopy Bed', pt: 'Cama Queen de Dossel Acolhedora' },
+      description: {
+        en: 'Surrounded by curated sculptures and classic contemporary Angolan canvases, this suite offers a serene, museum-quality atmosphere with a plush reading alcove.',
+        pt: 'Cercada por esculturas curadas e telas contemporâneas angolanas, esta suíte oferece uma atmosfera serena de qualidade museológica com recanto de leitura.'
+      },
+      amenities: {
+        en: ['Private In-Suite Sculptures', 'Plush Reading & Art Alcove', 'Queen Canopy Bed', 'Nespresso Espresso Bar', 'Artisan Soaking Tub', 'Fiber Wi-Fi'],
+        pt: ['Esculturas Privadas na Suíte', 'Recanto Acolhedor de Leitura & Arte', 'Cama Queen de Dossel', 'Bar de Café Nespresso', 'Banheira de Imersão Artesanal', 'Wi-Fi por Fibra']
+      },
       images: [
         { url: "/images/Corridor's art.jpg", caption: 'Private Art Curation Corridor' },
         { url: '/images/art-sculpture.jpg', caption: 'Sculptural Art Nook' },
@@ -380,15 +598,21 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'courtyard-twin-suite': {
-      title: 'Courtyard Deluxe Twin Suite',
-      tagline: 'Lush Botanical Views & Flexible Twin Comfort',
+      title: { en: 'Courtyard Deluxe Twin Suite', pt: 'Suíte Twin Deluxe Pátio' },
+      tagline: { en: 'Lush Botanical Views & Flexible Twin Comfort', pt: 'Vistas Botânicas & Conforto Twin Flexível' },
       priceUSD: 195,
       priceAOA: '128,000 Kz',
       size: '45 m² / 485 sq ft',
-      capacity: '2 Adults / 2 Companions',
-      bed: '2 Custom Single Beds (or Joined King)',
-      description: 'Opening toward our tranquil inner courtyard garden, offering refined twin bedding, custom teak nightstands, and walk-in rain shower.',
-      amenities: ['Direct Courtyard Garden Access', 'Twin Plush Custom Beds', 'Walk-in Rainfall Shower', 'Work Desk & Lounge Chair', 'Espresso Station', 'Daily Maid Service'],
+      capacity: { en: '2 Adults / 2 Companions', pt: '2 Adultos / 2 Acompanhantes' },
+      bed: { en: '2 Custom Single Beds (or Joined King)', pt: '2 Camas Individuais Personalizadas (ou King)' },
+      description: {
+        en: 'Opening toward our tranquil inner courtyard garden, offering refined twin bedding, custom teak nightstands, and walk-in rain shower.',
+        pt: 'Com acesso direto ao nosso tranquilo jardim do pátio interior, oferece camas twin requintadas, mesas de cabeceira em teca e chuveiro de teto.'
+      },
+      amenities: {
+        en: ['Direct Courtyard Garden Access', 'Twin Plush Custom Beds', 'Walk-in Rainfall Shower', 'Work Desk & Lounge Chair', 'Espresso Station', 'Daily Maid Service'],
+        pt: ['Acesso Direto ao Jardim do Pátio', 'Camas Twin Personalizadas', 'Chuveiro de Teto Walk-in', 'Secretária de Trabalho & Poltrona', 'Estação de Espresso', 'Serviço Diário de Limpeza']
+      },
       images: [
         { url: '/images/Twins.jpg', caption: 'Courtyard Twin Suite Interior' },
         { url: '/images/1stbedroom.jpeg', caption: 'Bedroom Layout & Garden Light' },
@@ -409,19 +633,23 @@ document.addEventListener('DOMContentLoaded', () => {
     currentRoomId = roomId;
     currentPhotoIndex = 0;
 
-    document.getElementById('modalRoomTitle').textContent = data.title;
-    document.getElementById('modalRoomTagline').textContent = data.tagline;
-    document.getElementById('modalRoomPrice').textContent = `$${data.priceUSD} / night (${data.priceAOA})`;
+    const lang = currentLang || 'en';
+    const getVal = (field) => (typeof field === 'object' ? (field[lang] || field.en) : field);
+
+    document.getElementById('modalRoomTitle').textContent = getVal(data.title);
+    document.getElementById('modalRoomTagline').textContent = getVal(data.tagline);
+    document.getElementById('modalRoomPrice').textContent = `$${data.priceUSD} / ${lang === 'pt' ? 'noite' : 'night'} (${data.priceAOA})`;
     document.getElementById('modalRoomSize').textContent = data.size;
-    document.getElementById('modalRoomCapacity').textContent = data.capacity;
-    document.getElementById('modalRoomBed').textContent = data.bed;
-    document.getElementById('modalRoomDesc').textContent = data.description;
+    document.getElementById('modalRoomCapacity').textContent = getVal(data.capacity);
+    document.getElementById('modalRoomBed').textContent = getVal(data.bed);
+    document.getElementById('modalRoomDesc').textContent = getVal(data.description);
 
     // Render Amenities
     const amenitiesList = document.getElementById('modalRoomAmenities');
     if (amenitiesList) {
       amenitiesList.innerHTML = '';
-      data.amenities.forEach(item => {
+      const list = getVal(data.amenities) || [];
+      list.forEach(item => {
         const li = document.createElement('li');
         li.className = 'feature-pill';
         li.textContent = item;
