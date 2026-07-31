@@ -504,9 +504,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pt: ['Varanda Privada com Vista Jardim', 'Coleção Curada de Arte Angolana', 'Casa de Banho em Mármore com Banheira', 'Wi-Fi de Alta Velocidade por Fibra', 'Pequeno-Almoço Artesanal Incluído', 'Máquina de Café Espresso & Chá', 'Transporte Privado do Aeroporto']
       },
       images: [
-        { url: '/images/MasterSuite.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
-        { url: '/images/MasterSuite1.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
-        { url: '/images/MasterSuite2.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
+        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
+        { url: '/images/MasterSuite2.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
+        { url: '/images/MasterSuite3.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
       ]
     },
     'garden-villa': {
@@ -526,9 +526,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pt: ['Piscina Privativa', 'Terraço Privado em Teca', 'Chuveiro Exterior de Teto', 'Serviço de Refeições na Villa', 'Produtos de Banho Orgânicos', 'Sistema de Som Inteligente', 'Serviço de Mordomo Privado']
       },
       images: [
-        { url: '/images/Twins.jpg', caption: 'Twin Bedroom & Courtyard View' },
-        { url: '/images/SeaView1.jpg', caption: 'Ocean & Coastline View' },
-        { url: '/images/SeaView2.jpg', caption: 'Lounge & Balcony Ocean Outlook' }
+        { url: '/images/Twins3.jpg', caption: 'Twin Bedroom & Courtyard View' },
+        { url: '/images/Twins2.jpg', caption: 'Ocean & Coastline View' },
+        { url: '/images/Twins.jpg', caption: 'Lounge & Balcony Ocean Outlook' }
       ]
     },
     'executive-studio': {
@@ -570,9 +570,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pt: ['Varanda Panorâmica com Vista Mar', 'Têxteis Angolanos Personalizados', 'Chuveiro de Teto', 'Zona de Relaxamento em Teca', 'Wi-Fi de Fibra de Alta Velocidade', 'Pequeno-Almoço no Pátio Incluído']
       },
       images: [
-        { url: '/images/SeaView3.jpg', caption: 'Atlantic Coastline Horizon View' },
-        { url: '/images/SeaView4.jpg', caption: 'Private Balcony & Sunset Terrace' },
-        { url: '/images/SeaView1.jpg', caption: 'Sunlit Coastal Suite Interior' }
+        { url: '/images/SuiteMaster1.jpg', caption: 'Atlantic Coastline Horizon View' },
+        { url: '/images/SuiteMaster2.jpg', caption: 'Private Balcony & Sunset Terrace' },
+        { url: '/images/BathRooms.jpg', caption: 'Sunlit Coastal Suite Interior' }
       ]
     },
     'heritage-gallery-suite': {
