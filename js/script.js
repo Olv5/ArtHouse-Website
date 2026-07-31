@@ -279,9 +279,9 @@ document.addEventListener('DOMContentLoaded', () => {
       description: 'Our crown jewel suite features floor-to-ceiling panoramic views, custom teak furnishings, private art curation from Angolan masters, and an expansive marble bathroom with double rain showers and soaking tub.',
       amenities: ['Private Balcony with Garden View', 'Curated Angolan Art Collection', 'Marble Bathroom with Soaking Tub', 'High-Speed Fiber Wi-Fi', 'Artisanal Breakfast Included', 'Espresso & Tea Station', 'Chauffeur Airport Transfer'],
       images: [
-        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
-        { url: '/images/MasterSuite2.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
-        { url: '/images/MasterSuite3.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
+        { url: '/images/MasterSuite.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
+        { url: '/images/MasterSuite1.jpg', caption: 'Luxury Marble Bathroom & Soaking Tub' },
+        { url: '/images/MasterSuite2.jpg', caption: 'Curated Angolan Art Lounge & Balcony' }
       ]
     },
     'garden-villa': {
