@@ -91,7 +91,7 @@
     <div class="mobile-drawer-footer">
       <div class="drawer-contact-info">
         <p><strong>Luanda, Angola</strong></p>
-        <p>Tel: +244 923 000 000</p>
+        <p>Tel: +244 933 694 600</p>
         <p>Email: reservations@thomsonarthouse.com</p>
       </div>
       <button class="btn btn-primary btn-lg" style="width: 100%;" onclick="openBookingModal()" data-i18n="btnReserve">
@@ -268,6 +268,144 @@
           </div>
         </article>
 
+        <!-- Room 4: Atlantic Oceanfront Suite -->
+        <article class="room-card" data-category="executive">
+          <div class="room-img-wrap">
+            <img id="card-img-oceanfront" src="/images/SeaView3.jpg" alt="Atlantic Oceanfront Suite at Art House Angola" referrerPolicy="no-referrer" />
+            <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="photo-count-badge">📷 3 Photos</div>
+            <div class="room-card-thumbs">
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/SeaView3.jpg', 'card-img-oceanfront')" title="Coastline View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SeaView4.jpg', 'card-img-oceanfront')" title="Balcony View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SeaView1.jpg', 'card-img-oceanfront')" title="Suite View"></button>
+            </div>
+          </div>
+          <div class="room-body">
+            <div class="room-header-row">
+              <div>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Sea View</span>
+                <h3 class="room-title">Atlantic Oceanfront Suite</h3>
+              </div>
+              <div class="room-card-price">
+                $260 <span>/ night</span>
+              </div>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+              Panoramic views of Luanda Bay and Atlantic waters, featuring a private teak balcony, rain shower, and custom Angolan craft.
+            </p>
+
+            <div class="room-features-list">
+              <span class="feature-pill">58 m²</span>
+              <span class="feature-pill">Ocean Terrace</span>
+              <span class="feature-pill">King Bed</span>
+              <span class="feature-pill">Rain Shower</span>
+              <span class="feature-pill">Fiber Wi-Fi</span>
+            </div>
+
+            <div class="room-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('oceanfront-suite')">
+                Explore Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('oceanfront-suite')">
+                Reserve Suite
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 5: Heritage Gallery Suite -->
+        <article class="room-card" data-category="master">
+          <div class="room-img-wrap">
+            <img id="card-img-heritage" src="/images/Corridor's art.jpg" alt="Heritage Gallery Suite at Art House Angola" referrerPolicy="no-referrer" />
+            <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="photo-count-badge">📷 3 Photos</div>
+            <div class="room-card-thumbs">
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Corridor\'s art.jpg', 'card-img-heritage')" title="Gallery Passage"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/art-sculpture.jpg', 'card-img-heritage')" title="Sculpture Nook"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/1stbedroom.jpeg', 'card-img-heritage')" title="Master Suite"></button>
+            </div>
+          </div>
+          <div class="room-body">
+            <div class="room-header-row">
+              <div>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Master Art</span>
+                <h3 class="room-title">Heritage Gallery Suite</h3>
+              </div>
+              <div class="room-card-price">
+                $240 <span>/ night</span>
+              </div>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+              Serene museum-quality suite adorned with curated sculptures, original oil paintings, plush reading alcove, and artisan bath.
+            </p>
+
+            <div class="room-features-list">
+              <span class="feature-pill">52 m²</span>
+              <span class="feature-pill">In-Suite Gallery</span>
+              <span class="feature-pill">Queen Canopy Bed</span>
+              <span class="feature-pill">Artisan Soaking Tub</span>
+              <span class="feature-pill">Nespresso Bar</span>
+            </div>
+
+            <div class="room-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('heritage-gallery-suite')">
+                Explore Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('heritage-gallery-suite')">
+                Reserve Suite
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 6: Courtyard Deluxe Twin Suite -->
+        <article class="room-card" data-category="villa">
+          <div class="room-img-wrap">
+            <img id="card-img-courtyard-twin" src="/images/Twins.jpg" alt="Courtyard Deluxe Twin Suite at Art House Angola" referrerPolicy="no-referrer" />
+            <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            <div class="photo-count-badge">📷 3 Photos</div>
+            <div class="room-card-thumbs">
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-courtyard-twin')" title="Twin Room View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/1stbedroom.jpeg', 'card-img-courtyard-twin')" title="Bedroom Layout"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Facade03.jpg', 'card-img-courtyard-twin')" title="Courtyard Garden"></button>
+            </div>
+          </div>
+          <div class="room-body">
+            <div class="room-header-row">
+              <div>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Twin Rooms</span>
+                <h3 class="room-title">Courtyard Deluxe Twin Suite</h3>
+              </div>
+              <div class="room-card-price">
+                $195 <span>/ night</span>
+              </div>
+            </div>
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+              Opening directly to the tranquil inner botanical courtyard, featuring plush twin custom beds and a walk-in rainfall shower.
+            </p>
+
+            <div class="room-features-list">
+              <span class="feature-pill">45 m²</span>
+              <span class="feature-pill">Courtyard Garden Access</span>
+              <span class="feature-pill">Twin Plush Beds</span>
+              <span class="feature-pill">Walk-in Rain Shower</span>
+              <span class="feature-pill">Fiber Wi-Fi</span>
+            </div>
+
+            <div class="room-actions">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('courtyard-twin-suite')">
+                Explore Details
+              </button>
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('courtyard-twin-suite')">
+                Reserve Suite
+              </button>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -349,9 +487,9 @@
         <div>
           <h4 class="footer-title">Luanda Address</h4>
           <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
-            Thomson Art House<br />
+            Thomson House, Av. Murtala Mohammed<br />
             Luanda, Angola<br />
-            Tel: +244 923 000 000<br />
+            Tel: +244 933 694 600<br />
             Email: reservations@thomsonarthouse.com
           </p>
         </div>
@@ -429,8 +567,11 @@
           <label class="form-label">Select Suite</label>
           <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
             <option value="master-art-suite">Master Art Suite ($280 / night)</option>
-            <option value="garden-villa">Twin Rooms ($340 / night)</option>
-            <option value="executive-studio">Sea View Studio ($220 / night)</option>
+            <option value="garden-villa">Garden Villa Suite ($340 / night)</option>
+            <option value="executive-studio">Executive Studio ($220 / night)</option>
+            <option value="oceanfront-suite">Atlantic Oceanfront Suite ($260 / night)</option>
+            <option value="heritage-gallery-suite">Heritage Gallery Suite ($240 / night)</option>
+            <option value="courtyard-twin-suite">Courtyard Deluxe Twin Suite ($195 / night)</option>
           </select>
         </div>
 
@@ -443,7 +584,7 @@
     </div>
   </div>
 
-  <a href="https://wa.me/244923000000?text=Hello%20Art%20House!%20I%20would%20like%20to%20inquire%20about%20a%20suite%20reservation." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp with Art House Angola" title="Chat on WhatsApp">
+  <a href="https://wa.me/244933694600?text=Hello%20Art%20House!%20I%20would%20like%20to%20inquire%20about%20a%20suite%20reservation." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp with Art House Angola" title="Chat on WhatsApp">
     <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.999 4.486-9.999 10.001 0 1.8.48 3.55 1.391 5.097l-1.423 5.203 5.328-1.398c1.492.813 3.178 1.243 4.887 1.243 5.514 0 10.001-4.486 10.001-10.001s-4.487-10.001-10.015-10.001zm5.836 14.195c-.244.688-1.428 1.354-1.98 1.411-.519.054-1.196.082-3.411-.837-2.827-1.171-4.639-4.045-4.781-4.233-.141-.188-1.144-1.522-1.144-2.905 0-1.383.725-2.062.981-2.344.256-.282.559-.352.747-.352.188 0 .376.002.536.01.17.008.399-.064.625.479.244.588.83 2.029.902 2.175.072.146.12.316.024.505-.096.188-.144.306-.288.475-.144.169-.304.377-.435.506-.145.143-.297.301-.128.591.169.29.752 1.238 1.613 2.007 1.109.988 2.046 1.295 2.336 1.437.29.141.459.118.629-.076.169-.194.725-.845.92-1.135.195-.29.39-.241.656-.143.266.098 1.69.797 1.982.942.292.145.487.217.559.34.072.122.072.709-.172 1.397z"/></svg>
   </a>
 

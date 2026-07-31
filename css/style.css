@@ -1895,6 +1895,83 @@ form .btn.btn-lg {
 }
 
 /* --------------------------------------------------------------------------
+   FAQ SECTION
+   -------------------------------------------------------------------------- */
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.faq-item:hover {
+  border-color: var(--color-border-medium);
+}
+
+.faq-item[open] {
+  border-color: var(--color-gold);
+  box-shadow: 0 6px 20px rgba(35, 50, 99, 0.08);
+}
+
+.faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  gap: 1rem;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-item[open] .faq-icon {
+  transform: rotate(180deg);
+  background-color: var(--color-gold);
+  color: #ffffff;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 1rem;
+  margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
    11. RESERVATION ENGINE MODAL
    -------------------------------------------------------------------------- */
 .modal-backdrop {

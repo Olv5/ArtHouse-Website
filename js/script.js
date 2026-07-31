@@ -346,6 +346,54 @@ document.addEventListener('DOMContentLoaded', () => {
         { url: '/images/CityView2.jpg', caption: 'Ergonomic Teak Workstation & Business Desk' },
         { url: '/images/CityView3.jpg', caption: 'Contemporary Sculpture Art Nook' }
       ]
+    },
+    'oceanfront-suite': {
+      title: 'Atlantic Oceanfront Suite',
+      tagline: 'Panoramic Ocean Views & Private Coastal Balcony',
+      priceUSD: 260,
+      priceAOA: '170,000 Kz',
+      size: '58 m² / 625 sq ft',
+      capacity: '2 Adults',
+      bed: 'King-size Premium Ocean Bed',
+      description: 'Overlooking Luanda Bay and the Atlantic horizon, this open suite features custom handcrafted furniture, a broad teak terrace, and bespoke Angolan artwork.',
+      amenities: ['Panoramic Ocean Balcony', 'Custom Angolan Textiles', 'Rainfall Shower', 'Teak Daybed Lounge', 'High-Speed Fiber Wi-Fi', 'Courtyard Breakfast Included'],
+      images: [
+        { url: '/images/SeaView3.jpg', caption: 'Atlantic Coastline Horizon View' },
+        { url: '/images/SeaView4.jpg', caption: 'Private Balcony & Sunset Terrace' },
+        { url: '/images/SeaView1.jpg', caption: 'Sunlit Coastal Suite Interior' }
+      ]
+    },
+    'heritage-gallery-suite': {
+      title: 'Heritage Gallery Suite',
+      tagline: 'Private Art Curation & Sculptural Lounge',
+      priceUSD: 240,
+      priceAOA: '158,000 Kz',
+      size: '52 m² / 560 sq ft',
+      capacity: '2 Adults',
+      bed: 'Queen Plush Canopy Bed',
+      description: 'Surrounded by curated sculptures and classic contemporary Angolan canvases, this suite offers a serene, museum-quality atmosphere with a plush reading alcove.',
+      amenities: ['Private In-Suite Sculptures', 'Plush Reading & Art Alcove', 'Queen Canopy Bed', 'Nespresso Espresso Bar', 'Artisan Soaking Tub', 'Fiber Wi-Fi'],
+      images: [
+        { url: "/images/Corridor's art.jpg", caption: 'Private Art Curation Corridor' },
+        { url: '/images/art-sculpture.jpg', caption: 'Sculptural Art Nook' },
+        { url: '/images/1stbedroom.jpeg', caption: 'Heritage Suite Master Layout' }
+      ]
+    },
+    'courtyard-twin-suite': {
+      title: 'Courtyard Deluxe Twin Suite',
+      tagline: 'Lush Botanical Views & Flexible Twin Comfort',
+      priceUSD: 195,
+      priceAOA: '128,000 Kz',
+      size: '45 m² / 485 sq ft',
+      capacity: '2 Adults / 2 Companions',
+      bed: '2 Custom Single Beds (or Joined King)',
+      description: 'Opening toward our tranquil inner courtyard garden, offering refined twin bedding, custom teak nightstands, and walk-in rain shower.',
+      amenities: ['Direct Courtyard Garden Access', 'Twin Plush Custom Beds', 'Walk-in Rainfall Shower', 'Work Desk & Lounge Chair', 'Espresso Station', 'Daily Maid Service'],
+      images: [
+        { url: '/images/Twins.jpg', caption: 'Courtyard Twin Suite Interior' },
+        { url: '/images/1stbedroom.jpeg', caption: 'Bedroom Layout & Garden Light' },
+        { url: '/images/Facade03.jpg', caption: 'Inner Courtyard Garden Outlook' }
+      ]
     }
   };
 
@@ -638,7 +686,7 @@ document.addEventListener('DOMContentLoaded', () => {
     message += `\nHello! I would like to check availability and request a reservation. Thank you!`;
 
     const encodedMsg = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/244923000000?text=${encodedMsg}`;
+    const whatsappUrl = `https://wa.me/244933694600?text=${encodedMsg}`;
 
     try {
       const win = window.open(whatsappUrl, '_blank');
@@ -677,7 +725,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `Hello! I would like to request a custom event proposal with these details. Thank you!`;
 
     const encodedMsg = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/244923000000?text=${encodedMsg}`;
+    const whatsappUrl = `https://wa.me/244933694600?text=${encodedMsg}`;
 
     window.open(whatsappUrl, '_blank');
 
