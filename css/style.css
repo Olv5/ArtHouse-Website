@@ -1350,14 +1350,16 @@ form .btn.btn-lg {
 
 .gallery-item {
   position: relative;
-  height: 280px;
+  aspect-ratio: 3024 / 4032;
+  width: 100%;
   border-radius: var(--radius-md);
   overflow: hidden;
   cursor: pointer;
 }
 
 .gallery-item.tall {
-  height: 380px;
+  aspect-ratio: 3024 / 4032;
+  height: auto;
 }
 
 @media (min-width: 992px) {

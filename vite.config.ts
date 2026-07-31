@@ -17,7 +17,6 @@ export default defineConfig(() => {
           main: path.resolve(__dirname, 'index.html'),
           rooms: path.resolve(__dirname, 'rooms.html'),
           about: path.resolve(__dirname, 'about.html'),
-          gallery: path.resolve(__dirname, 'gallery.html'),
           contact: path.resolve(__dirname, 'contact.html'),
         },
       },

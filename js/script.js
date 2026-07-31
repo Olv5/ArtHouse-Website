@@ -470,7 +470,6 @@ document.addEventListener('DOMContentLoaded', () => {
       (currentPath.includes('rooms') && href.includes('rooms')) ||
       (currentPath.includes('about') && href.includes('about')) ||
       (currentPath.includes('events') && href.includes('events')) ||
-      (currentPath.includes('gallery') && href.includes('gallery')) ||
       (currentPath.includes('contact') && href.includes('contact'))
     ) {
       link.classList.add('active');
