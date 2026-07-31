@@ -65,6 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
       labelSpecialReq: "Event Details & Special Catering Requirements",
       btnSendEventRequest: "Submit Event Proposal via WhatsApp",
 
+      // Reviews & Testimonials Translations EN
+      reviewsTag: "Guest Ratings & Feedback",
+      reviewsTitle: "Words from Our Visitors",
+      reviewsSubtitle: "Authentic reviews from guests who stayed with us, featured on Booking.com and Google My Business.",
+      verifiedStays: "Verified Booking.com Stays",
+      googleProfile: "Google Business Profile",
+      guestSatisfaction: "Guest Choice",
+      topBoutique: "Top-Rated Boutique in Luanda",
+      recommended: "Guest Satisfaction",
+      scoreExceptional: "Exceptional",
+      topHospitality: "Superb Care",
+      filterAllReviews: "All Reviews",
+
       // Modal & Booking Translations
       bookingModalTag: "Direct Hotel Booking",
       bookingModalTitle: "Reserve Your Art House Stay",
@@ -125,6 +138,19 @@ document.addEventListener('DOMContentLoaded', () => {
       labelSpecialReq: "Detalhes do Evento & Requisitos de Catering",
       btnSendEventRequest: "Enviar Pedido de Proposta via WhatsApp",
 
+      // Reviews & Testimonials Translations PT
+      reviewsTag: "Avaliações de Hóspedes Verificados",
+      reviewsTitle: "Palavras dos Nossos Visitantes",
+      reviewsSubtitle: "Avaliações autênticas de hóspedes que se hospedaram connosco, publicadas no Booking.com e no Google My Business.",
+      verifiedStays: "Estadias Verificadas Booking.com",
+      googleProfile: "Perfil de Empresa no Google",
+      guestSatisfaction: "Escolha dos Hóspedes",
+      topBoutique: "Melhor Cotado em Luanda",
+      recommended: "Satisfação dos Hóspedes",
+      scoreExceptional: "Excecional",
+      topHospitality: "Cuidados Soberbos",
+      filterAllReviews: "Todas as Avaliações",
+
       // Modal & Booking Translations PT
       bookingModalTag: "Reserva Direta de Hotel",
       bookingModalTitle: "Reserve a sua Estadia no Art House",
@@ -171,6 +197,11 @@ document.addEventListener('DOMContentLoaded', () => {
         el.setAttribute('placeholder', t[key]);
       }
     });
+
+    // Update active review card if review engine is initialized
+    if (typeof window.renderActiveReview === 'function') {
+      window.renderActiveReview();
+    }
   }
 
   // Bind language toggle click
@@ -670,6 +701,254 @@ document.addEventListener('DOMContentLoaded', () => {
       `;
     }
   };
+
+  /* ==========================================================================
+     8.5 BOOKING.COM & GOOGLE REVIEWS ENGINE (REAL VERIFIED BOOKING REVIEWS)
+     ========================================================================== */
+  const reviewsData = [
+    {
+      id: 1,
+      author: "João",
+      role_en: "Portugal • King Deluxe Suite • 4 nights • Couple",
+      role_pt: "Portugal • Suite King Deluxe • 4 noites • Casal",
+      platform: "booking",
+      platform_name: "Booking.com",
+      score: "9.0 / 10",
+      score_label_en: "Exceptional",
+      score_label_pt: "Excecional",
+      title_en: "Great option",
+      title_pt: "òtima opção",
+      pos_en: "Design hotel with a great atmosphere. Right in front of the beach with a good breakfast. Great for enjoying Ilha de Luanda. I recommend suite 304.",
+      pos_pt: "Hotel design com muito bom ambiente. Frente à praia e com bom pequeno almoço. Ótimo para desfrutar da Ilha de Luanda. Recomendo a suite 304.",
+      neg_en: "Pillows were very high.",
+      neg_pt: "Almofadas muito altas.",
+      date_en: "September 2, 2024",
+      date_pt: "2 de setembro, 2024"
+    },
+    {
+      id: 2,
+      author: "Rita",
+      role_en: "Portugal • Small Twin Room • 1 night • Solo Traveler",
+      role_pt: "Portugal • Quarto Twin Pequeno • 1 noite • Viajante individual",
+      platform: "booking",
+      platform_name: "Booking.com",
+      score: "9.0 / 10",
+      score_label_en: "Exceptional",
+      score_label_pt: "Excecional",
+      title_en: "Excellent service and great location. Highly recommend!",
+      title_pt: "Excelente atendimento e boa localização. Recomendo!",
+      pos_en: "I was only passing through Luanda and stayed at Art House on recommendation! The location is great and service was excellent! The room was cozy and super clean. Lastly, even though I hadn't checked if dinner was available, they kindly arranged a quick and delicious dinner for me! Super recommend :)",
+      pos_pt: "Só estive em Luanda de passagem e fiquei no Art House por recomendação! A localização é muito boa e o atendimento foi excelente! O quarto era acolhedor e super limpo. Por último, apesar de não ter verificado se existia possibilidade de jantar ou não, tiveram a amabilidade de me arranjar um jantar bem rápido e óptimo! Super recomendo :)",
+      neg_en: "",
+      neg_pt: "",
+      date_en: "July 31, 2025",
+      date_pt: "31 de julho, 2025"
+    },
+    {
+      id: 3,
+      author: "Eduardo",
+      role_en: "Brazil • Small Twin Room • 1 night • Group stay",
+      role_pt: "Brasil • Quarto Twin Pequeno • 1 noite • Grupo",
+      platform: "booking",
+      platform_name: "Booking.com",
+      score: "8.0 / 10",
+      score_label_en: "Fabulous",
+      score_label_pt: "Fabuloso",
+      title_en: "The best part of the hotel is the staff.",
+      title_pt: "O melhor do hotél são os funcionários.",
+      pos_en: "The staff are extremely attentive and polite. On check-out day we had to leave for the airport before breakfast time, but they prepared and served breakfast earlier for us.",
+      pos_pt: "Os funcionários são muito atenciosos e educados. No check-out tínhamos que sair antes do horário do café da manhã para o aeroporto, mas eles anteciparam e nos serviram mais cedo.",
+      neg_en: "We were in a group of 8 people and had booking adjustments... Still, the staff were attentive, reassigning rooms and providing extra mattresses to accommodate everyone properly.",
+      neg_pt: "Estávamos em um grupo de 8 pessoas e houve problemas com as reservas... Ainda sim os funcionários foram atenciosos, remanejando alguns quartos, providenciando colchões extras e acabamos acomodando todos devidamente.",
+      date_en: "June 14, 2025",
+      date_pt: "14 de junho, 2025"
+    },
+    {
+      id: 4,
+      author: "Marco",
+      role_en: "Portugal • Double Room with Sea View • 9 nights • Couple",
+      role_pt: "Portugal • Quarto Duplo com Vista Mar • 9 noites • Casal",
+      platform: "booking",
+      platform_name: "Booking.com",
+      score: "8.0 / 10",
+      score_label_en: "Fabulous",
+      score_label_pt: "Fabuloso",
+      title_en: "Loved it. Thank you so much for the stay :)",
+      title_pt: "gostei bastante. muito obrigada pela estadia :)",
+      pos_en: "Loved the decor. Very cozy and clean. Very friendly and attentive staff. Security at the door. Simple yet cozy rooms. Comfortable bed.",
+      pos_pt: "Amei a decoração. Muito acolhedor e limpo. Pessoal muito simpático e atencioso. Segurança à porta. Quartos sem luxos mas acolhedor. Cama confortável.",
+      neg_en: "Breakfast with tasty local fruit, but don't be late or it will be gone :(",
+      neg_pt: "Pequeno almoço com fruta local e saborosa mas não se deixe atrasar porque senão desaparece :(",
+      date_en: "January 27, 2026",
+      date_pt: "27 de janeiro, 2026"
+    }
+  ];
+
+  let currentSourceFilter = 'all';
+  let activeReviewIndex = 0;
+  let autoSlideTimer = null;
+
+  const reviewCardStage = document.getElementById('reviewCardStage');
+  const reviewDotsBar = document.getElementById('reviewDotsBar');
+  const reviewPrevBtn = document.getElementById('reviewPrevBtn');
+  const reviewNextBtn = document.getElementById('reviewNextBtn');
+  const reviewFilterBtns = document.querySelectorAll('.review-filter-btn');
+
+  function getFilteredReviews() {
+    if (currentSourceFilter === 'all') return reviewsData;
+    return reviewsData.filter(r => r.platform === currentSourceFilter);
+  }
+
+  function renderActiveReview() {
+    if (!reviewCardStage) return;
+    const list = getFilteredReviews();
+    if (list.length === 0) return;
+
+    if (activeReviewIndex >= list.length) {
+      activeReviewIndex = 0;
+    }
+
+    const item = list[activeReviewIndex];
+    const isPt = currentLang === 'pt';
+
+    const role = isPt ? item.role_pt : item.role_en;
+    const title = isPt ? item.title_pt : item.title_en;
+    const posQuote = isPt ? item.pos_pt : item.pos_en;
+    const negQuote = isPt ? item.neg_pt : item.neg_en;
+    const scoreLabel = isPt ? item.score_label_pt : item.score_label_en;
+    const dateStr = isPt ? item.date_pt : item.date_en;
+
+    const tagClass = item.platform === 'booking' ? 'tag-booking' : 'tag-google';
+    const tagIcon = item.platform === 'booking'
+      ? `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.38 3.5H4.62C4.001 3.5 3.5 4.001 3.5 4.62v14.76c0 .619.501 1.12 1.12 1.12h14.76c.619 0 1.12-.501 1.12-1.12V4.62c0-.619-.501-1.12-1.12-1.12zm-8.32 12.75H8.25v-8.5h2.81c1.65 0 2.72.93 2.72 2.25 0 .97-.58 1.72-1.48 2.04.98.28 1.68 1.1 1.68 2.21 0 1.34-1.07 2.0-2.92 2.0zM10.12 9.5H9.6v2.2h.52c.74 0 1.25-.37 1.25-1.1 0-.73-.51-1.1-1.25-1.1zm.18 4.2H9.6v2.4h.7c.83 0 1.36-.4 1.36-1.2 0-.8-.53-1.2-1.36-1.2z"/></svg>`
+      : `<svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/></svg>`;
+
+    reviewCardStage.style.opacity = '0.3';
+    reviewCardStage.style.transform = 'translateY(10px)';
+
+    const negHtml = negQuote ? `
+      <div style="text-align: left; background-color: rgba(0,0,0,0.02); padding: 0.75rem 1rem; border-radius: var(--radius-sm); margin-top: 0.5rem; display: flex; gap: 10px; align-items: flex-start;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#666666" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top: 2px;"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        <span style="font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5;">${negQuote}</span>
+      </div>
+    ` : '';
+
+    setTimeout(() => {
+      reviewCardStage.innerHTML = `
+        <div class="review-card-item">
+          <div class="review-card-header">
+            <span class="review-platform-tag ${tagClass}">
+              ${tagIcon} ${item.platform_name}
+            </span>
+            <div class="review-score-badge">
+              <span style="background: #003580; color: #fff; padding: 2px 8px; border-radius: 6px; font-weight: 700;">${item.score}</span>
+              <span style="margin-left: 6px;">${scoreLabel}</span>
+            </div>
+          </div>
+          <h3 class="review-card-title">${title}</h3>
+          
+          <div style="text-align: left; background-color: rgba(0,53,128,0.02); padding: 0.875rem 1rem; border-radius: var(--radius-sm); margin-bottom: 0.5rem; display: flex; gap: 10px; align-items: flex-start;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#008009" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span style="font-size: 0.9375rem; color: var(--color-text-main); line-height: 1.6; font-style: normal;">${posQuote}</span>
+          </div>
+          ${negHtml}
+
+          <div style="margin-top: 1.25rem; border-top: 1px dashed var(--color-border-subtle); padding-top: 0.75rem;">
+            <div class="testimonial-author" style="font-weight: 700;">${item.author}</div>
+            <div class="testimonial-role" style="font-size: 0.8125rem;">${role}</div>
+            <div class="testimonial-date" style="font-size: 0.75rem; color: var(--color-text-muted);">${dateStr}</div>
+          </div>
+        </div>
+      `;
+      reviewCardStage.style.opacity = '1';
+      reviewCardStage.style.transform = 'translateY(0)';
+    }, 120);
+
+    renderReviewDots(list.length);
+  }
+
+  window.renderActiveReview = renderActiveReview;
+
+  function renderReviewDots(count) {
+    if (!reviewDotsBar) return;
+    reviewDotsBar.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.className = `review-dot ${i === activeReviewIndex ? 'active' : ''}`;
+      dot.setAttribute('aria-label', `Go to review ${i + 1}`);
+      dot.addEventListener('click', () => {
+        activeReviewIndex = i;
+        renderActiveReview();
+        resetAutoSlide();
+      });
+      reviewDotsBar.appendChild(dot);
+    }
+  }
+
+  function nextReview() {
+    const list = getFilteredReviews();
+    if (list.length === 0) return;
+    activeReviewIndex = (activeReviewIndex + 1) % list.length;
+    renderActiveReview();
+  }
+
+  function prevReview() {
+    const list = getFilteredReviews();
+    if (list.length === 0) return;
+    activeReviewIndex = (activeReviewIndex - 1 + list.length) % list.length;
+    renderActiveReview();
+  }
+
+  if (reviewNextBtn) {
+    reviewNextBtn.addEventListener('click', () => {
+      nextReview();
+      resetAutoSlide();
+    });
+  }
+
+  if (reviewPrevBtn) {
+    reviewPrevBtn.addEventListener('click', () => {
+      prevReview();
+      resetAutoSlide();
+    });
+  }
+
+  reviewFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      reviewFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentSourceFilter = btn.getAttribute('data-source') || 'all';
+      activeReviewIndex = 0;
+      renderActiveReview();
+      resetAutoSlide();
+    });
+  });
+
+  function startAutoSlide() {
+    stopAutoSlide();
+    autoSlideTimer = setInterval(() => {
+      nextReview();
+    }, 7000);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideTimer) {
+      clearInterval(autoSlideTimer);
+      autoSlideTimer = null;
+    }
+  }
+
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+
+  if (reviewCardStage) {
+    reviewCardStage.addEventListener('mouseenter', stopAutoSlide);
+    reviewCardStage.addEventListener('mouseleave', startAutoSlide);
+    renderActiveReview();
+    startAutoSlide();
+  }
 
   /* ==========================================================================
      9. SCROLL OBSERVER

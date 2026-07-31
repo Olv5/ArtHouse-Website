@@ -481,28 +481,38 @@
   </section>
 
   <!-- ==========================================================================
-       TESTIMONIALS SECTION
+       GUEST REVIEWS & RATINGS SECTION (BOOKING.COM & GOOGLE REVIEWS)
        ========================================================================== -->
-  <section class="section" style="background-color: var(--color-bg-alt);">
+  <section id="reviews" class="section reviews-section" style="background-color: var(--color-bg-alt);">
     <div class="container">
+      
+      <!-- Section Header -->
       <div class="section-header text-center">
-        <span class="section-tag">Guest Experiences</span>
-        <h2 class="section-title">Words from Our Visitors</h2>
+        <span class="section-tag" data-i18n="reviewsTag">Guest Ratings & Feedback</span>
+        <h2 class="section-title" data-i18n="reviewsTitle">Words from Our Visitors</h2>
+        <p class="section-subtitle" data-i18n="reviewsSubtitle">
+          Authentic reviews from guests who stayed with us, featured on Booking.com.
+        </p>
       </div>
 
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <blockquote class="testimonial-quote">
-          “Art House is an architectural jewel in Luanda. The blend of contemporary Angolan art, private tranquility, and flawless hospitality made our stay in Angola unforgettable.”
-        </blockquote>
-        <div class="testimonial-author">Elena R.</div>
-        <div class="testimonial-role">International Design Curator • Geneva</div>
+      <!-- Reviews Carousel Container -->
+      <div class="reviews-carousel-wrap">
+        <button class="review-nav-btn prev-btn" id="reviewPrevBtn" aria-label="Previous Review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
 
-        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
-          <button class="btn btn-secondary btn-sm test-prev" aria-label="Previous Review">← Prev</button>
-          <button class="btn btn-secondary btn-sm test-next" aria-label="Next Review">Next →</button>
+        <div class="review-card-stage" id="reviewCardStage">
+          <!-- Dynamic JS will render active review card here -->
         </div>
+
+        <button class="review-nav-btn next-btn" id="reviewNextBtn" aria-label="Next Review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
+
+      <!-- Carousel Pagination Dots -->
+      <div class="review-dots-bar" id="reviewDotsBar"></div>
+
     </div>
   </section>
 

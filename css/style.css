@@ -1480,18 +1480,269 @@ form .btn.btn-lg {
 .lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
 
 /* --------------------------------------------------------------------------
-   9. TESTIMONIALS & REVIEWS SLIDER
+   9. TESTIMONIALS & REVIEWS SLIDER (BOOKING.COM & GOOGLE REVIEWS)
    -------------------------------------------------------------------------- */
-.testimonial-card {
+.reviews-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Platform Badges Header */
+.reviews-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.platform-badge-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.platform-badge-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}
+
+.platform-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.platform-icon {
+  flex-shrink: 0;
+}
+
+.booking-card .platform-icon {
+  color: #003580;
+}
+
+.platform-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.platform-status {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.platform-score-wrap {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.score-num {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.score-denom {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.score-badge-pill {
+  display: inline-block;
+  background-color: #003580;
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.score-badge-pill.gold {
+  background-color: var(--color-gold);
+  color: var(--color-primary);
+}
+
+.stars-gold {
+  color: var(--color-gold);
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.highlight-emoji {
+  font-size: 1.75rem;
+}
+
+/* Reviews Filter Bar */
+.reviews-filter-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.review-filter-btn {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  padding: 0.45rem 1.15rem;
+  font-size: 0.84375rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.review-filter-btn:hover {
+  border-color: var(--color-gold);
+  color: var(--color-primary);
+}
+
+.review-filter-btn.active {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(11, 14, 20, 0.15);
+}
+
+.dot-booking {
+  width: 8px;
+  height: 8px;
+  background-color: #006ce4;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-google {
+  width: 8px;
+  height: 8px;
+  background-color: #4285f4;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Reviews Carousel Wrapper & Card Stage */
+.reviews-carousel-wrap {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.review-nav-btn {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-primary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.review-nav-btn:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.review-card-stage {
+  flex: 1;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+
+/* Full Review Card Style */
+.testimonial-card,
+.review-card-item {
   background-color: var(--color-bg-surface);
   border: 1px solid var(--color-border-subtle);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   box-shadow: var(--shadow-card);
-  max-width: 780px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   text-align: center;
+  position: relative;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.review-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border-subtle);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.review-platform-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+}
+
+.review-platform-tag.tag-booking {
+  background-color: rgba(0, 53, 128, 0.08);
+  color: #003580;
+}
+
+.review-platform-tag.tag-google {
+  background-color: rgba(66, 133, 244, 0.08);
+  color: #1a73e8;
+}
+
+.review-score-badge {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.review-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
 }
 
 .testimonial-stars {
@@ -1504,22 +1755,69 @@ form .btn.btn-lg {
 
 .testimonial-quote {
   font-family: var(--font-serif);
-  font-size: 1.375rem;
+  font-size: 1.1875rem;
   font-style: italic;
   color: var(--color-text-main);
   margin-bottom: var(--spacing-md);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .testimonial-author {
   font-weight: 700;
   font-size: 1rem;
-  color: var(--color-text-main);
+  color: var(--color-primary);
 }
 
 .testimonial-role {
   font-size: 0.8125rem;
   color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.testimonial-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Dots Bar */
+.review-dots-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--spacing-md);
+}
+
+.review-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-border-subtle);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.review-dot.active {
+  width: 28px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .reviews-carousel-wrap {
+    flex-direction: column;
+  }
+  .review-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .review-nav-btn.prev-btn { left: -10px; }
+  .review-nav-btn.next-btn { right: -10px; }
+  .reviews-badges-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* --------------------------------------------------------------------------
