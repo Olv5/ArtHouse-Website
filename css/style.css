@@ -1357,6 +1357,16 @@ form .btn.btn-lg {
   cursor: pointer;
 }
 
+.gallery-item.frame-500-333,
+.gallery-item.frame-500x333 {
+  aspect-ratio: 500 / 333;
+}
+
+.gallery-item.frame-750-500,
+.gallery-item.frame-750x500 {
+  aspect-ratio: 750 / 500;
+}
+
 .gallery-item.tall {
   aspect-ratio: 3024 / 4032;
   height: auto;
