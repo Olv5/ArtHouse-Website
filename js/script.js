@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       philo2Title: "Cultural Depth",
       philo2Desc: "Living art collection integrated seamlessly into design.",
       philo3Title: "Bespoke Care",
-      philo3Desc: "24/7 dedicated team",
+      philo3Desc: "Dedicated hospitality team",
       philo4Title: "Sea view",
       philo4Desc: "breathtaking sunsets over the Atlantic",
 
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       exp2Title: "The view is part of the stay",
       exp2Desc: "As the day winds down, the sky opens up over the water and gives you a front-row seat to some unforgettable sunsets.",
       exp3Title: "Feel at Home",
-      exp3Desc: "Our English-speaking team and 24/7 concierge are here to make your stay comfortable, from the little details to everything you need around the city.",
+      exp3Desc: "Our English-speaking team and dedicated concierge are here to make your stay comfortable, from the little details to everything you need around the city.",
       exp4Title: "Here When You Need Us",
       exp4Desc: "Our reception is open around the clock, with concierge assistance, luggage storage, currency exchange, and local recommendations whenever you need them.",
       exp5Title: "Free Wi-Fi & Security",
@@ -96,8 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
       labelAddress: "Address",
       labelPhone: "Telephone / WhatsApp",
       labelEmail: "Email",
-      formInquiryTitle: "Send an Inquiry",
-      formInquiryDesc: "Fill in your details below and our team will get back to you promptly.",
+      formInquiryTitle: "Get in Touch",
+      formInquiryDesc: "Connect directly with our hospitality concierge for reservations, gallery viewings, or general inquiries.",
+      btnChatWhatsApp: "Contact via WhatsApp",
       labelYourName: "Your Name",
       labelEmailAddr: "Email Address",
       labelMessage: "Message or Special Request",
@@ -112,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       faqQ2: "Where is Thomson Art House located in Luanda?",
       faqA2: "We are located at <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, right along the scenic Ilha do Cabo coastline. We are surrounded by fine dining, beach lounges, and just 15 minutes from Quatro de Fevereiro International Airport (LAD).",
       faqQ3: "Is airport transfer or chauffeur pickup available?",
-      faqA3: "Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our 24/7 reception team.",
+      faqA3: "Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our reception team.",
       faqQ4: "Is breakfast included with my suite reservation?",
       faqA4: "Yes! All direct bookings include a daily gourmet artisanal breakfast served in our tranquil courtyard garden, featuring fresh local Angolan produce, tropical fruits, freshly baked pastries, and specialty espresso coffees.",
       faqQ5: "How can I make a direct booking or contact via WhatsApp?",
@@ -131,23 +132,33 @@ document.addEventListener('DOMContentLoaded', () => {
       footerRights: "© 2026 Art House Angola. All rights reserved.",
 
       // Events Page Translations
-      eventsTagline: "Bespoke Gatherings & Cultural Celebrations",
-      eventsHeroTitle: "Private Events & Art Gatherings",
-      eventsHeroDesc: "From curatorial art vernissages and executive symposia to romantic courtyard galas, Art House Angola offers extraordinary spaces tailored to unforgettable moments in Luanda.",
-      btnInquireEvent: "Request Event Proposal",
-      eventTypesTag: "Tailored Occasions",
-      eventTypesTitle: "Curated Event Categories",
-      eventTypesDesc: "Each event is thoughtfully managed by our dedicated cultural concierge, sommelier, and culinary team.",
-      eventCat1: "Cultural Vernissages",
-      eventCat2: "Gourmet Hospitality",
-      eventCat3: "Corporate Excellence",
-      eventCat4: "Bespoke Celebrations",
-      venuesTag: "Architectural Spaces",
-      venuesTitle: "Event Venue Capabilities",
-      venuesDesc: "Choose from flexible indoor art lounges and lush open-air botanical garden courtyards.",
-      inquiryTag: "Direct Concierge Booking",
-      inquiryTitle: "Request an Event Proposal",
-      inquiryDesc: "Share details about your upcoming gathering in Luanda, and our Event Director will respond within 24 hours with a custom proposal.",
+      eventsTagline: "Botanico Rooftop",
+      eventsHeroTitle: "Celebrate Every Occasion at Thomson Art House",
+      eventsHeroP1: "Located on the fourth floor of Thomson Art House, Botanico Rooftop is a unique venue for private events overlooking the coastline of Ilha do Cabo.",
+      eventsHeroP2: "With space for up to 100 guests, sweeping views, and a dedicated team to take care of every detail, it's the perfect setting for corporate events, birthdays, anniversaries, engagement parties, networking events, and unforgettable celebrations.",
+      btnPlanEvent: "Plan Your Event",
+      eventTypesTitle: "Perfect for Every Occasion",
+      eventTypesDesc: "Whether you're planning an intimate gathering or a larger celebration, Botanico adapts to your vision.",
+      corpEventsTitle: "Corporate Events",
+      corpEventsDesc: "Meetings, networking events, team dinners, product launches, and company celebrations.",
+      privEventsTitle: "Private Celebrations",
+      privEventsDesc: "Birthdays, anniversaries, baby showers, graduation parties, and family gatherings.",
+      btnStartPlanning: "Let's Start Planning",
+      eventsAtmosphereTag: "Botanico Atmosphere",
+      eventsAtmosphereTitle: "Rooftop & Sunset Experience",
+      eventsAtmosphereDesc: "Panoramic coastal views, vibrant lounge ambiance, and custom event setups high above Ilha do Cabo.",
+      banquetDiningTitle: "Oceanfront Banquet Setup",
+      banquetDiningDesc: "Bespoke outdoor dining under canopy overlooking the sea.",
+      coastalTableTitle: "Coastal Celebration Table",
+      coastalTableDesc: "Elegant open-air banquet seating facing the Atlantic horizon.",
+      sunsetDeckTitle: "Sunset Lounge & Ocean Horizon",
+      sunsetDeckDesc: "Unmatched dusk views across the Ilha do Cabo coastline.",
+      rooftopBarTitle: "Botanico Rooftop Bar",
+      rooftopBarDesc: "Custom bar and lounge setup for private receptions.",
+      inquiryTag: "Botanico Rooftop Events",
+      inquiryTitle: "Ready to Host Your Event?",
+      inquiryDesc: "Connect directly with our events team to discuss availability, menus, and custom arrangements for your celebration at Botanico Rooftop.",
+      btnPlanYourEvent: "Plan Your Event",
       labelFullName: "Full Name *",
 
       // Reviews & Testimonials Translations EN
@@ -217,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       philo2Title: "Profundidade Cultural",
       philo2Desc: "Coleção viva de arte integrada perfeitamente na arquitetura.",
       philo3Title: "Atendimento Personalizado",
-      philo3Desc: "Equipa dedicada 24 horas por dia",
+      philo3Desc: "Equipa dedicada de hospitalidade",
       philo4Title: "Vista para o Mar",
       philo4Desc: "Pôr do sol deslumbrante sobre as águas do Atlântico",
 
@@ -237,11 +248,11 @@ document.addEventListener('DOMContentLoaded', () => {
       exp2Title: "A Vista Faz Parte da Estadia",
       exp2Desc: "Ao final do dia, o céu abre-se sobre as águas do Atlântico, oferecendo um lugar de primeira fila para pores do sol inesquecíveis.",
       exp3Title: "Sinta-se em Casa",
-      exp3Desc: "A nossa equipa e o serviço de concierge 24/7 estão disponíveis para tornar a sua estadia confortável em todos os detalhes.",
+      exp3Desc: "A nossa equipa e o serviço de concierge estão disponíveis para tornar a sua estadia confortável em todos os detalhes.",
       exp4Title: "Sempre Aqui para Si",
-      exp4Desc: "A nossa receção funciona 24 horas por dia, com assistência de concierge, guarda de bagagem, câmbio e recomendações locais.",
+      exp4Desc: "A nossa receção funciona para si, com assistência de concierge, guarda de bagagem, câmbio e recomendações locais.",
       exp5Title: "Wi-Fi Gratuito & Segurança",
-      exp5Desc: "Wi-Fi de alta velocidade dedicado e equipa de segurança 24 horas por dia.",
+      exp5Desc: "Wi-Fi de alta velocidade dedicado e equipa de segurança.",
       exp6Title: "No Coração de Luanda",
       exp6Desc: "Localizado no distrito de entretenimento de Luanda, perto dos melhores bares, restaurantes e atrações beira-mar da cidade.",
 
@@ -257,8 +268,9 @@ document.addEventListener('DOMContentLoaded', () => {
       labelAddress: "Endereço",
       labelPhone: "Telefone / WhatsApp",
       labelEmail: "Correio Eletrónico",
-      formInquiryTitle: "Enviar uma Mensagem",
-      formInquiryDesc: "Preencha os seus dados abaixo e a nossa equipa responderá com brevidade.",
+      formInquiryTitle: "Entre em Contacto",
+      formInquiryDesc: "Fale diretamente com a nossa receção e concierge para reservas, visitas à galeria ou informações gerais.",
+      btnChatWhatsApp: "Contactar por WhatsApp",
       labelYourName: "O seu Nome",
       labelEmailAddr: "Endereço de Correio Eletrónico",
       labelMessage: "Mensagem ou Pedido Especial",
@@ -273,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
       faqQ2: "Onde fica localizado o Thomson Art House em Luanda?",
       faqA2: "Estamos localizados no <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, ao longo da costa da Ilha do Cabo, cercados por restaurantes, beach lounges e a apenas 15 minutos do Aeroporto Internacional Quatro de Fevereiro.",
       faqQ3: "O serviço de transporte para o aeroporto está disponível?",
-      faqA3: "Sim, o transporte privado de/para o aeroporto está incluído para os hóspedes das nossas suítes. Transferes e deslocações na cidade também podem ser coordenados diretamente com a nossa receção 24/7.",
+      faqA3: "Sim, o transporte privado de/para o aeroporto está incluído para os hóspedes das nossas suítes. Transferes e deslocações na cidade também podem ser coordenados diretamente com a nossa receção.",
       faqQ4: "O pequeno-almoço está incluído na reserva da suíte?",
       faqA4: "Sim! Todas as reservas diretas incluem pequeno-almoço gourmet artesanal servido diariamente no nosso jardim interior, com produtos locais angolanos, frutas tropicais e cafés espresso.",
       faqQ5: "Como posso fazer uma reserva direta ou contactar por WhatsApp?",
@@ -292,23 +304,33 @@ document.addEventListener('DOMContentLoaded', () => {
       footerRights: "© 2026 Art House Angola. Todos os direitos reservados.",
 
       // Events Page Translations PT
-      eventsTagline: "Encontros Exclusivos & Celebrações Culturais",
-      eventsHeroTitle: "Eventos Privados & Exposições de Arte",
-      eventsHeroDesc: "Desde vernissages de arte e simpósios executivos até galas românticas no pátio tropical, o Art House Angola oferece espaços extraordinários sob medida para momentos inesquecíveis em Luanda.",
-      btnInquireEvent: "Solicitar Proposta de Evento",
-      eventTypesTag: "Ocasiões Sob Medida",
-      eventTypesTitle: "Categorias de Eventos Curadas",
-      eventTypesDesc: "Cada evento é cuidadosamente gerido pela nossa equipa de concierge cultural, sommelier e chefs executivos.",
-      eventCat1: "Vernissages Culturais",
-      eventCat2: "Hospitalidade Gourmet",
-      eventCat3: "Excelência Corporativa",
-      eventCat4: "Celebrações Únicas",
-      venuesTag: "Espaços Arquitetónicos",
-      venuesTitle: "Capacidade dos Espaços para Eventos",
-      venuesDesc: "Escolha entre lounges de arte interiores climatizados e pátios de jardim botânico ao ar livre.",
-      inquiryTag: "Reserva Direta com Concierge",
-      inquiryTitle: "Solicitar Proposta de Evento",
-      inquiryDesc: "Partilhe os detalhes da sua reunião em Luanda e o nosso Diretor de Eventos responderá dentro de 24 horas com uma proposta personalizada.",
+      eventsTagline: "Botanico Rooftop",
+      eventsHeroTitle: "Celebre Todas as Ocasiões no Thomson Art House",
+      eventsHeroP1: "Localizado no quarto andar do Thomson Art House, o Botanico Rooftop é um local único para eventos privados com vista para a orla da Ilha do Cabo.",
+      eventsHeroP2: "Com capacidade para até 100 convidados, vistas deslumbrantes e uma equipa dedicada a cuidar de cada detalhe, é o cenário perfeito para eventos corporativos, aniversários, festas de noivado, eventos de networking e celebrações inesquecíveis.",
+      btnPlanEvent: "Planear o Seu Evento",
+      eventTypesTitle: "Perfeito para Todas as Ocasiões",
+      eventTypesDesc: "Quer esteja a planear um encontro íntimo ou uma celebração maior, o Botanico adapta-se à sua visão.",
+      corpEventsTitle: "Eventos Corporativos",
+      corpEventsDesc: "Reuniões, eventos de networking, jantares de equipa, lançamentos de produtos e celebrações da empresa.",
+      privEventsTitle: "Celebrações Privadas",
+      privEventsDesc: "Aniversários, festas de noivado, chás de bebé, festas de graduação e encontros familiares.",
+      btnStartPlanning: "Comece a Planear",
+      eventsAtmosphereTag: "Ambiente Botanico",
+      eventsAtmosphereTitle: "Experiência no Rooftop ao Pôr do Sol",
+      eventsAtmosphereDesc: "Vistas panorâmicas sobre a costa, ambiente de lounge vibrante e montagens personalizadas na Ilha do Cabo.",
+      banquetDiningTitle: "Montagem de Banquete à Beira-Mar",
+      banquetDiningDesc: "Jantares ao ar livre sob tenda personalizada com vista para o mar.",
+      coastalTableTitle: "Mesa de Celebração Costeira",
+      coastalTableDesc: "Jantares elegantes ao ar livre virados para o horizonte do Atlântico.",
+      sunsetDeckTitle: "Sunset Lounge & Horizonte do Oceano",
+      sunsetDeckDesc: "Vistas inigualáveis do pôr do sol na orla da Ilha do Cabo.",
+      rooftopBarTitle: "Bar do Botanico Rooftop",
+      rooftopBarDesc: "Bar e lounge personalizado para receções privadas.",
+      inquiryTag: "Eventos Botanico Rooftop",
+      inquiryTitle: "Pronto para Organizar o Seu Evento?",
+      inquiryDesc: "Fale diretamente com a nossa equipa de eventos para consultar disponibilidade, menus e detalhes personalizados para a sua celebração no Botanico Rooftop.",
+      btnPlanYourEvent: "Planear o Seu Evento",
       labelFullName: "Nome Completo *",
 
       // Reviews & Testimonials Translations PT
@@ -860,60 +882,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     7. RESERVATION ENGINE & BOOKING MODAL
+     7. DIRECT WHATSAPP RESERVATION REDIRECT
      ========================================================================== */
-  const bookingModal = document.getElementById('bookingModal');
-
   window.openBookingModal = (roomCategory = null) => {
-    if (bookingModal) {
-      if (roomCategory) {
-        const roomSelect = document.getElementById('modalRoomSelect');
-        if (roomSelect) roomSelect.value = roomCategory;
-      }
-      bookingModal.classList.add('is-open');
-      document.body.classList.add('no-scroll');
+    let text = "Hello Thomson Art House! I would like to inquire about reserving a stay.";
+    if (typeof roomCategory === 'string' && roomCategory.trim()) {
+      const suiteName = roomCategory.replace(/-/g, ' ');
+      text = `Hello Thomson Art House! I would like to inquire about reserving the ${suiteName}.`;
     }
-  };
-
-  window.closeBookingModal = () => {
-    if (bookingModal) {
-      bookingModal.classList.remove('is-open');
-      document.body.classList.remove('no-scroll');
-    }
-  };
-
-  window.sendWhatsAppReservation = window.handleModalBookingSubmit = (event) => {
-    if (event && typeof event.preventDefault === 'function') {
-      event.preventDefault();
-    }
-    const nameInput = document.getElementById('guestName') || document.getElementById('modalName');
-    const phoneInput = document.getElementById('guestPhone');
-    const emailInput = document.getElementById('guestEmail');
-    const roomSelect = document.getElementById('modalRoomSelect');
-
-    const name = nameInput?.value?.trim() || 'Guest';
-    const phone = phoneInput?.value?.trim() || 'Not provided';
-    const email = emailInput?.value?.trim() || 'Not provided';
-    const roomName = (roomSelect && roomSelect.selectedIndex >= 0) ? roomSelect.options[roomSelect.selectedIndex].text : 'Suite';
-
-    const checkin = document.getElementById('modalCheckIn')?.value?.trim() || '';
-    const checkout = document.getElementById('modalCheckOut')?.value?.trim() || '';
-    const guests = document.getElementById('modalGuests')?.value?.trim() || '';
-
-    let message = `*ART HOUSE ANGOLA - RESERVATION REQUEST*\n\n` +
-      `• *Guest Name:* ${name}\n` +
-      `• *Phone / WhatsApp:* ${phone}\n` +
-      `• *Email:* ${email}\n` +
-      `• *Selected Suite:* ${roomName}\n`;
-
-    if (checkin) message += `• *Check-in:* ${checkin}\n`;
-    if (checkout) message += `• *Check-out:* ${checkout}\n`;
-    if (guests) message += `• *Guests:* ${guests}\n`;
-
-    message += `\nHello! I would like to check availability and request a reservation. Thank you!`;
-
-    const encodedMsg = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/244933694600?text=${encodedMsg}`;
+    const whatsappUrl = `https://wa.me/244933694600?text=${encodeURIComponent(text)}`;
 
     try {
       const win = window.open(whatsappUrl, '_blank');
@@ -923,8 +900,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (e) {
       window.location.href = whatsappUrl;
     }
+  };
 
-    closeBookingModal();
+  window.closeBookingModal = () => {};
+
+  window.sendWhatsAppReservation = window.handleModalBookingSubmit = (event) => {
+    if (event && typeof event.preventDefault === 'function') {
+      event.preventDefault();
+    }
+    window.openBookingModal();
   };
 
   /* ==========================================================================

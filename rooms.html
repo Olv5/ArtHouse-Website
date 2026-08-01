@@ -537,51 +537,6 @@
     </div>
   </div>
 
-  <div class="modal-backdrop" id="bookingModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeBookingModal()">✕</button>
-      <span class="section-tag">Direct Stay Inquiry</span>
-      <h3 class="modal-title">Reserve at Art House</h3>
-      <p class="modal-subtitle">Select your suite and details for instant confirmation and concierge assistance.</p>
-
-      <form id="reservationForm" onsubmit="sendWhatsAppReservation(event); return false;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
-          <div>
-            <label class="form-label">Guest Name</label>
-            <input type="text" id="guestName" class="form-control" placeholder="Full Name" required style="padding-left: 0.875rem;" />
-          </div>
-          <div>
-            <label class="form-label">Phone / WhatsApp</label>
-            <input type="tel" id="guestPhone" class="form-control" placeholder="+244 9XX XXX XXX" required style="padding-left: 0.875rem;" />
-          </div>
-        </div>
-
-        <div style="margin-bottom: var(--spacing-sm);">
-          <label class="form-label">Email Address</label>
-          <input type="email" id="guestEmail" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
-        </div>
-
-        <div style="margin-bottom: var(--spacing-sm);">
-          <label class="form-label">Select Suite</label>
-          <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
-            <option value="master-art-suite">Master Art Suite ($280 / night)</option>
-            <option value="garden-villa">Garden Villa Suite ($340 / night)</option>
-            <option value="executive-studio">Executive Studio ($220 / night)</option>
-            <option value="oceanfront-suite">Atlantic Oceanfront Suite ($260 / night)</option>
-            <option value="heritage-gallery-suite">Heritage Gallery Suite ($240 / night)</option>
-            <option value="courtyard-twin-suite">Courtyard Deluxe Twin Suite ($195 / night)</option>
-          </select>
-        </div>
-
-        <div>
-          <button type="submit" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation(event)" style="width: 100%;">
-            💬 Reserve via WhatsApp
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <a href="https://wa.me/244933694600?text=Hello%20Art%20House!%20I%20would%20like%20to%20inquire%20about%20a%20suite%20reservation." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp with Art House Angola" title="Chat on WhatsApp">
     <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.999 4.486-9.999 10.001 0 1.8.48 3.55 1.391 5.097l-1.423 5.203 5.328-1.398c1.492.813 3.178 1.243 4.887 1.243 5.514 0 10.001-4.486 10.001-10.001s-4.487-10.001-10.015-10.001zm5.836 14.195c-.244.688-1.428 1.354-1.98 1.411-.519.054-1.196.082-3.411-.837-2.827-1.171-4.639-4.045-4.781-4.233-.141-.188-1.144-1.522-1.144-2.905 0-1.383.725-2.062.981-2.344.256-.282.559-.352.747-.352.188 0 .376.002.536.01.17.008.399-.064.625.479.244.588.83 2.029.902 2.175.072.146.12.316.024.505-.096.188-.144.306-.288.475-.144.169-.304.377-.435.506-.145.143-.297.301-.128.591.169.29.752 1.238 1.613 2.007 1.109.988 2.046 1.295 2.336 1.437.29.141.459.118.629-.076.169-.194.725-.845.92-1.135.195-.29.39-.241.656-.143.266.098 1.69.797 1.982.942.292.145.487.217.559.34.072.122.072.709-.172 1.397z"/></svg>
   </a>

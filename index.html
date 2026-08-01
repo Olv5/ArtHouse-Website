@@ -170,7 +170,7 @@
             </div>
             <div class="philosophy-item">
               <h4 data-i18n="philo3Title">Bespoke Care</h4>
-              <p data-i18n="philo3Desc">24/7 dedicated team</p>
+              <p data-i18n="philo3Desc">Dedicated hospitality team</p>
             </div>
             <div class="philosophy-item">
               <h4 data-i18n="philo4Title">Sea view</h4>
@@ -383,7 +383,7 @@
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
           </div>
           <h4 data-i18n="exp3Title">Feel at Home</h4>
-          <p data-i18n="exp3Desc">Our English-speaking team and 24/7 concierge are here to make your stay comfortable, from the little details to everything you need around the city.</p>
+          <p data-i18n="exp3Desc">Our English-speaking team and dedicated concierge are here to make your stay comfortable, from the little details to everything you need around the city.</p>
         </div>
 
         <div class="exp-card">
@@ -577,32 +577,17 @@
           </div>
         </div>
 
-        <div class="contact-form-card">
-          <h3 style="margin-bottom: var(--spacing-xs);" data-i18n="formInquiryTitle">Send an Inquiry</h3>
-          <p style="font-size: 0.875rem; margin-bottom: var(--spacing-md);" data-i18n="formInquiryDesc">
-            Fill in your details below and our team will get back to you promptly.
+        <div class="contact-form-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: clamp(2rem, 4vw, 3rem);">
+          <span class="section-tag" style="margin-bottom: 0.5rem;" data-i18n="contactTag">Concierge Desk</span>
+          <h3 style="margin-bottom: var(--spacing-xs);" data-i18n="formInquiryTitle">Get in Touch</h3>
+          <p style="font-size: 0.9375rem; color: var(--color-text-muted); margin-bottom: var(--spacing-lg); text-align: center;" data-i18n="formInquiryDesc">
+            Connect directly with our hospitality concierge for reservations, gallery viewings, or general inquiries.
           </p>
 
-          <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to Art House team.');">
-            <div class="form-group" style="margin-bottom: var(--spacing-sm);">
-              <label class="form-label" data-i18n="labelYourName">Your Name</label>
-              <input type="text" class="form-control" placeholder="e.g. Maria Santos" required style="padding-left: 0.875rem;" />
-            </div>
-
-            <div class="form-group" style="margin-bottom: var(--spacing-sm);">
-              <label class="form-label" data-i18n="labelEmailAddr">Email Address</label>
-              <input type="email" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
-            </div>
-
-            <div class="form-group" style="margin-bottom: var(--spacing-sm);">
-              <label class="form-label" data-i18n="labelMessage">Message or Special Request</label>
-              <textarea class="form-control" rows="4" placeholder="How can we assist your stay in Angola?" required style="padding-left: 0.875rem; padding-top: 0.75rem;"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="btnSendMessage">
-              Send Message
-            </button>
-          </form>
+          <a href="https://wa.me/244933694600?text=Hello%20Thomson%20Art%20House!%20I%20would%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="width: 100%; display: inline-flex; align-items: center; justify-content: center; gap: 10px;" data-i18n="btnChatWhatsApp">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 2c-5.514 0-9.999 4.486-9.999 10.001 0 1.8.48 3.55 1.391 5.097l-1.423 5.203 5.328-1.398c1.492.813 3.178 1.243 4.887 1.243 5.514 0 10.001-4.486 10.001-10.001s-4.487-10.001-10.015-10.001zm5.836 14.195c-.244.688-1.428 1.354-1.98 1.411-.519.054-1.196.082-3.411-.837-2.827-1.171-4.639-4.045-4.781-4.233-.141-.188-1.144-1.522-1.144-2.905 0-1.383.725-2.062.981-2.344.256-.282.559-.352.747-.352.188 0 .376.002.536.01.17.008.399-.064.625.479.244.588.83 2.029.902 2.175.072.146.12.316.024.505-.096.188-.144.306-.288.475-.144.169-.304.377-.435.506-.145.143-.297.301-.128.591.169.29.752 1.238 1.613 2.007 1.109.988 2.046 1.295 2.336 1.437.29.141.459.118.629-.076.169-.194.725-.845.92-1.135.195-.29.39-.241.656-.143.266.098 1.69.797 1.982.942.292.145.487.217.559.34.072.122.072.709-.172 1.397z"/></svg>
+            Contact via WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -654,7 +639,7 @@
             </span>
           </summary>
           <div class="faq-answer" data-i18n="faqA3">
-            Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our 24/7 reception team.
+            Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our reception team.
           </div>
         </details>
 
@@ -814,49 +799,6 @@
       <img id="lightboxImg" class="lightbox-img" src="" alt="Gallery Preview" referrerPolicy="no-referrer" />
       <div class="lightbox-caption" id="lightboxCaption"></div>
       <div style="color: var(--color-gold); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px;" id="lightboxCategory"></div>
-    </div>
-  </div>
-
-  <!-- Booking & Reservation Engine Modal -->
-  <div class="modal-backdrop" id="bookingModal">
-    <div class="modal-box">
-      <button class="modal-close" onclick="closeBookingModal()">✕</button>
-      <span class="section-tag" data-i18n="bookingModalTag">Direct Availability Inquiry</span>
-      <h3 class="modal-title" data-i18n="bookingModalTitle">Reserve at Art House</h3>
-      <p class="modal-subtitle" data-i18n="bookingModalDesc">Select your stay details for direct concierge reservation assistance.</p>
-
-      <form id="reservationForm" onsubmit="sendWhatsAppReservation(event); return false;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
-          <div>
-            <label class="form-label" data-i18n="labelGuestName">Guest Name</label>
-            <input type="text" id="guestName" class="form-control" placeholder="Full Name" required style="padding-left: 0.875rem;" />
-          </div>
-          <div>
-            <label class="form-label" data-i18n="labelGuestPhone">Phone / WhatsApp</label>
-            <input type="tel" id="guestPhone" class="form-control" placeholder="+244 9XX XXX XXX" required style="padding-left: 0.875rem;" />
-          </div>
-        </div>
-
-        <div style="margin-bottom: var(--spacing-sm);">
-          <label class="form-label" data-i18n="labelEmailAddr">Email Address</label>
-          <input type="email" id="guestEmail" class="form-control" placeholder="name@domain.com" required style="padding-left: 0.875rem;" />
-        </div>
-
-        <div style="margin-bottom: var(--spacing-sm);">
-          <label class="form-label" data-i18n="labelSelectSuite">Select Suite</label>
-          <select id="modalRoomSelect" class="form-control" style="padding-left: 0.875rem;">
-            <option value="master-art-suite">Master Art Suite ($280 / night)</option>
-            <option value="garden-villa">Twin Rooms ($340 / night)</option>
-            <option value="executive-studio">Sea View Studio ($220 / night)</option>
-          </select>
-        </div>
-
-        <div>
-          <button type="submit" class="btn btn-gold btn-lg" onclick="sendWhatsAppReservation(event)" style="width: 100%;" data-i18n="btnReserveWhatsApp">
-            💬 Reserve via WhatsApp
-          </button>
-        </div>
-      </form>
     </div>
   </div>
 
