@@ -69,9 +69,16 @@
           <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-white" />
           <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-dark" />
         </a>
-        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button class="lang-toggle" aria-label="Toggle Language EN / PT" title="Switch Language">
+            <span data-lang="en" class="active">EN</span>
+            <span>/</span>
+            <span data-lang="pt">PT</span>
+          </button>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
       </div>
 
       <nav class="mobile-nav-list">
@@ -115,6 +122,39 @@
   </section>
 
   <!-- ==========================================================================
+       ROOFTOP & SUNSET ATMOSPHERE
+       ========================================================================== -->
+  <section class="section" style="background-color: var(--color-bg-alt); padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
+    <div class="container">
+      <div class="section-header text-center" style="margin-bottom: var(--spacing-lg);">
+        <span class="section-tag" data-i18n="eventsAtmosphereTag">Botanico Atmosphere</span>
+        <h2 class="section-title" data-i18n="eventsAtmosphereTitle">Rooftop & Sunset Experience</h2>
+        <p class="section-subtitle" data-i18n="eventsAtmosphereDesc">Panoramic coastal views, vibrant lounge ambiance, and custom event setups high above Ilha do Cabo.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-md);">
+        
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
+          <img src="/images/Events1.jpg" alt="Botanico Oceanfront Banquet Setup" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+        </div>
+
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
+          <img src="/images/RooftopTakes.jpg" alt="Botanico Coastal Celebration Table" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+        </div>
+
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
+          <img src="/images/Events5.jpg" alt="Botanico Rooftop Bar Setup" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+        </div>
+
+        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
+          <img src="/images/SunsetTakes1.jpg" alt="Botanico Rooftop Sunset Deck" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        PERFECT FOR EVERY OCCASION
        ========================================================================== -->
   <section class="section">
@@ -153,39 +193,6 @@
   </section>
 
   <!-- ==========================================================================
-       ROOFTOP & SUNSET ATMOSPHERE
-       ========================================================================== -->
-  <section class="section" style="background-color: var(--color-bg-alt); padding-top: var(--spacing-lg); padding-bottom: var(--spacing-lg); border-top: 1px solid var(--color-border-subtle); border-bottom: 1px solid var(--color-border-subtle);">
-    <div class="container">
-      <div class="section-header text-center" style="margin-bottom: var(--spacing-lg);">
-        <span class="section-tag" data-i18n="eventsAtmosphereTag">Botanico Atmosphere</span>
-        <h2 class="section-title" data-i18n="eventsAtmosphereTitle">Rooftop & Sunset Experience</h2>
-        <p class="section-subtitle" data-i18n="eventsAtmosphereDesc">Panoramic coastal views, vibrant lounge ambiance, and custom event setups high above Ilha do Cabo.</p>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--spacing-md);">
-        
-        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
-          <img src="/images/Events1.jpg" alt="Botanico Oceanfront Banquet Setup" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
-        </div>
-
-        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
-          <img src="/images/RooftopTakes.jpg" alt="Botanico Coastal Celebration Table" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
-        </div>
-
-        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
-          <img src="/images/Events5.jpg" alt="Botanico Rooftop Bar Setup" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
-        </div>
-
-        <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4/3;">
-          <img src="/images/SunsetTakes1.jpg" alt="Botanico Rooftop Sunset Deck" style="width: 100%; height: 100%; object-fit: cover;" referrerPolicy="no-referrer" />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
        PLAN YOUR EVENT CALL TO ACTION
        ========================================================================== -->
   <section id="event-inquiry" class="section text-center">
@@ -215,13 +222,13 @@
           <a href="/index.html" class="footer-logo" aria-label="Art House Hotel & Rooftop Bar">
             <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="footer-logo-img" />
           </a>
-          <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;">
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6;" data-i18n="footerDesc">
             A boutique hotel inspired by Angolan art, culture, and genuine hospitality in the heart of Luanda.
           </p>
         </div>
 
         <div>
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footerNav">Navigation</h4>
           <div class="footer-links">
             <a href="/index.html" data-i18n="navHome">Home</a>
             <a href="/rooms.html" data-i18n="navRooms">Suites</a>
@@ -233,16 +240,16 @@
         </div>
 
         <div>
-          <h4 class="footer-title">Legal & Contact</h4>
+          <h4 class="footer-title" data-i18n="footerLegal">Legal & Contact</h4>
           <div class="footer-links">
-            <a href="/contact.html">Contact Us</a>
-            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
-            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
+            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;" data-i18n="privacyPolicy">Privacy Policy</a>
+            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;" data-i18n="termsOfStay">Terms of Stay</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Luanda Address</h4>
+          <h4 class="footer-title" data-i18n="footerAddressTitle">Luanda Address</h4>
           <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
             Thomson House, Av. Murtala Mohammed<br />
             Luanda, Angola<br />
@@ -253,8 +260,8 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Art House Angola. All rights reserved.</div>
-        <div>Thomson Art House • Luanda, Angola</div>
+        <div data-i18n="footerRights">© 2026 Art House Angola. All rights reserved.</div>
+        <div data-i18n="footerTagline">Redesigned for Thomson Art House • Luanda, Angola</div>
       </div>
     </div>
   </footer>

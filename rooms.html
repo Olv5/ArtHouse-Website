@@ -72,9 +72,16 @@
           <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-white" />
           <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-dark" />
         </a>
-        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button class="lang-toggle" aria-label="Toggle Language EN / PT" title="Switch Language">
+            <span data-lang="en" class="active">EN</span>
+            <span>/</span>
+            <span data-lang="pt">PT</span>
+          </button>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
       </div>
 
       <nav class="mobile-nav-list">
@@ -177,14 +184,14 @@
         <!-- Room 2: Garden Villa Suite -->
         <article class="room-card" data-category="villa">
           <div class="room-img-wrap">
-            <img id="card-img-villa" src="/images/Twins3.jpg" alt="Garden Villa Suite with Plunge Pool at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-villa" src="/images/Twins3.jpg" alt="Garden Villa Suite at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
             <div class="room-card-thumbs">
-              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins3.jpg', 'card-img-villa')" title="Twin Room View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins2.jpg', 'card-img-villa')" title="Ocean View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/BathRooms.jpg', 'card-img-villa')" title="Balcony View"></button>
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins3.jpg', 'card-img-villa')" title="Twin Bedroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins2.jpg', 'card-img-villa')" title="Suite Lounge View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-villa')" title="Suite Interior"></button>
             </div>
           </div>
           <div class="room-body">
@@ -276,7 +283,7 @@
             <div class="room-card-thumbs">
               <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/SuiteMaster1.jpg', 'card-img-oceanfront')" title="Coastline View"></button>
               <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SuiteMaster2.jpg', 'card-img-oceanfront')" title="Balcony View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Bathrooms.jpg', 'card-img-oceanfront')" title="Suite View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SuiteMaster3.jpg', 'card-img-oceanfront')" title="Suite Interior"></button>
             </div>
           </div>
           <div class="room-body">
@@ -320,9 +327,9 @@
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
             <div class="room-card-thumbs">
-              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/SeaView1.jpg', 'card-img-heritage')" title="Gallery Passage"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SeaView2.jpg', 'card-img-heritage')" title="Sculpture Nook"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SeaView3.jpg', 'card-img-heritage')" title="Master Suite"></button>
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/SeaView1.jpg', 'card-img-heritage')" title="Sea View Horizon"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SeaView2.jpg', 'card-img-heritage')" title="Ocean Terrace"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/SeaView3.jpg', 'card-img-heritage')" title="Suite Bedroom"></button>
             </div>
           </div>
           <div class="room-body">
@@ -366,9 +373,9 @@
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
             <div class="room-card-thumbs">
-              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-courtyard-twin')" title="Twin Room View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/BathRooms.jpg', 'card-img-courtyard-twin')" title="Bedroom Layout"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-courtyard-twin')" title="Courtyard Garden"></button>
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-courtyard-twin')" title="Twin Bedroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins2.jpg', 'card-img-courtyard-twin')" title="Lounge Area"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Facade03.jpg', 'card-img-courtyard-twin')" title="Courtyard Garden Access"></button>
             </div>
           </div>
           <div class="room-body">
@@ -459,31 +466,31 @@
           <a href="/index.html" class="footer-logo" aria-label="Art House Hotel & Rooftop Bar">
             <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="footer-logo-img" />
           </a>
-          <p>A boutique hotel inspired by Angolan art, culture, and genuine hospitality in the heart of Luanda.</p>
+          <p data-i18n="footerDesc">A boutique hotel inspired by Angolan art, culture, and genuine hospitality in the heart of Luanda.</p>
         </div>
 
         <div>
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footerNav">Navigation</h4>
           <div class="footer-links">
-            <a href="/index.html">Home</a>
-            <a href="/rooms.html">Suites</a>
-            <a href="/about.html">About</a>
-            <a href="/index.html#gallery">Gallery</a>
-            <a href="/contact.html">Contact Us</a>
+            <a href="/index.html" data-i18n="navHome">Home</a>
+            <a href="/rooms.html" data-i18n="navRooms">Suites</a>
+            <a href="/about.html" data-i18n="navAbout">About</a>
+            <a href="/index.html#gallery" data-i18n="navGallery">Gallery</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Legal & Contact</h4>
+          <h4 class="footer-title" data-i18n="footerLegal">Legal & Contact</h4>
           <div class="footer-links">
-            <a href="/contact.html">Contact Us</a>
-            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
-            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
+            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;" data-i18n="privacyPolicy">Privacy Policy</a>
+            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;" data-i18n="termsOfStay">Terms of Stay</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Luanda Address</h4>
+          <h4 class="footer-title" data-i18n="footerAddressTitle">Luanda Address</h4>
           <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
             Thomson House, Av. Murtala Mohammed<br />
             Luanda, Angola<br />
@@ -494,8 +501,8 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Art House Angola. All rights reserved.</div>
-        <div>Redesigned for Thomson Art House • Luanda, Angola</div>
+        <div data-i18n="footerRights">© 2026 Art House Angola. All rights reserved.</div>
+        <div data-i18n="footerTagline">Redesigned for Thomson Art House • Luanda, Angola</div>
       </div>
     </div>
   </footer>

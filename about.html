@@ -69,9 +69,16 @@
           <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-white" />
           <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-dark" />
         </a>
-        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <button class="lang-toggle" aria-label="Toggle Language EN / PT" title="Switch Language">
+            <span data-lang="en" class="active">EN</span>
+            <span>/</span>
+            <span data-lang="pt">PT</span>
+          </button>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
       </div>
 
       <nav class="mobile-nav-list">
@@ -100,9 +107,9 @@
        ========================================================================== -->
   <section class="section" style="padding-top: calc(var(--header-height) + 3rem); background-color: var(--color-bg-dark); border-bottom: 1px solid var(--color-border-subtle);">
     <div class="container text-center" style="max-width: 800px;">
-      <span class="section-tag" style="color: var(--color-gold);">Our Heritage & Vision</span>
-      <h1 class="section-title" style="color: var(--color-text-inverse); font-size: clamp(2.25rem, 5vw, 3.5rem);">The Art House Sanctuary</h1>
-      <p class="section-subtitle" style="color: var(--color-text-muted);">
+      <span class="section-tag" style="color: var(--color-gold);" data-i18n="aboutHeroTag">Our Heritage & Vision</span>
+      <h1 class="section-title" style="color: var(--color-text-inverse); font-size: clamp(2.25rem, 5vw, 3.5rem);" data-i18n="aboutHeroTitle">The Art House Sanctuary</h1>
+      <p class="section-subtitle" style="color: var(--color-text-muted);" data-i18n="aboutHeroSubtitle">
         A boutique destination in Luanda where Angolan contemporary art, peaceful architecture, and personal care converge into a quiet oasis.
       </p>
     </div>
@@ -115,53 +122,49 @@
     <div class="container">
       <div class="brand-grid" style="margin-bottom: var(--spacing-xl);">
         <div class="brand-image-stack">
-          <img src="/images/art-gallery.jpg" alt="Art House Hotel Gallery Lobby Lounge" class="brand-main-img" referrerPolicy="no-referrer" />
+          <img src="/images/ArtGallery.jpg" alt="Art House Hotel Gallery Lobby Lounge" class="brand-main-img" referrerPolicy="no-referrer" />
           <div class="brand-accent-card">
-            <h4>Angolan art</h4>
-            <p>We love local art, Angolan culture, and showing foreigners what our country has to offer!</p>
+            <h4 data-i18n="aboutBadge">Angolan art</h4>
+            <p data-i18n="aboutBadgeText">We love local art, Angolan culture, and showing foreigners what our country has to offer!</p>
           </div>
         </div>
 
         <div>
-          <div class="section-tag">Experience the soul of Luanda</div>
-          <h2 class="section-title">Through Art, Culture and Genuine Hospitality</h2>
-          <p style="margin-bottom: var(--spacing-md);">
+          <div class="section-tag" data-i18n="aboutSoulTag">Experience the soul of Luanda</div>
+          <h2 class="section-title" data-i18n="aboutTitle">Through Art, Culture and Genuine Hospitality</h2>
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP1">
             Set along the coast of Ilha do Cabo, in the heart of Luanda's entertainment district, Thomson Art House is an intimate 16-room boutique hotel where Angolan creativity and genuine hospitality come together.
           </p>
-          <p style="margin-bottom: var(--spacing-md);">
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP2">
             Art is at the heart of who we are. From the spaces around you to the stories behind them, we celebrate the artists, culture, and character that make Angola unique—and we love sharing that with the people who come through our doors.
           </p>
-          <p style="margin-bottom: var(--spacing-md);">
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP3">
             Our team is proudly Angolan and fluent in English, making it easy for guests from around the world to feel understood, welcomed, and at home from the moment they arrive.
           </p>
-          <p style="margin-bottom: var(--spacing-md);">
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP4">
             Whether you're discovering Luanda for the first time or returning to a city you already know, Art House gives you a comfortable place to stay, a friendly community to connect with, and a local perspective on the best of Angola.
           </p>
-          <p style="margin-bottom: var(--spacing-md);">
+          <p style="margin-bottom: var(--spacing-md);" data-i18n="aboutP5">
             Come stay with us and experience Luanda at its best.
           </p>
-
-
         </div>
       </div>
     </div>
   </section>
-
-
 
   <!-- ==========================================================================
        CTA BANNER
        ========================================================================== -->
   <section class="section" style="background-color: var(--color-bg-dark); color: var(--color-text-inverse); text-align: center;">
     <div class="container" style="max-width: 720px;">
-      <span class="section-tag" style="color: var(--color-gold);">Plan Your Stay</span>
-      <h2 class="section-title" style="color: var(--color-text-inverse);">Experience Art House in Luanda</h2>
-      <p style="color: var(--color-text-light); margin-left: auto; margin-right: auto; margin-bottom: var(--spacing-lg);">
+      <span class="section-tag" style="color: var(--color-gold);" data-i18n="planStayTag">Plan Your Stay</span>
+      <h2 class="section-title" style="color: var(--color-text-inverse);" data-i18n="planStayTitle">Experience Art House in Luanda</h2>
+      <p style="color: var(--color-text-light); margin-left: auto; margin-right: auto; margin-bottom: var(--spacing-lg);" data-i18n="planStaySub">
         Reserve your suite today and enjoy our curated hospitality in Angola.
       </p>
       <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-        <a href="/rooms.html" class="btn btn-gold btn-lg">Explore Suites</a>
-        <button class="btn btn-outline-light btn-lg" onclick="openBookingModal()">Reserve a Stay</button>
+        <a href="/rooms.html" class="btn btn-gold btn-lg" data-i18n="btnExploreSuites">Explore Suites</a>
+        <button class="btn btn-outline-light btn-lg" onclick="openBookingModal()" data-i18n="btnReserveStay">Reserve a Stay</button>
       </div>
     </div>
   </section>
@@ -176,31 +179,31 @@
           <a href="/index.html" class="footer-logo" aria-label="Art House Hotel & Rooftop Bar">
             <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="footer-logo-img" />
           </a>
-          <p>A boutique hotel inspired by Angolan art, culture, and genuine hospitality in the heart of Luanda.</p>
+          <p data-i18n="footerDesc">A boutique hotel inspired by Angolan art, culture, and genuine hospitality in the heart of Luanda.</p>
         </div>
 
         <div>
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footerNav">Navigation</h4>
           <div class="footer-links">
-            <a href="/index.html">Home</a>
-            <a href="/rooms.html">Suites</a>
-            <a href="/about.html">About</a>
-            <a href="/index.html#gallery">Gallery</a>
-            <a href="/contact.html">Contact Us</a>
+            <a href="/index.html" data-i18n="navHome">Home</a>
+            <a href="/rooms.html" data-i18n="navRooms">Suites</a>
+            <a href="/about.html" data-i18n="navAbout">About</a>
+            <a href="/index.html#gallery" data-i18n="navGallery">Gallery</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Legal & Contact</h4>
+          <h4 class="footer-title" data-i18n="footerLegal">Legal & Contact</h4>
           <div class="footer-links">
-            <a href="/contact.html">Contact Us</a>
-            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
-            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
+            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;" data-i18n="privacyPolicy">Privacy Policy</a>
+            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;" data-i18n="termsOfStay">Terms of Stay</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-title">Luanda Address</h4>
+          <h4 class="footer-title" data-i18n="footerAddressTitle">Luanda Address</h4>
           <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
             Thomson House, Av. Murtala Mohammed<br />
             Luanda, Angola<br />
@@ -211,8 +214,8 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 Art House Angola. All rights reserved.</div>
-        <div>Redesigned for Thomson Art House • Luanda, Angola</div>
+        <div data-i18n="footerRights">© 2026 Art House Angola. All rights reserved.</div>
+        <div data-i18n="footerTagline">Redesigned for Thomson Art House • Luanda, Angola</div>
       </div>
     </div>
   </footer>
