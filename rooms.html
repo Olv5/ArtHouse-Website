@@ -112,7 +112,7 @@
     <div class="container text-center" style="max-width: 800px;">
       <span class="section-tag" style="color: var(--color-gold);" data-i18n="roomsHeroTag">Art House Accommodations</span>
       <h1 class="section-title" style="color: var(--color-text-inverse); font-size: clamp(2.25rem, 5vw, 3.5rem);" data-i18n="roomsHeroTitle">Our Suites</h1>
-      <p class="section-subtitle" style="color: var(--color-text-muted);" data-i18n="roomsHeroSubtitle">
+      <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.85);" data-i18n="roomsHeroSubtitle">
         Each one of our rooms features a one-of-a-kind theme inspired by our Angolan community and local artists.
       </p>
     </div>
@@ -129,14 +129,14 @@
         <button class="filter-btn active" data-filter="all" data-i18n="allRooms">All Suites</button>
         <button class="filter-btn" data-filter="master" data-i18n="filterMaster">Master Suites</button>
         <button class="filter-btn" data-filter="villa" data-i18n="filterTwin">Twin Rooms</button>
-        <button class="filter-btn" data-filter="executive" data-i18n="filterSeaView">Sea view</button>
+        <button class="filter-btn" data-filter="seaview" data-i18n="filterSeaView">Sea view</button>
       </div>
 
       <!-- Rooms Grid -->
       <div class="rooms-grid">
         
         <!-- Room 1: Master Art Suite -->
-        <article class="room-card" data-category="master">
+        <article class="room-card" data-category="master seaview">
           <div class="room-img-wrap">
             <img id="card-img-master" src="/images/MasterSuite1.jpg" alt="Master Art Suite Bedroom at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
@@ -151,14 +151,14 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Sea View</span>
-                <h3 class="room-title">Master Art Suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagSeaView">Sea View</span>
+                <h3 class="room-title" data-i18n="masterSuiteTitle">Master Art Suite</h3>
               </div>
-              <div class="room-card-price">
+              <div class="room-card-price" data-i18n="pricePerNight100">
                 $100 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="masterSuiteDesc">
               A bright, contemporary suite with sweeping sea views with generous natural light and a welcoming atmosphere designed for unwinding.
             </p>
 
@@ -171,10 +171,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')" data-i18n="btnExploreDetails">
                 Explore Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')" data-i18n="btnReserveSuite">
                 Reserve Suite
               </button>
             </div>
@@ -197,14 +197,14 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Standard</span>
-                <h3 class="room-title">Twin Room</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagStandard">Standard</span>
+                <h3 class="room-title" data-i18n="gardenVillaTitle">Twin Room</h3>
               </div>
-              <div class="room-card-price">
+              <div class="room-card-price" data-i18n="pricePerNight89">
                 $89 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="gardenVillaDesc">
               Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.
             </p>
 
@@ -217,10 +217,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')" data-i18n="btnExploreDetails">
                 Explore Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')" data-i18n="btnReserveSuite">
                 Reserve Suite
               </button>
             </div>
@@ -228,7 +228,7 @@
         </article>
 
         <!-- Room 3: Executive Studio -->
-        <article class="room-card" data-category="executive">
+        <article class="room-card" data-category="seaview">
           <div class="room-img-wrap">
             <img id="card-img-exec" src="/images/CityView1.jpg" alt="Executive Studio Suite at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
@@ -243,15 +243,15 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Sea view</span>
-                <h3 class="room-title">Ocean Room</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagSeaView">Sea View</span>
+                <h3 class="room-title" data-i18n="execStudioTitle">Ocean Room</h3>
               </div>
-              <div class="room-card-price">
+              <div class="room-card-price" data-i18n="pricePerNight89">
                 $89 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
-              Modern studio engineered for high productivity and quiet relaxation, equipped with an ergonomic teak workstation and Nespresso bar.
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="execStudioDesc">
+              A vibrant blue feature wall and handcrafted fish artwork bring the beauty of the coastline into the room, creating a unique space inspired by the sea and the creativity of Angola.
             </p>
 
             <div class="room-features-list">
@@ -263,10 +263,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')" data-i18n="btnExploreDetails">
                 Explore Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')" data-i18n="btnReserveSuite">
                 Reserve Suite
               </button>
             </div>
@@ -274,7 +274,7 @@
         </article>
 
         <!-- Room 4: Atlantic Oceanfront Suite -->
-        <article class="room-card" data-category="executive">
+        <article class="room-card" data-category="master">
           <div class="room-img-wrap">
             <img id="card-img-oceanfront" src="/images/SuiteMaster1.jpg" alt="Atlantic Oceanfront Suite at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
@@ -289,14 +289,14 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Premium</span>
-                <h3 class="room-title">Executive suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagPremium">Premium</span>
+                <h3 class="room-title" data-i18n="oceanfrontTitle">Executive suite</h3>
               </div>
-              <div class="room-card-price">
+              <div class="room-card-price" data-i18n="pricePerNight100">
                 $100 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="oceanfrontDesc">
               More than just a place to sleep, this spacious suite offers a calm, inviting atmosphere with refined interiors, a king-size bed, and flexible spaces to dine, work, or unwind at your own pace.
             </p>
 
@@ -309,10 +309,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('oceanfront-suite')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('oceanfront-suite')" data-i18n="btnExploreDetails">
                 Explore Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('oceanfront-suite')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('oceanfront-suite')" data-i18n="btnReserveSuite">
                 Reserve Suite
               </button>
             </div>
@@ -335,15 +335,15 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Standard</span>
-                <h3 class="room-title">Heritage Gallery Suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagStandard">Standard</span>
+                <h3 class="room-title" data-i18n="heritageTitle">Heritage Gallery Suite</h3>
               </div>
-              <div class="room-card-price">
+              <div class="room-card-price" data-i18n="pricePerNight100">
                 $100 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
-              "Relax surrounded by vibrant canvas artwork and warm neutral tones. Outfitted with a spacious king bed, private bathroom and much more.
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="heritageDesc">
+              Relax surrounded by vibrant canvas artwork and warm neutral tones. Outfitted with a spacious king bed, private bathroom and much more.
             </p>
 
             <div class="room-features-list">
@@ -355,10 +355,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('heritage-gallery-suite')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('heritage-gallery-suite')" data-i18n="btnExploreDetails">
                 Explore Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('heritage-gallery-suite')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('heritage-gallery-suite')" data-i18n="btnReserveSuite">
                 Reserve Suite
               </button>
             </div>
@@ -381,14 +381,14 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;">Standard</span>
-                <h3 class="room-title">Twin Room</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagStandard">Standard</span>
+                <h3 class="room-title" data-i18n="courtyardTitle">Twin Room</h3>
               </div>
-              <div class="room-card-price">
+              <div class="room-card-price" data-i18n="pricePerNight89">
                 $89 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);">
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="courtyardDesc">
               Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.
             </p>
 
@@ -401,10 +401,10 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('courtyard-twin-suite')">
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('courtyard-twin-suite')" data-i18n="btnExploreDetails">
                 Explore Details
               </button>
-              <button class="btn btn-primary btn-sm" onclick="openBookingModal('courtyard-twin-suite')">
+              <button class="btn btn-primary btn-sm" onclick="openBookingModal('courtyard-twin-suite')" data-i18n="btnReserveSuite">
                 Reserve Suite
               </button>
             </div>
@@ -421,9 +421,9 @@
   <section class="section" style="background-color: var(--color-bg-alt);">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tag">Included With Every Stay</span>
-        <h2 class="section-title">The Art House Hospitality Standard</h2>
-        <p class="section-subtitle">
+        <span class="section-tag" data-i18n="hospitalityTag">Included With Every Stay</span>
+        <h2 class="section-title" data-i18n="hospitalityTitle">The Art House Hospitality Standard</h2>
+        <p class="section-subtitle" data-i18n="hospitalitySubtitle">
           We ensure every guest experiences effortless comfort with our high-standard inclusions.
         </p>
       </div>
@@ -433,24 +433,24 @@
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           </div>
-          <h4>Breakfast, Done Right</h4>
-          <p>Start your day with a fresh breakfast featuring tropical fruits, freshly brewed Angolan coffee, local flavors, and daily favorites.</p>
+          <h4 data-i18n="hospBreakfastTitle">Breakfast, Done Right</h4>
+          <p data-i18n="hospBreakfastDesc">Start your day with a fresh breakfast featuring tropical fruits, freshly brewed Angolan coffee, local flavors, and daily favorites.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
-          <h4>Stay Connected</h4>
-          <p>Whether you're catching up on work or sharing your journey, enjoy complimentary high-speed Wi-Fi throughout the hotel.</p>
+          <h4 data-i18n="hospWifiTitle">Stay Connected</h4>
+          <p data-i18n="hospWifiDesc">Whether you're catching up on work or sharing your journey, enjoy complimentary high-speed Wi-Fi throughout the hotel.</p>
         </div>
 
         <div class="exp-card">
           <div class="exp-icon">
             <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           </div>
-          <h4>Seamless Arrival</h4>
-          <p>From the moment you land, we're here to make your journey effortless with airport transfer arrangements available upon request.</p>
+          <h4 data-i18n="hospTransferTitle">Seamless Arrival</h4>
+          <p data-i18n="hospTransferDesc">From the moment you land, we're here to make your journey effortless with airport transfer arrangements available upon request.</p>
         </div>
       </div>
     </div>
@@ -502,7 +502,6 @@
 
       <div class="footer-bottom">
         <div data-i18n="footerRights">© 2026 Art House Angola. All rights reserved.</div>
-        <div data-i18n="footerTagline">Redesigned for Thomson Art House • Luanda, Angola</div>
       </div>
     </div>
   </footer>

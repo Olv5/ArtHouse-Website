@@ -185,8 +185,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // About Page Translations EN
       aboutHeroTag: "Our Heritage & Vision",
-      aboutHeroTitle: "The Art House Sanctuary",
-      aboutHeroSubtitle: "A boutique destination in Luanda where Angolan contemporary art, peaceful architecture, and personal care converge into a quiet oasis.",
+      aboutHeroTitle: "To be your home in Luanda",
+      aboutHeroSubtitle: "A boutique destination in Luanda where you'll feel at home.",
       aboutBadge: "Angolan art",
       aboutBadgeText: "We love local art, Angolan culture, and showing foreigners what our country has to offer!",
       aboutSoulTag: "Experience the soul of Luanda",
@@ -202,8 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Contact Page Translations EN
       contactHeroTag: "Get In Touch",
       contactHeroTitle: "Location & Concierge",
-      contactHeroSubtitle: "Our dedicated hospitality team in Luanda is available to answer reservation inquiries, assist with chauffeur arrangements, or plan private gallery tours.",
+      contactHeroSubtitle: "Our dedicated team in Luanda is available to answer reservation inquiries, assist with chauffeur arrangements and help you have a nice stay.",
       contactReachTag: "Reach Out",
+      contactDirectTitle: "Direct Contact",
       contactP1: "We look forward to welcoming you to Art House in Luanda, Angola. Contact our concierge team for reservations, private gallery viewings, or airport transfer coordination.",
       labelEmailConcierge: "Email Concierge",
       openInGoogleMaps: "Open in Google Maps →",
@@ -214,31 +215,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Rooms Page Translations EN
       roomsHeroTag: "Art House Accommodations",
-      roomsHeroTitle: "Suites & Private Villas",
-      roomsHeroSubtitle: "Every room is a private sanctuary featuring bespoke teak woodwork, high-speed fiber internet, original Angolan contemporary art, and personalized concierge care in Luanda.",
-      masterSuiteTag: "Signature Suite",
+      roomsHeroTitle: "Our Suites",
+      roomsHeroSubtitle: "Each one of our rooms features a one-of-a-kind theme inspired by our Angolan community and local artists.",
+      tagSeaView: "Sea View",
+      tagStandard: "Standard",
+      tagPremium: "Premium",
       masterSuiteTitle: "Master Art Suite",
-      masterSuiteDesc: "Expansive king suite featuring floor-to-ceiling windows, private balcony, marble bathroom, and curated master artworks from Angolan artists.",
-      gardenVillaTag: "Private Villa",
-      gardenVillaTitle: "Garden Villa Suite",
-      gardenVillaDesc: "Secluded courtyard villa featuring a private plunge pool, teak sun deck, outdoor rain shower, and intimate botanical lounge.",
-      execStudioTag: "Business & Leisure",
-      execStudioTitle: "Executive Studio",
-      execStudioDesc: "Modern studio engineered for high productivity and quiet relaxation, equipped with an ergonomic teak workstation and Nespresso bar.",
-      oceanfrontTag: "Sea View",
-      oceanfrontTitle: "Atlantic Oceanfront Suite",
-      oceanfrontDesc: "Panoramic views of Luanda Bay and Atlantic waters, featuring a private teak balcony, rain shower, and custom Angolan craft.",
-      heritageTag: "Art Sanctuary",
+      masterSuiteDesc: "A bright, contemporary suite with sweeping sea views with generous natural light and a welcoming atmosphere designed for unwinding.",
+      gardenVillaTitle: "Twin Room",
+      gardenVillaDesc: "Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.",
+      execStudioTitle: "Ocean Room",
+      execStudioDesc: "A vibrant blue feature wall and handcrafted fish artwork bring the beauty of the coastline into the room, creating a unique space inspired by the sea and the creativity of Angola.",
+      oceanfrontTitle: "Executive suite",
+      oceanfrontDesc: "More than just a place to sleep, this spacious suite offers a calm, inviting atmosphere with refined interiors, a king-size bed, and flexible spaces to dine, work, or unwind at your own pace.",
       heritageTitle: "Heritage Gallery Suite",
-      heritageDesc: "Surrounded by curated sculptures and classic contemporary Angolan canvases, with a museum-quality atmosphere and plush reading alcove.",
-      courtyardTag: "Garden Outlook",
-      courtyardTitle: "Courtyard Deluxe Twin Suite",
-      courtyardDesc: "Opening toward our tranquil inner courtyard garden, offering refined twin bedding, custom teak nightstands, and walk-in rain shower.",
+      heritageDesc: "Relax surrounded by vibrant canvas artwork and warm neutral tones. Outfitted with a spacious king bed, private bathroom and much more.",
+      courtyardTitle: "Twin Room",
+      courtyardDesc: "Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.",
       btnExploreDetails: "Explore Details",
+      btnReserveSuite: "Reserve Suite",
+      pricePerNight100: "$100 / night",
+      pricePerNight89: "$89 / night",
       photoCount3: "📷 3 Photos",
-      footerTagline: "Redesigned for Thomson Art House • Luanda, Angola",
+      footerTagline: "",
       privacyPolicy: "Privacy Policy",
-      termsOfStay: "Terms of Stay"
+      termsOfStay: "Terms of Stay",
+
+      // Hospitality Standard Translations EN
+      hospitalityTag: "Included With Every Stay",
+      hospitalityTitle: "The Art House Hospitality Standard",
+      hospitalitySubtitle: "We ensure every guest experiences effortless comfort with our high-standard inclusions.",
+      hospBreakfastTitle: "Breakfast, Done Right",
+      hospBreakfastDesc: "Start your day with a fresh breakfast featuring tropical fruits, freshly brewed Angolan coffee, local flavors, and daily favorites.",
+      hospWifiTitle: "Stay Connected",
+      hospWifiDesc: "Whether you're catching up on work or sharing your journey, enjoy complimentary high-speed Wi-Fi throughout the hotel.",
+      hospTransferTitle: "Seamless Arrival",
+      hospTransferDesc: "From the moment you land, we're here to make your journey effortless with airport transfer arrangements available upon request."
     },
     pt: {
       navHome: "Início",
@@ -431,8 +443,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // Contact Page Translations PT
       contactHeroTag: "Fale Connosco",
       contactHeroTitle: "Localização & Concierge",
-      contactHeroSubtitle: "A nossa equipa de hospitalidade em Luanda está disponível para responder a dúvidas sobre reservas, organizar transporte privado ou planear visitas à galeria.",
+      contactHeroSubtitle: "A nossa equipa em Luanda está disponível para responder a dúvidas sobre reservas, organizar transporte privado e ajudá-lo a ter uma excelente estadia.",
       contactReachTag: "Contacto Direto",
+      contactDirectTitle: "Contacto Direto",
       contactP1: "Ansiamos por recebê-lo no Art House em Luanda, Angola. Contacte a nossa equipa de concierge para reservas, visitas privadas à galeria ou transporte do aeroporto.",
       labelEmailConcierge: "Email Concierge",
       openInGoogleMaps: "Abrir no Google Maps →",
@@ -443,31 +456,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Rooms Page Translations PT
       roomsHeroTag: "Acomodações Art House",
-      roomsHeroTitle: "Suítes & Villas Privadas",
-      roomsHeroSubtitle: "Cada quarto é um santuário privado com carpintaria em teca feita à medida, internet de fibra de alta velocidade, arte contemporânea angolana original e atendimento personalizado em Luanda.",
-      masterSuiteTag: "Suíte de Assinatura",
+      roomsHeroTitle: "As Nossas Suítes",
+      roomsHeroSubtitle: "Cada um dos nossos quartos apresenta um tema único inspirado na nossa comunidade angolana e artistas locais.",
+      tagSeaView: "Vista Mar",
+      tagStandard: "Padrão",
+      tagPremium: "Premium",
       masterSuiteTitle: "Suíte Master Art",
-      masterSuiteDesc: "Ampla suíte king com janelas do chão ao teto, varanda privada, casa de banho em mármore e obras de arte curadas de artistas angolanos.",
-      gardenVillaTag: "Villa Privada",
-      gardenVillaTitle: "Suíte Garden Villa",
-      gardenVillaDesc: "Villa reservada no pátio com piscina privativa, terraço em teca, chuveiro exterior e lounge botânico acolhedor.",
-      execStudioTag: "Negócios & Lazer",
-      execStudioTitle: "Estúdio Executivo",
-      execStudioDesc: "Estúdio moderno projetado para elevada produtividade e tranquilidade, equipado com mesa de trabalho ergonómica em teca e máquina Nespresso.",
-      oceanfrontTag: "Vista Mar",
-      oceanfrontTitle: "Suíte Frente ao Mar Atlântico",
-      oceanfrontDesc: "Vistas panorâmicas sobre a Baía de Luanda e o Atlântico, com varanda privada em teca, chuveiro de teto e artesanato angolano.",
-      heritageTag: "Santuário de Arte",
+      masterSuiteDesc: "Uma suíte luminosa e contemporânea, com amplas vistas para o mar, generosa luz natural e uma atmosfera acolhedora concebida para relaxar.",
+      gardenVillaTitle: "Quarto Twin",
+      gardenVillaDesc: "Quer esteja a viajar com um amigo, familiar ou colega, o nosso Quarto Twin oferece o equilíbrio perfeito de conforto, funcionalidade e design atencioso para uma estadia relaxante em Luanda.",
+      execStudioTitle: "Quarto Ocean",
+      execStudioDesc: "Uma parede decorativa em azul vibrante e obras de arte artesanais em forma de peixe trazem a beleza da costa para o quarto, criando um espaço único inspirado no mar e na criatividade de Angola.",
+      oceanfrontTitle: "Suíte Executiva",
+      oceanfrontDesc: "Mais do que um simples lugar para dormir, esta espaçosa suíte oferece uma atmosfera calma e acolhedora com interiores requintados, uma cama king-size e espaços flexíveis para jantar, trabalhar ou relaxar ao seu próprio ritmo.",
       heritageTitle: "Suíte Galeria Heritage",
-      heritageDesc: "Rodeada por esculturas curadas e quadros contemporâneos angolanos, com uma atmosfera de qualidade museológica e canto de leitura.",
-      courtyardTag: "Vista Jardim",
-      courtyardTitle: "Suíte Twin Deluxe Pátio",
-      courtyardDesc: "Com vista para o nosso tranquilo jardim interior, oferecendo camas twin requintadas, mesas de cabeceira em teca e chuveiro de teto.",
+      heritageDesc: "Relaxe rodeado por vibrantes obras em tela e tons neutros e acolhedores. Equipado com uma espaçosa cama king, casa de banho privada e muito mais.",
+      courtyardTitle: "Quarto Twin",
+      courtyardDesc: "Quer esteja a viajar com um amigo, familiar ou colega, o nosso Quarto Twin oferece o equilíbrio perfeito de conforto, funcionalidade e design atencioso para uma estadia relaxante em Luanda.",
       btnExploreDetails: "Ver Detalhes",
+      btnReserveSuite: "Reservar Suíte",
+      pricePerNight100: "$100 / noite",
+      pricePerNight89: "$89 / noite",
       photoCount3: "📷 3 Fotos",
-      footerTagline: "Redesenhado para Thomson Art House • Luanda, Angola",
+      footerTagline: "",
       privacyPolicy: "Política de Privacidade",
-      termsOfStay: "Termos de Estadia"
+      termsOfStay: "Termos de Estadia",
+
+      // Hospitality Standard Translations PT
+      hospitalityTag: "Incluído em Cada Estadia",
+      hospitalityTitle: "O Padrão de Hospitalidade Art House",
+      hospitalitySubtitle: "Garantimos que cada hóspede desfrute de conforto sem esforço com as nossas inclusões de elevado padrão.",
+      hospBreakfastTitle: "Pequeno-Almoço Exemplar",
+      hospBreakfastDesc: "Comece o seu dia com um pequeno-almoço fresco com frutas tropicais, café angolano fresco, sabores locais e os seus favoritos diários.",
+      hospWifiTitle: "Permaneça Conectado",
+      hospWifiDesc: "Quer esteja a trabalhar ou a partilhar a sua viagem, desfrute de Wi-Fi de alta velocidade gratuito em todo o hotel.",
+      hospTransferTitle: "Chegada Sem Complicações",
+      hospTransferDesc: "A partir do momento em que aterra, estamos aqui para tornar a sua viagem tranquila com serviço de transfer do aeroporto mediante solicitação."
     }
   };
 
@@ -630,9 +654,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const roomsData = {
     'master-art-suite': {
       title: { en: 'Master Art Suite', pt: 'Suíte Master Art' },
-      tagline: { en: 'Sea view', pt: 'Suíte de autor' },
+      tagline: { en: 'Sea View', pt: 'Vista Mar' },
       priceUSD: 100,
-      priceAOA: '185,000 Kz',
       size: '30 m²',
       capacity: { en: '2 Adults, 1 Child', pt: '2 Adultos, 1 Criança' },
       bed: { en: 'Super King-size Custom Wood Bed', pt: 'Cama Super King em Madeira Personalizada' },
@@ -641,123 +664,118 @@ document.addEventListener('DOMContentLoaded', () => {
         pt: 'Uma suíte luminosa e contemporânea, com amplas vistas para o mar, generosa luz natural e uma atmosfera acolhedora concebida para relaxar.'
       },
       amenities: {
-        en: ['Living Room', 'Ocean view', 'Free Wi-Fi', 'Soundproofing'],
-        pt: ['Varanda Privada com Vista Jardim', 'Coleção Curada de Arte Angolana', 'Casa de Banho em Mármore com Banheira', 'Wi-Fi de Alta Velocidade por Fibra', 'Pequeno-Almoço Artesanal Incluído', 'Máquina de Café Espresso & Chá', 'Transporte Privado do Aeroporto']
+        en: ['30 m²', 'Living room', 'Ocean view', 'Free Wi-Fi', 'Soundproofing'],
+        pt: ['30 m²', 'Sala de estar', 'Vista mar', 'Wi-Fi gratuito', 'Insonorização']
       },
       images: [
-        { url: '/images/MasterSuite1.jpg', caption: '' },
-        { url: '/images/MasterSuite2.jpg', caption: '' },
-        { url: '/images/MasterSuite3.jpg', caption: '' }
+        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom View' },
+        { url: '/images/MasterSuite2.jpg', caption: 'Bathroom View' },
+        { url: '/images/MasterSuite3.jpg', caption: 'Art Lounge View' }
       ]
     },
     'garden-villa': {
-      title: { en: 'Twin Room', pt: 'Suíte Garden Villa' },
-      tagline: { en: 'Standard', pt: 'Refúgio Botânico Reservado com Piscina Privativa' },
+      title: { en: 'Twin Room', pt: 'Quarto Twin' },
+      tagline: { en: 'Standard', pt: 'Padrão' },
       priceUSD: 89,
-      priceAOA: '225,000 Kz',
       size: '30 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
-      bed: { en: 'King-size Pillowtop Bed', pt: 'Cama King-size de Alto Conforto' },
+      bed: { en: '2 Individual Beds', pt: '2 Camas Individuais' },
       description: {
-        en: 'Whether you re traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.',
-        pt: 'Aninhada no nosso pátio tropical privado, a Garden Villa oferece privacidade absoluta com piscina privativa, terraço em teca, chuveiro exterior e zona de estar íntima.'
+        en: "Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.",
+        pt: 'Quer esteja a viajar com um amigo, familiar ou colega, o nosso Quarto Twin oferece o equilíbrio perfeito de conforto, funcionalidade e design atencioso para uma estadia relaxante em Luanda.'
       },
       amenities: {
-        en: ['2 individual beds', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
-        pt: ['Piscina Privativa', 'Terraço Privado em Teca', 'Chuveiro Exterior de Teto', 'Serviço de Refeições na Villa', 'Produtos de Banho Orgânicos', 'Sistema de Som Inteligente', 'Serviço de Mordomo Privado']
+        en: ['30 m²', '2 individual beds', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
+        pt: ['30 m²', '2 camas individuais', 'Casa de banho privada', 'Wi-Fi gratuito', 'TV ecrã plano']
       },
       images: [
-        { url: '/images/Twins3.jpg', caption: 'Garden Villa Bedroom & Custom Wood Furnishings' },
-        { url: '/images/Twins2.jpg', caption: 'Private Courtyard Lounge & Living Area' },
-        { url: '/images/Twins.jpg', caption: 'Courtyard Garden View & Terrace Access' }
+        { url: '/images/Twins3.jpg', caption: 'Twin Bedroom View' },
+        { url: '/images/Twins2.jpg', caption: 'Suite Lounge View' },
+        { url: '/images/Twins.jpg', caption: 'Suite Interior' }
       ]
     },
     'executive-studio': {
-      title: { en: 'Ocean Room', pt: 'Estúdio Executivo' },
-      tagline: { en: 'Refined Comfort for Business & Leisure', pt: 'Conforto Refinado para Negócios & Lazer' },
-      priceUSD: 220,
-      priceAOA: '145,000 Kz',
+      title: { en: 'Ocean Room', pt: 'Quarto Ocean' },
+      tagline: { en: 'Sea view', pt: 'Vista mar' },
+      priceUSD: 89,
       size: '20 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
-      bed: { en: 'King-size Luxury Bed', pt: 'Cama King-size de Luxo' },
+      bed: { en: 'King Bed', pt: 'Cama King' },
       description: {
         en: 'A vibrant blue feature wall and handcrafted fish artwork bring the beauty of the coastline into the room, creating a unique space inspired by the sea and the creativity of Angola.',
-        pt: 'Projetado para executivos e viajantes exigentes, combinando uma estação de trabalho ergonómica, obras de arte originais, iluminação ambiente serena e ligação de fibra rápida.'
+        pt: 'Uma parede decorativa em azul vibrante e obras de arte artesanais em forma de peixe trazem a beleza da costa para o quarto, criando um espaço único inspirado no mar e na criatividade de Angola.'
       },
       amenities: {
-        en: ['King bed', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
-        pt: ['Estação de Trabalho Ergonómica', 'Internet de Fibra de Alta Velocidade', 'Máquina de Café Nespresso', 'Zona de Vestiarieiro Espaçosa', 'Cofre no Quarto', 'Serviço Diário de Limpeza', 'Acesso ao Lounge']
+        en: ['20 m²', 'King Bed', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
+        pt: ['20 m²', 'Cama King', 'Casa de banho privada', 'Wi-Fi gratuito', 'TV ecrã plano']
       },
       images: [
-        { url: '/images/CityView1.jpg', caption: 'Executive Suite Bedroom & City View' },
-        { url: '/images/CityView2.jpg', caption: 'Ergonomic Teak Workstation & Business Desk' },
-        { url: '/images/CityView3.jpg', caption: 'Contemporary Sculpture Art Nook' }
+        { url: '/images/CityView1.jpg', caption: 'Bedroom View' },
+        { url: '/images/CityView2.jpg', caption: 'Workstation View' },
+        { url: '/images/CityView3.jpg', caption: 'Sculpture View' }
       ]
     },
     'oceanfront-suite': {
-      title: { en: 'Executive Suite', pt: 'Suíte Frente ao Mar Atlântico' },
-      tagline: { en: 'Premium', pt: 'Vistas Panorâmicas sobre o Oceano & Varanda Privativa' },
-      priceUSD: 260,
-      priceAOA: '170,000 Kz',
-      size: '35 m²',
+      title: { en: 'Executive suite', pt: 'Suíte Executiva' },
+      tagline: { en: 'Premium', pt: 'Premium' },
+      priceUSD: 100,
+      size: '58 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
-      bed: { en: 'King-size Premium Ocean Bed', pt: 'Cama King Premium com Vista Mar' },
+      bed: { en: 'King-size Bed', pt: 'Cama King-size' },
       description: {
         en: 'More than just a place to sleep, this spacious suite offers a calm, inviting atmosphere with refined interiors, a king-size bed, and flexible spaces to dine, work, or unwind at your own pace.',
-        pt: 'Com vista para a Baía de Luanda e o horizonte do Atlântico, esta suíte acolhedora apresenta mobiliário feito à mão, amplo terraço em teca e arte angolana personalizada.'
+        pt: 'Mais do que um simples lugar para dormir, esta espaçosa suíte oferece uma atmosfera calma e acolhedora com interiores requintados, uma cama king-size e espaços flexíveis para jantar, trabalhar ou relaxar ao seu próprio ritmo.'
       },
       amenities: {
-        en: ['Panoramic Ocean Balcony', 'Custom Angolan Textiles', 'Rainfall Shower', 'Teak Daybed Lounge', 'High-Speed Fiber Wi-Fi', 'Courtyard Breakfast Included'],
-        pt: ['Varanda Panorâmica com Vista Mar', 'Têxteis Angolanos Personalizados', 'Chuveiro de Teto', 'Zona de Relaxamento em Teca', 'Wi-Fi de Fibra de Alta Velocidade', 'Pequeno-Almoço no Pátio Incluído']
+        en: ['58 m²', 'Ocean Terrace', 'King Bed', 'Rain Shower', 'Fiber Wi-Fi'],
+        pt: ['58 m²', 'Terraço Vista Mar', 'Cama King', 'Chuveiro de Teto', 'Wi-Fi por Fibra']
       },
       images: [
-        { url: '/images/SuiteMaster1.jpg', caption: 'Atlantic Coastline Horizon View' },
-        { url: '/images/SuiteMaster2.jpg', caption: 'Private Balcony & Sunset Terrace' },
-        { url: '/images/SuiteMaster3.jpg', caption: 'Sunlit Coastal Suite Interior & Rain Shower' }
+        { url: '/images/SuiteMaster1.jpg', caption: 'Coastline View' },
+        { url: '/images/SuiteMaster2.jpg', caption: 'Balcony View' },
+        { url: '/images/SuiteMaster3.jpg', caption: 'Suite Interior' }
       ]
     },
     'heritage-gallery-suite': {
       title: { en: 'Heritage Gallery Suite', pt: 'Suíte Galeria Heritage' },
-      tagline: { en: 'Private Art Curation & Sculptural Lounge', pt: 'Curadoria de Arte Privada & Lounge de Esculturas' },
-      priceUSD: 240,
-      priceAOA: '158,000 Kz',
-      size: '52 m² / 560 sq ft',
+      tagline: { en: 'Standard', pt: 'Padrão' },
+      priceUSD: 100,
+      size: '20 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
-      bed: { en: 'Queen Plush Canopy Bed', pt: 'Cama Queen de Dossel Acolhedora' },
+      bed: { en: 'King Bed', pt: 'Cama King' },
       description: {
-        en: 'Surrounded by curated sculptures and classic contemporary Angolan canvases, this suite offers a serene, museum-quality atmosphere with a plush reading alcove.',
-        pt: 'Cercada por esculturas curadas e telas contemporâneas angolanas, esta suíte oferece uma atmosfera serena de qualidade museológica com recanto de leitura.'
+        en: 'Relax surrounded by vibrant canvas artwork and warm neutral tones. Outfitted with a spacious king bed, private bathroom and much more.',
+        pt: 'Relaxe rodeado por vibrantes obras em tela e tons neutros e acolhedores. Equipado com uma espaçosa cama king, casa de banho privada e muito mais.'
       },
       amenities: {
-        en: ['Private In-Suite Sculptures', 'Plush Reading & Art Alcove', 'Queen Canopy Bed', 'Nespresso Espresso Bar', 'Artisan Soaking Tub', 'Fiber Wi-Fi'],
-        pt: ['Esculturas Privadas na Suíte', 'Recanto Acolhedor de Leitura & Arte', 'Cama Queen de Dossel', 'Bar de Café Nespresso', 'Banheira de Imersão Artesanal', 'Wi-Fi por Fibra']
+        en: ['20 m²', 'King Bed', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
+        pt: ['20 m²', 'Cama King', 'Casa de banho privada', 'Wi-Fi gratuito', 'TV ecrã plano']
       },
       images: [
-        { url: '/images/ArtGallery.jpg', caption: 'Private In-Suite Angolan Art Gallery' },
-        { url: '/images/ArtGallery3.jpg', caption: 'Curated Fine Art & Contemporary Paintings' },
-        { url: '/images/SeaView1.jpg', caption: 'Serene Heritage Bedroom & Coastal Atmosphere' }
+        { url: '/images/SeaView1.jpg', caption: 'Sea View Horizon' },
+        { url: '/images/SeaView2.jpg', caption: 'Ocean Terrace' },
+        { url: '/images/SeaView3.jpg', caption: 'Suite Bedroom' }
       ]
     },
     'courtyard-twin-suite': {
-      title: { en: 'Courtyard Deluxe Twin Suite', pt: 'Suíte Twin Deluxe Pátio' },
-      tagline: { en: 'Lush Botanical Views & Flexible Twin Comfort', pt: 'Vistas Botânicas & Conforto Twin Flexível' },
-      priceUSD: 195,
-      priceAOA: '128,000 Kz',
-      size: '45 m² / 485 sq ft',
-      capacity: { en: '2 Adults / 2 Companions', pt: '2 Adultos / 2 Acompanhantes' },
-      bed: { en: '2 Custom Single Beds (or Joined King)', pt: '2 Camas Individuais Personalizadas (ou King)' },
+      title: { en: 'Twin Room', pt: 'Quarto Twin' },
+      tagline: { en: 'Standard', pt: 'Padrão' },
+      priceUSD: 89,
+      size: '30 m²',
+      capacity: { en: '2 Adults', pt: '2 Adultos' },
+      bed: { en: '2 Individual Beds', pt: '2 Camas Individuais' },
       description: {
-        en: 'Opening toward our tranquil inner courtyard garden, offering refined twin bedding, custom teak nightstands, and walk-in rain shower.',
-        pt: 'Com acesso direto ao nosso tranquilo jardim do pátio interior, oferece camas twin requintadas, mesas de cabeceira em teca e chuveiro de teto.'
+        en: "Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.",
+        pt: 'Quer esteja a viajar com um amigo, familiar ou colega, o nosso Quarto Twin oferece o equilíbrio perfeito de conforto, funcionalidade e design atencioso para uma estadia relaxante em Luanda.'
       },
       amenities: {
-        en: ['Direct Courtyard Garden Access', 'Twin Plush Custom Beds', 'Walk-in Rainfall Shower', 'Work Desk & Lounge Chair', 'Espresso Station', 'Daily Maid Service'],
-        pt: ['Acesso Direto ao Jardim do Pátio', 'Camas Twin Personalizadas', 'Chuveiro de Teto Walk-in', 'Secretária de Trabalho & Poltrona', 'Estação de Espresso', 'Serviço Diário de Limpeza']
+        en: ['30 m²', '2 individual beds', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
+        pt: ['30 m²', '2 camas individuais', 'Casa de banho privada', 'Wi-Fi gratuito', 'TV ecrã plano']
       },
       images: [
-        { url: '/images/Twins.jpg', caption: 'Courtyard Twin Bedroom & Custom Teak Beds' },
-        { url: '/images/Twins2.jpg', caption: 'Twin Suite Lounge & Interior Details' },
-        { url: '/images/Facade03.jpg', caption: 'Inner Courtyard Garden & Boutique Entrance' }
+        { url: '/images/Twins.jpg', caption: 'Twin Bedroom View' },
+        { url: '/images/Twins2.jpg', caption: 'Lounge Area' },
+        { url: '/images/Facade03.jpg', caption: 'Courtyard Garden Access' }
       ]
     }
   };
@@ -779,7 +797,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('modalRoomTitle').textContent = getVal(data.title);
     document.getElementById('modalRoomTagline').textContent = getVal(data.tagline);
-    document.getElementById('modalRoomPrice').textContent = `$${data.priceUSD} / ${lang === 'pt' ? 'noite' : 'night'} (${data.priceAOA})`;
+    document.getElementById('modalRoomPrice').textContent = `$${data.priceUSD} / ${lang === 'pt' ? 'noite' : 'night'}`;
     document.getElementById('modalRoomSize').textContent = data.size;
     document.getElementById('modalRoomCapacity').textContent = getVal(data.capacity);
     document.getElementById('modalRoomBed').textContent = getVal(data.bed);
@@ -910,8 +928,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const filterValue = btn.getAttribute('data-filter');
 
       roomCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
+        const rawCategory = card.getAttribute('data-category') || '';
+        const categories = rawCategory.split(' ');
+        const isSeaViewFilter = filterValue === 'seaview' || filterValue === 'executive';
+        const matchesSeaView = isSeaViewFilter && (categories.includes('seaview') || categories.includes('executive'));
+        const matchesDirect = filterValue === 'all' || categories.includes(filterValue);
+
+        if (matchesDirect || matchesSeaView) {
           card.style.display = 'flex';
           setTimeout(() => {
             card.style.opacity = '1';

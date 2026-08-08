@@ -200,14 +200,14 @@
         <button class="filter-btn active" data-filter="all" data-i18n="allRooms">All rooms</button>
         <button class="filter-btn" data-filter="master" data-i18n="filterMaster">Master Suites</button>
         <button class="filter-btn" data-filter="villa" data-i18n="filterTwin">Twin rooms</button>
-        <button class="filter-btn" data-filter="executive" data-i18n="filterSeaView">Sea View</button>
+        <button class="filter-btn" data-filter="seaview" data-i18n="filterSeaView">Sea View</button>
       </div>
 
       <!-- Rooms Grid -->
       <div class="rooms-grid">
         
         <!-- Room 1: Master Art Suite -->
-        <article class="room-card" data-category="master">
+        <article class="room-card" data-category="master seaview">
           <div class="room-img-wrap">
             <img id="card-img-home-master" src="/images/MasterSuite1.jpg" alt="Master Art Suite Bedroom at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
@@ -222,15 +222,15 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="cardSignatureTag">Signature Suite</span>
-                <h3 class="room-title" data-i18n="masterSuite">Master Art Suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagSeaView">Sea View</span>
+                <h3 class="room-title" data-i18n="masterSuiteTitle">Master Art Suite</h3>
               </div>
-              <div class="room-card-price">
-                $280 <span data-i18n="night">/ night</span>
+              <div class="room-card-price" data-i18n="pricePerNight100">
+                $100 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="cardMasterDesc">
-              Expansive king suite featuring floor-to-ceiling windows, private balcony, marble bathroom, and curated master artworks.
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="masterSuiteDesc">
+              A bright, contemporary suite with sweeping sea views with generous natural light and a welcoming atmosphere designed for unwinding.
             </p>
 
             <div class="room-features-list">
@@ -242,11 +242,11 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')" data-i18n="btnExploreSuite">
-                Explore Suite
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('master-art-suite')" data-i18n="btnExploreDetails">
+                Explore Details
               </button>
               <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')" data-i18n="btnReserveSuite">
-                Reserve
+                Reserve Suite
               </button>
             </div>
           </div>
@@ -255,28 +255,28 @@
         <!-- Room 2: Garden Villa Suite -->
         <article class="room-card" data-category="villa">
           <div class="room-img-wrap">
-            <img id="card-img-home-villa" src="/images/Twins3.jpg" alt="Garden Villa Suite with Plunge Pool at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-villa" src="/images/Twins3.jpg" alt="Twin Room at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
             <div class="room-card-thumbs">
-              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins3.jpg', 'card-img-home-villa')" title="Plunge Pool View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins2.jpg', 'card-img-home-villa')" title="Lounge View"></button>
-              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-home-villa')" title="Courtyard View"></button>
+              <button class="thumb-dot active" onclick="switchCardPhoto(this, '/images/Twins3.jpg', 'card-img-home-villa')" title="Twin Bedroom View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins2.jpg', 'card-img-home-villa')" title="Suite Lounge View"></button>
+              <button class="thumb-dot" onclick="switchCardPhoto(this, '/images/Twins.jpg', 'card-img-home-villa')" title="Suite Interior"></button>
             </div>
           </div>
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="cardVillaTag">Private Villa</span>
-                <h3 class="room-title" data-i18n="gardenVilla">Garden Villa Suite</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagStandard">Standard</span>
+                <h3 class="room-title" data-i18n="gardenVillaTitle">Twin Room</h3>
               </div>
-              <div class="room-card-price">
-                $340 <span data-i18n="night">/ night</span>
+              <div class="room-card-price" data-i18n="pricePerNight89">
+                $89 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="cardVillaDesc">
-              Secluded courtyard villa featuring a private plunge pool, teak sun deck, outdoor rain shower, and intimate lounge.
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="gardenVillaDesc">
+              Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.
             </p>
 
             <div class="room-features-list">
@@ -288,20 +288,20 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')" data-i18n="btnExploreSuite">
-                Explore Suite
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('garden-villa')" data-i18n="btnExploreDetails">
+                Explore Details
               </button>
               <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')" data-i18n="btnReserveSuite">
-                Reserve
+                Reserve Suite
               </button>
             </div>
           </div>
         </article>
 
         <!-- Room 3: Executive Studio -->
-        <article class="room-card" data-category="executive">
+        <article class="room-card" data-category="seaview">
           <div class="room-img-wrap">
-            <img id="card-img-home-exec" src="/images/CityView1.jpg" alt="Executive Studio Suite at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-exec" src="/images/CityView1.jpg" alt="Ocean Room at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
@@ -314,15 +314,15 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="cardExecTag">Business & Leisure</span>
-                <h3 class="room-title" data-i18n="executiveStudio">Executive Studio</h3>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagSeaView">Sea View</span>
+                <h3 class="room-title" data-i18n="execStudioTitle">Ocean Room</h3>
               </div>
-              <div class="room-card-price">
-                $220 <span data-i18n="night">/ night</span>
+              <div class="room-card-price" data-i18n="pricePerNight89">
+                $89 <span>/ night</span>
               </div>
             </div>
-            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="cardExecDesc">
-              Modern studio designed for high productivity and relaxation, equipped with an ergonomic workstation and Nespresso bar.
+            <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="execStudioDesc">
+              A vibrant blue feature wall and handcrafted fish artwork bring the beauty of the coastline into the room, creating a unique space inspired by the sea and the creativity of Angola.
             </p>
 
             <div class="room-features-list">
@@ -334,11 +334,11 @@
             </div>
 
             <div class="room-actions">
-              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')" data-i18n="btnExploreSuite">
-                Explore Suite
+              <button class="btn btn-secondary btn-sm" onclick="openRoomModal('executive-studio')" data-i18n="btnExploreDetails">
+                Explore Details
               </button>
               <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')" data-i18n="btnReserveSuite">
-                Reserve
+                Reserve Suite
               </button>
             </div>
           </div>
