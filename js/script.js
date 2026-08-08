@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
       whatsappMsgIntro: "Olá Art House! Gostaria de solicitar uma reserva para o vosso hotel em Luanda, Angola.",
 
       // Brand & Philosophy
-      cardCuratedArtTitle: "Arte Angolana Curada",
+      cardCuratedArtTitle: "Arte Angolana",
       cardCuratedArtDesc: "Amamos a arte local, a cultura angolana e mostrar aos visitantes o melhor que o nosso país tem para oferecer!",
       aboutTag: "Viva a Alma de Luanda",
       aboutTitle: "Através da Arte, Cultura e Hospitalidade Genuína",
@@ -426,8 +426,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // About Page Translations PT
       aboutHeroTag: "A Nossa Herança e Visão",
-      aboutHeroTitle: "O Santuário Art House",
-      aboutHeroSubtitle: "Um destino boutique em Luanda onde a arte contemporânea angolana, a arquitetura serena e o atendimento personalizado convergem num oásis de tranquilidade.",
+      aboutHeroTitle: "Ser a sua casa em Luanda",
+      aboutHeroSubtitle: "Um boutique hotel onde te sentirás em casa.",
       aboutBadge: "Arte angolana",
       aboutBadgeText: "Adoramos arte local, cultura angolana e mostrar a visitantes o que o nosso país tem para oferecer!",
       aboutSoulTag: "Sinta a alma de Luanda",
