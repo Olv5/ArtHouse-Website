@@ -630,40 +630,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const roomsData = {
     'master-art-suite': {
       title: { en: 'Master Art Suite', pt: 'Suíte Master Art' },
-      tagline: { en: 'Signature Luxury & Curated Contemporary Art', pt: 'Luxo de Assinatura & Arte Contemporânea Curada' },
-      priceUSD: 280,
+      tagline: { en: 'Sea view', pt: 'Suíte de autor' },
+      priceUSD: 100,
       priceAOA: '185,000 Kz',
-      size: '65 m² / 700 sq ft',
+      size: '30 m²',
       capacity: { en: '2 Adults, 1 Child', pt: '2 Adultos, 1 Criança' },
       bed: { en: 'Super King-size Custom Wood Bed', pt: 'Cama Super King em Madeira Personalizada' },
       description: {
-        en: 'Our crown jewel suite features floor-to-ceiling panoramic views, custom teak furnishings, private art curation from Angolan masters, and an expansive marble bathroom with double rain showers and soaking tub.',
-        pt: 'A nossa suíte principal oferece vistas panorâmicas com janelas do chão ao teto, mobiliário em teca personalizado, coleção privada de arte de mestres angolanos e casa de banho em mármore com chuveiro de teto e banheira.'
+        en: 'A bright, contemporary suite with sweeping sea views with generous natural light and a welcoming atmosphere designed for unwinding.',
+        pt: 'Uma suíte luminosa e contemporânea, com amplas vistas para o mar, generosa luz natural e uma atmosfera acolhedora concebida para relaxar.'
       },
       amenities: {
-        en: ['Private Balcony with Garden View', 'Curated Angolan Art Collection', 'Marble Bathroom with Soaking Tub', 'High-Speed Fiber Wi-Fi', 'Artisanal Breakfast Included', 'Espresso & Tea Station', 'Chauffeur Airport Transfer'],
+        en: ['Living Room', 'Ocean view', 'Free Wi-Fi', 'Soundproofing'],
         pt: ['Varanda Privada com Vista Jardim', 'Coleção Curada de Arte Angolana', 'Casa de Banho em Mármore com Banheira', 'Wi-Fi de Alta Velocidade por Fibra', 'Pequeno-Almoço Artesanal Incluído', 'Máquina de Café Espresso & Chá', 'Transporte Privado do Aeroporto']
       },
       images: [
-        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom & Custom Teak Furniture' },
-        { url: '/images/MasterSuite2.jpg', caption: 'Spacious Suite Lounge & Curated Art' },
-        { url: '/images/MasterSuite3.jpg', caption: 'Private Suite Balcony & Outdoor Seating' }
+        { url: '/images/MasterSuite1.jpg', caption: '' },
+        { url: '/images/MasterSuite2.jpg', caption: '' },
+        { url: '/images/MasterSuite3.jpg', caption: '' }
       ]
     },
     'garden-villa': {
-      title: { en: 'Garden Villa Suite', pt: 'Suíte Garden Villa' },
-      tagline: { en: 'Secluded Botanical Haven with Plunge Pool', pt: 'Refúgio Botânico Reservado com Piscina Privativa' },
-      priceUSD: 340,
+      title: { en: 'Twin Room', pt: 'Suíte Garden Villa' },
+      tagline: { en: 'Standard', pt: 'Refúgio Botânico Reservado com Piscina Privativa' },
+      priceUSD: 89,
       priceAOA: '225,000 Kz',
-      size: '85 m² / 915 sq ft',
+      size: '30 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: 'King-size Pillowtop Bed', pt: 'Cama King-size de Alto Conforto' },
       description: {
-        en: 'Nestled in our private tropical courtyard, the Garden Villa offers complete privacy with a private plunge pool, teak sun deck, outdoor rainfall shower, and intimate lounge area.',
+        en: 'Whether you re traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.',
         pt: 'Aninhada no nosso pátio tropical privado, a Garden Villa oferece privacidade absoluta com piscina privativa, terraço em teca, chuveiro exterior e zona de estar íntima.'
       },
       amenities: {
-        en: ['Private Plunge Pool', 'Private Teak Sun Deck', 'Outdoor Rainfall Shower', 'In-Villa Dining Service', 'Organic Bath Products', 'Smart Sound System', 'Private Butler Service'],
+        en: ['2 individual beds', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
         pt: ['Piscina Privativa', 'Terraço Privado em Teca', 'Chuveiro Exterior de Teto', 'Serviço de Refeições na Villa', 'Produtos de Banho Orgânicos', 'Sistema de Som Inteligente', 'Serviço de Mordomo Privado']
       },
       images: [
@@ -673,19 +673,19 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'executive-studio': {
-      title: { en: 'Executive Studio', pt: 'Estúdio Executivo' },
+      title: { en: 'Ocean Room', pt: 'Estúdio Executivo' },
       tagline: { en: 'Refined Comfort for Business & Leisure', pt: 'Conforto Refinado para Negócios & Lazer' },
       priceUSD: 220,
       priceAOA: '145,000 Kz',
-      size: '48 m² / 515 sq ft',
+      size: '20 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: 'King-size Luxury Bed', pt: 'Cama King-size de Luxo' },
       description: {
-        en: 'Engineered for discerning executives and travelers, combining an ergonomic workstation, original art pieces, peaceful ambient lighting, and high-speed fiber connectivity.',
+        en: 'A vibrant blue feature wall and handcrafted fish artwork bring the beauty of the coastline into the room, creating a unique space inspired by the sea and the creativity of Angola.',
         pt: 'Projetado para executivos e viajantes exigentes, combinando uma estação de trabalho ergonómica, obras de arte originais, iluminação ambiente serena e ligação de fibra rápida.'
       },
       amenities: {
-        en: ['Ergonomic Workstation', 'High-Speed Fiber Internet', 'Nespresso Coffee Machine', 'Spacious Dressing Area', 'In-Room Safe', 'Daily Housekeeping', 'Lounge Access'],
+        en: ['King bed', 'Private bathroom', 'Free Wi-fi', 'Plain Tv'],
         pt: ['Estação de Trabalho Ergonómica', 'Internet de Fibra de Alta Velocidade', 'Máquina de Café Nespresso', 'Zona de Vestiarieiro Espaçosa', 'Cofre no Quarto', 'Serviço Diário de Limpeza', 'Acesso ao Lounge']
       },
       images: [
@@ -695,15 +695,15 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'oceanfront-suite': {
-      title: { en: 'Atlantic Oceanfront Suite', pt: 'Suíte Frente ao Mar Atlântico' },
-      tagline: { en: 'Panoramic Ocean Views & Private Coastal Balcony', pt: 'Vistas Panorâmicas sobre o Oceano & Varanda Privativa' },
+      title: { en: 'Executive Suite', pt: 'Suíte Frente ao Mar Atlântico' },
+      tagline: { en: 'Premium', pt: 'Vistas Panorâmicas sobre o Oceano & Varanda Privativa' },
       priceUSD: 260,
       priceAOA: '170,000 Kz',
-      size: '58 m² / 625 sq ft',
+      size: '35 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: 'King-size Premium Ocean Bed', pt: 'Cama King Premium com Vista Mar' },
       description: {
-        en: 'Overlooking Luanda Bay and the Atlantic horizon, this open suite features custom handcrafted furniture, a broad teak terrace, and bespoke Angolan artwork.',
+        en: 'More than just a place to sleep, this spacious suite offers a calm, inviting atmosphere with refined interiors, a king-size bed, and flexible spaces to dine, work, or unwind at your own pace.',
         pt: 'Com vista para a Baía de Luanda e o horizonte do Atlântico, esta suíte acolhedora apresenta mobiliário feito à mão, amplo terraço em teca e arte angolana personalizada.'
       },
       amenities: {
