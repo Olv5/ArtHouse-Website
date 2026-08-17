@@ -670,9 +670,9 @@ document.addEventListener('DOMContentLoaded', () => {
         pt: ['30 m²', 'Sala de estar', 'Vista mar', 'Wi-Fi gratuito', 'Insonorização']
       },
       images: [
-        { url: '/images/MasterSuite1.jpg', caption: 'Master Bedroom View' },
-        { url: '/images/MasterSuite2.jpg', caption: 'Bathroom View' },
-        { url: '/images/MasterSuite3.jpg', caption: 'Art Lounge View' }
+        { url: 'images/MasterSuite1.jpg', caption: 'Master Bedroom View' },
+        { url: 'images/MasterSuite2.jpg', caption: 'Bathroom View' },
+        { url: 'images/MasterSuite3.jpg', caption: 'Art Lounge View' }
       ]
     },
     'garden-villa': {
