@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       whatsappMsgIntro: "Hello Art House! I would like to request a reservation at your hotel in Luanda, Angola.",
 
       // Brand & Philosophy
-      cardCuratedArtTitle: "Curated Angolan Art",
+      cardCuratedArtTitle: "Angolan Art",
       cardCuratedArtDesc: "We love local art, Angolan culture, and showing foreigners what our country has to offer!",
       aboutTag: "Experience the Soul of Luanda",
       aboutTitle: "Through Art, Culture and Genuine Hospitality",
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ctaTag: "Plan Your Visit",
       ctaTitle: "Experience the Art of Staying",
       ctaSubtitle: "Discover Luanda, contemporary art, and authentic hospitality in Luanda, Angola.",
-      footerDesc: "A boutique hotel inspired by Angolan art, culture, and genuine hospitality in the heart of Luanda.",
+      footerDesc: "A boutique hotel where Angolan art, genuine hospitality, and some amazing views come together to create an unforgettable stay.",
       footerNav: "Navigation",
       footerLegal: "Legal & Contact",
       footerAddressTitle: "Luanda Address",
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ctaTag: "Planeie a Sua Visita",
       ctaTitle: "Viva a Arte de Se Hospedar",
       ctaSubtitle: "Descubra Luanda, arte contemporânea e hospitalidade autêntica em Luanda, Angola.",
-      footerDesc: "Um hotel boutique inspirado pela arte, cultura e hospitalidade genuína angolana no coração de Luanda.",
+      footerDesc: "Um hotel boutique onde a arte angolana, a hospitalidade genuína e vistas incríveis se unem para criar uma estadia inesquecível.",
       footerNav: "Navegação",
       footerLegal: "Informações Legais",
       footerAddressTitle: "Endereço em Luanda",
@@ -735,7 +735,7 @@ document.addEventListener('DOMContentLoaded', () => {
       images: [
         { url: '/images/SuiteMaster1.jpg', caption: 'Coastline View' },
         { url: '/images/SuiteMaster2.jpg', caption: 'Balcony View' },
-        { url: '/images/SuiteMaster3.jpg', caption: 'Suite Interior' }
+        { url: '/images/BathRooms.jpg', caption: 'Suite Interior' }
       ]
     },
     'heritage-gallery-suite': {
