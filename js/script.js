@@ -1027,23 +1027,18 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     7. DIRECT WHATSAPP RESERVATION REDIRECT
+     7. DIRECT CLOUDBEDS RESERVATION REDIRECT
      ========================================================================== */
-  window.openBookingModal = (roomCategory = null) => {
-    let text = "Hello Thomson Art House! I would like to inquire about reserving a stay.";
-    if (typeof roomCategory === 'string' && roomCategory.trim()) {
-      const suiteName = roomCategory.replace(/-/g, ' ');
-      text = `Hello Thomson Art House! I would like to inquire about reserving the ${suiteName}.`;
-    }
-    const whatsappUrl = `https://wa.me/244933694600?text=${encodeURIComponent(text)}`;
+  const CLOUDBEDS_RESERVATION_URL = "https://hotels.cloudbeds.com/en/reservation/4nvkL2?currency=usd";
 
+  window.openBookingModal = (roomCategory = null) => {
     try {
-      const win = window.open(whatsappUrl, '_blank');
+      const win = window.open(CLOUDBEDS_RESERVATION_URL, '_blank');
       if (!win || win.closed || typeof win.closed === 'undefined') {
-        window.location.href = whatsappUrl;
+        window.location.href = CLOUDBEDS_RESERVATION_URL;
       }
     } catch (e) {
-      window.location.href = whatsappUrl;
+      window.location.href = CLOUDBEDS_RESERVATION_URL;
     }
   };
 
