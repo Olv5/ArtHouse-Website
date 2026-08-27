@@ -41,7 +41,7 @@
 
       <nav class="nav-menu" aria-label="Main Navigation">
         <a href="/index.html" class="nav-link active" data-i18n="navHome">Home</a>
-        <a href="/rooms.html" class="nav-link" data-i18n="navRooms">Suites</a>
+        <a href="/rooms.html" class="nav-link" data-i18n="navRooms">Rooms</a>
         <a href="/about.html" class="nav-link" data-i18n="navAbout">About</a>
         <a href="/events.html" class="nav-link" data-i18n="navEvents">Events</a>
         <a href="/contact.html" class="nav-link" data-i18n="navContact">Contact</a>
@@ -83,7 +83,7 @@
 
       <nav class="mobile-nav-list">
         <a href="/index.html" class="mobile-nav-link" data-i18n="navHome">Home <span>→</span></a>
-        <a href="/rooms.html" class="mobile-nav-link" data-i18n="navRooms">Suites <span>→</span></a>
+        <a href="/rooms.html" class="mobile-nav-link" data-i18n="navRooms">Rooms <span>→</span></a>
         <a href="/about.html" class="mobile-nav-link" data-i18n="navAbout">About <span>→</span></a>
         <a href="/events.html" class="mobile-nav-link" data-i18n="navEvents">Events <span>→</span></a>
         <a href="/contact.html" class="mobile-nav-link" data-i18n="navContact">Contact <span>→</span></a>
@@ -209,7 +209,7 @@
         <!-- Room 1: Master Art Suite -->
         <article class="room-card" data-category="master seaview">
           <div class="room-img-wrap">
-            <img id="card-img-home-master" src="/images/MasterSuite1.jpg" alt="Master Art Suite Bedroom at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-master" src="/images/MasterSuite1.jpg" alt="Suite 301 Bedroom at Art House Angola" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
@@ -223,10 +223,10 @@
             <div class="room-header-row">
               <div>
                 <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagSeaView">Sea View</span>
-                <h3 class="room-title" data-i18n="masterSuiteTitle">Master Art Suite</h3>
+                <h3 class="room-title" data-i18n="masterSuiteTitle">Suite 301</h3>
               </div>
-              <div class="room-card-price" data-i18n="pricePerNight100">
-                $100 <span>/ night</span>
+              <div class="room-card-price" data-i18n="pricePerNight111">
+                $111 <span>/ night</span>
               </div>
             </div>
             <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="masterSuiteDesc">
@@ -246,7 +246,7 @@
                 Explore Details
               </button>
               <button class="btn btn-primary btn-sm" onclick="openBookingModal('master-art-suite')" data-i18n="btnReserveSuite">
-                Reserve Suite
+                Reserve Room
               </button>
             </div>
           </div>
@@ -268,11 +268,11 @@
           <div class="room-body">
             <div class="room-header-row">
               <div>
-                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagStandard">Standard</span>
+                <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagStandard">City View</span>
                 <h3 class="room-title" data-i18n="gardenVillaTitle">Twin Room</h3>
               </div>
-              <div class="room-card-price" data-i18n="pricePerNight89">
-                $89 <span>/ night</span>
+              <div class="room-card-price" data-i18n="pricePerNight94">
+                $94 <span>/ night</span>
               </div>
             </div>
             <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="gardenVillaDesc">
@@ -292,7 +292,7 @@
                 Explore Details
               </button>
               <button class="btn btn-primary btn-sm" onclick="openBookingModal('garden-villa')" data-i18n="btnReserveSuite">
-                Reserve Suite
+                Reserve Room
               </button>
             </div>
           </div>
@@ -317,8 +317,8 @@
                 <span class="section-tag" style="font-size: 0.6875rem; margin-bottom: 2px; display: inline-block;" data-i18n="tagSeaView">Sea View</span>
                 <h3 class="room-title" data-i18n="execStudioTitle">Ocean Room</h3>
               </div>
-              <div class="room-card-price" data-i18n="pricePerNight89">
-                $89 <span>/ night</span>
+              <div class="room-card-price" data-i18n="pricePerNight101">
+                $101 <span>/ night</span>
               </div>
             </div>
             <p style="font-size: 0.875rem; margin-bottom: var(--spacing-xs);" data-i18n="execStudioDesc">
@@ -338,7 +338,7 @@
                 Explore Details
               </button>
               <button class="btn btn-primary btn-sm" onclick="openBookingModal('executive-studio')" data-i18n="btnReserveSuite">
-                Reserve Suite
+                Reserve Room
               </button>
             </div>
           </div>
@@ -414,6 +414,42 @@
   </section>
 
   <!-- ==========================================================================
+       GUEST REVIEWS & RATINGS SECTION (BOOKING.COM & GOOGLE REVIEWS)
+       ========================================================================== -->
+  <section id="reviews" class="section reviews-section" style="background-color: var(--color-bg-alt);">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header text-center">
+        <span class="section-tag" data-i18n="reviewsTag">Guest Ratings & Feedback</span>
+        <h2 class="section-title" data-i18n="reviewsTitle">Words from Our Visitors</h2>
+        <p class="section-subtitle" data-i18n="reviewsSubtitle">
+          Authentic reviews from guests who stayed with us, featured on Booking.com.
+        </p>
+      </div>
+
+      <!-- Reviews Carousel Container -->
+      <div class="reviews-carousel-wrap">
+        <button class="review-nav-btn prev-btn" id="reviewPrevBtn" aria-label="Previous Review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <div class="review-card-stage" id="reviewCardStage">
+          <!-- Dynamic JS will render active review card here -->
+        </div>
+
+        <button class="review-nav-btn next-btn" id="reviewNextBtn" aria-label="Next Review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+
+      <!-- Carousel Pagination Dots -->
+      <div class="review-dots-bar" id="reviewDotsBar"></div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
        EDITORIAL GALLERY SECTION
        ========================================================================== -->
   <section id="gallery" class="section">
@@ -475,42 +511,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       GUEST REVIEWS & RATINGS SECTION (BOOKING.COM & GOOGLE REVIEWS)
-       ========================================================================== -->
-  <section id="reviews" class="section reviews-section" style="background-color: var(--color-bg-alt);">
-    <div class="container">
-      
-      <!-- Section Header -->
-      <div class="section-header text-center">
-        <span class="section-tag" data-i18n="reviewsTag">Guest Ratings & Feedback</span>
-        <h2 class="section-title" data-i18n="reviewsTitle">Words from Our Visitors</h2>
-        <p class="section-subtitle" data-i18n="reviewsSubtitle">
-          Authentic reviews from guests who stayed with us, featured on Booking.com.
-        </p>
-      </div>
-
-      <!-- Reviews Carousel Container -->
-      <div class="reviews-carousel-wrap">
-        <button class="review-nav-btn prev-btn" id="reviewPrevBtn" aria-label="Previous Review">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-        </button>
-
-        <div class="review-card-stage" id="reviewCardStage">
-          <!-- Dynamic JS will render active review card here -->
-        </div>
-
-        <button class="review-nav-btn next-btn" id="reviewNextBtn" aria-label="Next Review">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-        </button>
-      </div>
-
-      <!-- Carousel Pagination Dots -->
-      <div class="review-dots-bar" id="reviewDotsBar"></div>
-
     </div>
   </section>
 
@@ -621,30 +621,6 @@
 
         <details class="faq-item">
           <summary class="faq-summary">
-            <span data-i18n="faqQ2">Where is Thomson Art House located in Luanda?</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </span>
-          </summary>
-          <div class="faq-answer" data-i18n-html="faqA2">
-            We are located at <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, right along the scenic Ilha do Cabo coastline. We are surrounded by fine dining, beach lounges, and just 15 minutes from Quatro de Fevereiro International Airport (LAD).
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">
-            <span data-i18n="faqQ3">Is airport transfer or chauffeur pickup available?</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </span>
-          </summary>
-          <div class="faq-answer" data-i18n="faqA3">
-            Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our reception team.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary class="faq-summary">
             <span data-i18n="faqQ4">Is breakfast included with my suite reservation?</span>
             <span class="faq-icon" aria-hidden="true">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -676,6 +652,54 @@
           </summary>
           <div class="faq-answer" data-i18n="faqA6">
             Yes, our lush courtyard and art gallery venues host private multi-course dinners, cocktail receptions, executive summits, and cultural celebrations. Visit our Events page or inquire via WhatsApp to receive a customized proposal.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span data-i18n="faqQ7">Is it possible to request an extra bed or mattress for children?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer" data-i18n-html="faqA7">
+            Yes, upon prior request. We provide an extra mattress for children exclusively in our <strong>Suites</strong> (accommodating up to 2 adults and 1 child). Please inform our team in advance so we can arrange it for your stay.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span data-i18n="faqQ8">What is the cancellation policy?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer" data-i18n-html="faqA8">
+            We provide <strong>free cancellation up to 24 hours</strong> prior to your scheduled check-in date. In the event of a cancellation after this period or non-arrival (no-show), the hotel may charge the amount corresponding to the first night.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span data-i18n="faqQ9">Does the hotel allow pets?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer" data-i18n-html="faqA9">
+            To ensure maximum comfort, serenity, and hygiene standards for all our guests, <strong>pets are not permitted</strong> on the hotel premises.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-summary">
+            <span data-i18n="faqQ10">Is the reception open 24 hours?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+          </summary>
+          <div class="faq-answer" data-i18n-html="faqA10">
+            Yes! Our front desk, concierge, and on-site security teams are available <strong>24 hours a day, 7 days a week</strong> to assist with check-ins, local recommendations, and any requests throughout your stay.
           </div>
         </details>
       </div>
@@ -723,7 +747,7 @@
           <h4 class="footer-title" data-i18n="footerNav">Navigation</h4>
           <div class="footer-links">
             <a href="/index.html" data-i18n="navHome">Home</a>
-            <a href="/rooms.html" data-i18n="navRooms">Suites</a>
+            <a href="/rooms.html" data-i18n="navRooms">Rooms</a>
             <a href="/about.html" data-i18n="navAbout">About</a>
             <a href="#gallery" data-i18n="navGallery">Gallery</a>
             <a href="/contact.html" data-i18n="navContact">Contact Us</a>
@@ -733,9 +757,8 @@
         <div>
           <h4 class="footer-title" data-i18n="footerLegal">Legal & Contact</h4>
           <div class="footer-links">
-            <a href="#contact" data-i18n="navContact">Contact Us</a>
-            <a href="#" onclick="alert('Privacy Policy: Art House respects your privacy and protects your personal reservation data.'); return false;">Privacy Policy</a>
-            <a href="#" onclick="alert('Terms of Service: Standard hotel check-in from 14:00, check-out by 11:00.'); return false;">Terms of Stay</a>
+            <a href="/contact.html" data-i18n="navContact">Contact Us</a>
+            <a href="#" onclick="openTermsModal(); return false;" data-i18n="footerTermsOfStay">Terms of Stay (Políticas)</a>
           </div>
         </div>
 
@@ -743,9 +766,9 @@
           <h4 class="footer-title" data-i18n="footerAddressTitle">Luanda Address</h4>
           <p style="font-size: 0.875rem; color: var(--color-text-light); line-height: 1.6;">
             Thomson Art House<br />
-            Luanda, Angola<br />
-            Tel: 933694600<br />
-            Email: reservations@thomsonarthouse.com
+            Av. Murtala Mohammed, Luanda, Angola<br />
+            Tel: +244 933 694 600 / +244 918 001 001<br />
+            Email: reservations@arthouseangola.com
           </p>
         </div>
       </div>

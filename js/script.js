@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const translations = {
     en: {
       navHome: "Home",
-      navRooms: "Suites",
+      navRooms: "Rooms",
       navAbout: "About",
       navEvents: "Events",
       navGallery: "Gallery",
@@ -28,17 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
       arrival: "Check-in Date",
       departure: "Check-out Date",
       guests: "Guests",
-      roomType: "Suite Category",
+      roomType: "Room Category",
       allRooms: "All rooms",
-      filterMaster: "Master Suites",
+      filterMaster: "Suites",
       filterTwin: "Twin rooms",
       filterSeaView: "Sea View",
-      masterSuite: "Master Art Suite",
-      gardenVilla: "Garden Villa Suite",
-      executiveStudio: "Executive Studio",
-      oceanfrontSuite: "Atlantic Oceanfront Suite",
-      heritageSuite: "Heritage Gallery Suite",
-      courtyardTwinSuite: "Courtyard Deluxe Twin Suite",
+      masterSuite: "Suite 301",
+      gardenVilla: "Twin Room",
+      executiveStudio: "Ocean Room",
+      oceanfrontSuite: "Executive suite",
+      heritageSuite: "Heritage Room",
+      courtyardTwinSuite: "Twin Room",
       penthouse: "Art House Penthouse",
       night: "/ night",
       currencySymbol: "$",
@@ -62,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Rooms Section
       roomsTag: "Accommodations",
-      roomsTitle: "Our Room Collection",
+      roomsTitle: "Our Rooms",
       roomsSubtitle: "Each one of our rooms features a one-of-a-kind theme inspired by our Angolan community and local artists.",
-      btnExploreSuite: "Explore Suite",
-      btnReserveSuite: "Reserve",
+      btnExploreSuite: "Explore Room",
+      btnReserveSuite: "Reserve Room",
 
       // Experiences Section
       expTag: "Something you won't forget",
@@ -111,16 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
       faqSubtitle: "Everything you need to know about staying at Thomson Art House in Luanda.",
       faqQ1: "What are the check-in and check-out times?",
       faqA1: "Standard check-in is from 14:00 (2:00 PM) onwards, and check-out is until 12:00 (12:00 PM). Early check-in or late check-out options can be arranged depending on suite availability — simply notify our concierge in advance.",
-      faqQ2: "Where is Thomson Art House located in Luanda?",
-      faqA2: "We are located at <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, right along the scenic Ilha do Cabo coastline. We are surrounded by fine dining, beach lounges, and just 15 minutes from Quatro de Fevereiro International Airport (LAD).",
-      faqQ3: "Is airport transfer or chauffeur pickup available?",
-      faqA3: "Yes, complimentary private chauffeur airport pickup is included for guests staying in our suites. Reliable airport transfers and city transit can also be coordinated directly with our reception team.",
       faqQ4: "Is breakfast included with my suite reservation?",
       faqA4: "Yes! All direct bookings include a daily gourmet artisanal breakfast served in our tranquil courtyard garden, featuring fresh local Angolan produce, tropical fruits, freshly baked pastries, and specialty espresso coffees.",
       faqQ5: "How can I make a direct booking or contact via WhatsApp?",
       faqA5: "You can reserve your suite online using our booking modal or send us a direct message on WhatsApp at <strong>+244 933 694 600</strong> for immediate confirmation and custom requests.",
       faqQ6: "Do you host private events, weddings, or business gatherings?",
       faqA6: "Yes, our lush courtyard and art gallery venues host private multi-course dinners, cocktail receptions, executive summits, and cultural celebrations. Visit our Events page or inquire via WhatsApp to receive a customized proposal.",
+      faqQ7: "Is it possible to request an extra bed or mattress for children?",
+      faqA7: "Yes, upon prior request. We provide an extra mattress for children exclusively in our <strong>Suites</strong> (accommodating up to 2 adults and 1 child). Please inform our team in advance so we can arrange it for your stay.",
+      faqQ8: "What is the cancellation policy?",
+      faqA8: "We provide <strong>free cancellation up to 24 hours</strong> prior to your scheduled check-in date. In the event of a cancellation after this period or non-arrival (no-show), the hotel may charge the amount corresponding to the first night.",
+      faqQ9: "Does the hotel allow pets?",
+      faqA9: "To ensure maximum comfort, serenity, and hygiene standards for all our guests, <strong>pets are not permitted</strong> on the hotel premises.",
+      faqQ10: "Is the reception open 24 hours?",
+      faqA10: "Yes! Our front desk, concierge, and on-site security teams are available <strong>24 hours a day, 7 days a week</strong> to assist with check-ins, local recommendations, and any requests throughout your stay.",
 
       // CTA & Footer
       ctaTag: "Plan Your Visit",
@@ -197,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       planStayTag: "Plan Your Stay",
       planStayTitle: "Experience Art House in Luanda",
       planStaySub: "Reserve your suite today and enjoy our curated hospitality in Angola.",
-      btnExploreSuites: "Explore Suites",
+      btnExploreSuites: "Explore Rooms",
       btnReserveStay: "Reserve a Stay",
 
       // Contact Page Translations EN
@@ -216,12 +220,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Rooms Page Translations EN
       roomsHeroTag: "Art House Accommodations",
-      roomsHeroTitle: "Our Suites",
+      roomsHeroTitle: "Our Rooms",
       roomsHeroSubtitle: "Each one of our rooms features a one-of-a-kind theme inspired by our Angolan community and local artists.",
       tagSeaView: "Sea View",
-      tagStandard: "Standard",
+      tagStandard: "City View",
       tagPremium: "Premium",
-      masterSuiteTitle: "Master Art Suite",
+      masterSuiteTitle: "Suite 301",
       masterSuiteDesc: "A bright, contemporary suite with sweeping sea views with generous natural light and a welcoming atmosphere designed for unwinding.",
       gardenVillaTitle: "Twin Room",
       gardenVillaDesc: "Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.",
@@ -229,14 +233,17 @@ document.addEventListener('DOMContentLoaded', () => {
       execStudioDesc: "A vibrant blue feature wall and handcrafted fish artwork bring the beauty of the coastline into the room, creating a unique space inspired by the sea and the creativity of Angola.",
       oceanfrontTitle: "Executive suite",
       oceanfrontDesc: "More than just a place to sleep, this spacious suite offers a calm, inviting atmosphere with refined interiors, a king-size bed, and flexible spaces to dine, work, or unwind at your own pace.",
-      heritageTitle: "Heritage Gallery Suite",
+      heritageTitle: "Heritage Room",
       heritageDesc: "Relax surrounded by vibrant canvas artwork and warm neutral tones. Outfitted with a spacious king bed, private bathroom and much more.",
       courtyardTitle: "Twin Room",
       courtyardDesc: "Whether you're traveling with a friend, family member, or colleague, our Twin Room provides the perfect balance of comfort, functionality, and thoughtful design for a relaxing stay in Luanda.",
       btnExploreDetails: "Explore Details",
-      btnReserveSuite: "Reserve Suite",
-      pricePerNight100: "$100 / night",
-      pricePerNight89: "$89 / night",
+      btnReserveSuite: "Reserve Room",
+      pricePerNight111: "$111 / night",
+      pricePerNight101: "$101 / night",
+      pricePerNight94: "$94 / night",
+      pricePerNight100: "$111 / night",
+      pricePerNight89: "$94 / night",
       photoCount3: "📷 3 Photos",
       footerTagline: "",
       privacyPolicy: "Privacy Policy",
@@ -255,14 +262,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     pt: {
       navHome: "Início",
-      navRooms: "Suítes",
+      navRooms: "Quartos",
       navAbout: "Sobre",
       navEvents: "Eventos",
       navGallery: "Galeria",
       navExperiences: "Experiências",
       navContact: "Contacto",
       btnReserve: "Reservar Estadia",
-      btnExplore: "Explorar Suítes",
+      btnExplore: "Explorar Quartos",
       heroBadge: "✦ Hotel Boutique • Luanda, Angola",
       heroTitle: "A sua casa em Luanda",
       heroDesc: "Um hotel boutique onde a arte angolana, a hospitalidade genuína e vistas incríveis se unem para criar uma estadia inesquecível.",
@@ -270,17 +277,17 @@ document.addEventListener('DOMContentLoaded', () => {
       arrival: "Data de Entrada",
       departure: "Data de Saída",
       guests: "Hóspedes",
-      roomType: "Categoria de Suíte",
+      roomType: "Categoria de Quarto",
       allRooms: "Todos os quartos",
-      filterMaster: "Suítes Master",
+      filterMaster: "Suítes",
       filterTwin: "Quartos Twin",
       filterSeaView: "Vista Mar",
-      masterSuite: "Suíte Master Art",
-      gardenVilla: "Suíte Garden Villa",
-      executiveStudio: "Estúdio Executivo",
-      oceanfrontSuite: "Suíte Frente ao Mar Atlântico",
-      heritageSuite: "Suíte Galeria Heritage",
-      courtyardTwinSuite: "Suíte Twin Deluxe Pátio",
+      masterSuite: "Suíte 301",
+      gardenVilla: "Quarto Twin",
+      executiveStudio: "Quarto Ocean",
+      oceanfrontSuite: "Suíte Executiva",
+      heritageSuite: "Quarto Heritage",
+      courtyardTwinSuite: "Quarto Twin",
       penthouse: "Cobertura Art House",
       night: "/ noite",
       currencySymbol: "$",
@@ -304,10 +311,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Rooms Section
       roomsTag: "Acomodações",
-      roomsTitle: "A Nossa Coleção de Suítes",
+      roomsTitle: "Os Nossos Quartos",
       roomsSubtitle: "Cada um dos nossos quartos apresenta um tema único inspirado na nossa comunidade angolana e artistas locais.",
       btnExploreSuite: "Ver Detalhes",
-      btnReserveSuite: "Reservar",
+      btnReserveSuite: "Reservar Quarto",
 
       // Experiences Section
       expTag: "Algo Inesquecível",
@@ -353,16 +360,20 @@ document.addEventListener('DOMContentLoaded', () => {
       faqSubtitle: "Tudo o que precisa de saber sobre a sua estadia no Thomson Art House em Luanda.",
       faqQ1: "Quais são os horários de check-in e check-out?",
       faqA1: "O check-in padrão é a partir das 14:00 e o check-out até às 12:00. O check-in antecipado ou late check-out pode ser organizado sujeito à disponibilidade das suítes — basta avisar a receção com antecedência.",
-      faqQ2: "Onde fica localizado o Thomson Art House em Luanda?",
-      faqA2: "Estamos localizados no <strong>Thomson House, Av. Murtala Mohammed, Luanda, Angola</strong>, ao longo da costa da Ilha do Cabo, cercados por restaurantes, beach lounges e a apenas 15 minutos do Aeroporto Internacional Quatro de Fevereiro.",
-      faqQ3: "O serviço de transporte para o aeroporto está disponível?",
-      faqA3: "Sim, o transporte privado de/para o aeroporto está incluído para os hóspedes das nossas suítes. Transferes e deslocações na cidade também podem ser coordenados diretamente com a nossa receção.",
       faqQ4: "O pequeno-almoço está incluído na reserva da suíte?",
       faqA4: "Sim! Todas as reservas diretas incluem pequeno-almoço gourmet artesanal servido diariamente no nosso jardim interior, com produtos locais angolanos, frutas tropicais e cafés espresso.",
       faqQ5: "Como posso fazer uma reserva direta ou contactar por WhatsApp?",
       faqA5: "Pode reservar a sua suíte online através do nosso formulário ou enviar uma mensagem direta por WhatsApp para <strong>+244 933 694 600</strong> para confirmação imediata.",
       faqQ6: "Realizam eventos privados, casamentos ou reuniões de negócios?",
       faqA6: "Sim, o nosso pátio arborizado e galeria de arte acolhem jantares privados, receções de cocktail, reuniões executivas e celebrações culturais. Visite a página de Eventos ou contacte-nos por WhatsApp.",
+      faqQ7: "É possível solicitar cama ou colchão extra para crianças?",
+      faqA7: "Sim, mediante pedido prévio. Disponibilizamos colchão extra para crianças exclusivamente nas nossas <strong>Suítes</strong> (capacidade para 2 adultos e 1 criança). Por favor, contacte a nossa equipa com antecedência para confirmarmos a disponibilidade.",
+      faqQ8: "Qual é a política de cancelamento?",
+      faqA8: "Oferecemos <strong>cancelamento gratuito até 24 horas</strong> antes da data prevista de chegada. Em caso de cancelamento após este período ou de não comparência (no-show), o hotel cobrará o valor correspondente à primeira noite.",
+      faqQ9: "O hotel permite animais de estimação?",
+      faqA9: "De forma a garantir o conforto, tranquilidade e padrões de bem-estar de todos os hóspedes, <strong>não são permitidos animais de estimação</strong> nas instalações do hotel.",
+      faqQ10: "A receção funciona 24 horas?",
+      faqA10: "Sim! A nossa receção e equipa de segurança presencial funcionam <strong>24 horas por dia, 7 dias por semana</strong>, para acolher a sua chegada a qualquer hora e apoiar em quaisquer pedidos durante a estadia.",
 
       // CTA & Footer
       ctaTag: "Planeie a Sua Visita",
@@ -438,8 +449,8 @@ document.addEventListener('DOMContentLoaded', () => {
       aboutP5: "Venha hospedar-se connosco e viva o melhor de Luanda.",
       planStayTag: "Planeie a Sua Estadia",
       planStayTitle: "Viva a Experiência Art House em Luanda",
-      planStaySub: "Reserve a sua suíte hoje e desfrute da nossa hospitalidade em Angola.",
-      btnExploreSuites: "Explorar Suítes",
+      planStaySub: "Reserve a sua estadia hoje e desfrute da nossa hospitalidade em Angola.",
+      btnExploreSuites: "Explorar Quartos",
       btnReserveStay: "Reservar Estadia",
 
       // Contact Page Translations PT
@@ -458,12 +469,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Rooms Page Translations PT
       roomsHeroTag: "Acomodações Art House",
-      roomsHeroTitle: "As Nossas Suítes",
+      roomsHeroTitle: "Os Nossos Quartos",
       roomsHeroSubtitle: "Cada um dos nossos quartos apresenta um tema único inspirado na nossa comunidade angolana e artistas locais.",
       tagSeaView: "Vista Mar",
-      tagStandard: "Padrão",
+      tagStandard: "Vista Cidade",
       tagPremium: "Premium",
-      masterSuiteTitle: "Suíte Master Art",
+      masterSuiteTitle: "Suíte 301",
       masterSuiteDesc: "Uma suíte luminosa e contemporânea, com amplas vistas para o mar, generosa luz natural e uma atmosfera acolhedora concebida para relaxar.",
       gardenVillaTitle: "Quarto Twin",
       gardenVillaDesc: "Quer esteja a viajar com um amigo, familiar ou colega, o nosso Quarto Twin oferece o equilíbrio perfeito de conforto, funcionalidade e design atencioso para uma estadia relaxante em Luanda.",
@@ -471,14 +482,17 @@ document.addEventListener('DOMContentLoaded', () => {
       execStudioDesc: "Uma parede decorativa em azul vibrante e obras de arte artesanais em forma de peixe trazem a beleza da costa para o quarto, criando um espaço único inspirado no mar e na criatividade de Angola.",
       oceanfrontTitle: "Suíte Executiva",
       oceanfrontDesc: "Mais do que um simples lugar para dormir, esta espaçosa suíte oferece uma atmosfera calma e acolhedora com interiores requintados, uma cama king-size e espaços flexíveis para jantar, trabalhar ou relaxar ao seu próprio ritmo.",
-      heritageTitle: "Suíte Galeria Heritage",
+      heritageTitle: "Quarto Heritage",
       heritageDesc: "Relaxe rodeado por vibrantes obras em tela e tons neutros e acolhedores. Equipado com uma espaçosa cama king, casa de banho privada e muito mais.",
       courtyardTitle: "Quarto Twin",
       courtyardDesc: "Quer esteja a viajar com um amigo, familiar ou colega, o nosso Quarto Twin oferece o equilíbrio perfeito de conforto, funcionalidade e design atencioso para uma estadia relaxante em Luanda.",
       btnExploreDetails: "Ver Detalhes",
-      btnReserveSuite: "Reservar Suíte",
-      pricePerNight100: "$100 / noite",
-      pricePerNight89: "$89 / noite",
+      btnReserveSuite: "Reservar Quarto",
+      pricePerNight111: "$111 / noite",
+      pricePerNight101: "$101 / noite",
+      pricePerNight94: "$94 / noite",
+      pricePerNight100: "$111 / noite",
+      pricePerNight89: "$94 / noite",
       photoCount3: "📷 3 Fotos",
       footerTagline: "",
       privacyPolicy: "Política de Privacidade",
@@ -655,9 +669,9 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   const roomsData = {
     'master-art-suite': {
-      title: { en: 'Master Art Suite', pt: 'Suíte Master Art' },
+      title: { en: 'Suite 301', pt: 'Suíte 301' },
       tagline: { en: 'Sea View', pt: 'Vista Mar' },
-      priceUSD: 100,
+      priceUSD: 111,
       size: '30 m²',
       capacity: { en: '2 Adults, 1 Child', pt: '2 Adultos, 1 Criança' },
       bed: { en: 'Super King-size Custom Wood Bed', pt: 'Cama Super King em Madeira Personalizada' },
@@ -677,8 +691,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'garden-villa': {
       title: { en: 'Twin Room', pt: 'Quarto Twin' },
-      tagline: { en: 'Standard', pt: 'Padrão' },
-      priceUSD: 89,
+      tagline: { en: 'City View', pt: 'Vista Cidade' },
+      priceUSD: 94,
       size: '30 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: '2 Individual Beds', pt: '2 Camas Individuais' },
@@ -699,7 +713,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'executive-studio': {
       title: { en: 'Ocean Room', pt: 'Quarto Ocean' },
       tagline: { en: 'Sea view', pt: 'Vista mar' },
-      priceUSD: 89,
+      priceUSD: 101,
       size: '20 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: 'King Bed', pt: 'Cama King' },
@@ -720,7 +734,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'oceanfront-suite': {
       title: { en: 'Executive suite', pt: 'Suíte Executiva' },
       tagline: { en: 'Premium', pt: 'Premium' },
-      priceUSD: 100,
+      priceUSD: 111,
       size: '58 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: 'King-size Bed', pt: 'Cama King-size' },
@@ -739,9 +753,9 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     'heritage-gallery-suite': {
-      title: { en: 'Heritage Gallery Suite', pt: 'Suíte Galeria Heritage' },
-      tagline: { en: 'Standard', pt: 'Padrão' },
-      priceUSD: 100,
+      title: { en: 'Heritage Room', pt: 'Quarto Heritage' },
+      tagline: { en: 'City View', pt: 'Vista Cidade' },
+      priceUSD: 94,
       size: '20 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: 'King Bed', pt: 'Cama King' },
@@ -761,8 +775,8 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     'courtyard-twin-suite': {
       title: { en: 'Twin Room', pt: 'Quarto Twin' },
-      tagline: { en: 'Standard', pt: 'Padrão' },
-      priceUSD: 89,
+      tagline: { en: 'City View', pt: 'Vista Cidade' },
+      priceUSD: 94,
       size: '30 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
       bed: { en: '2 Individual Beds', pt: '2 Camas Individuais' },
@@ -1027,7 +1041,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ==========================================================================
-     7. DIRECT CLOUDBEDS RESERVATION REDIRECT
+     7. DIRECT CLOUDBEDS RESERVATION REDIRECT & TERMS MODAL
      ========================================================================== */
   const CLOUDBEDS_RESERVATION_URL = "https://hotels.cloudbeds.com/en/reservation/4nvkL2?currency=usd";
 
@@ -1049,6 +1063,121 @@ document.addEventListener('DOMContentLoaded', () => {
       event.preventDefault();
     }
     window.openBookingModal();
+  };
+
+  // Terms of Stay (Políticas da Casa) Modal
+  window.openTermsModal = () => {
+    let modal = document.getElementById('termsOfStayModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'termsOfStayModal';
+      modal.className = 'modal-backdrop';
+      modal.innerHTML = `
+        <div class="modal-box" style="max-width: 650px; max-height: 85vh; overflow-y: auto;">
+          <button class="modal-close" onclick="closeTermsModal()">✕</button>
+          <span class="section-tag" id="termsModalTag">Essential Policies</span>
+          <h3 class="modal-title" id="termsModalTitle" style="margin-bottom: var(--spacing-sm);">Políticas da Casa – Terms of Stay</h3>
+          <div id="termsModalContent" style="font-size: 0.9375rem; line-height: 1.7; color: var(--color-text-main);">
+          </div>
+          <div style="margin-top: var(--spacing-md); text-align: right;">
+            <button class="btn btn-primary" onclick="closeTermsModal()">Close / Fechar</button>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(modal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeTermsModal();
+      });
+    }
+
+    const isPt = currentLang === 'pt';
+    const tagEl = document.getElementById('termsModalTag');
+    const titleEl = document.getElementById('termsModalTitle');
+    const contentEl = document.getElementById('termsModalContent');
+
+    if (tagEl) tagEl.textContent = isPt ? 'Políticas Essenciais' : 'Essential Policies';
+    if (titleEl) titleEl.textContent = isPt ? 'Políticas da Casa – Termos de Estadia' : 'House Policies – Terms of Stay';
+
+    if (contentEl) {
+      if (isPt) {
+        contentEl.innerHTML = `
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-primary);">5.1 Check-in e Check-out</h4>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem;">
+              <li><strong>Check-in:</strong> a partir das 14h00;</li>
+              <li><strong>Check-out:</strong> até às 12h00.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-primary);">5.2 Política de Cancelamento</h4>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem;">
+              <li>Cancelamento gratuito até 24 horas antes da data de chegada;</li>
+              <li>Em caso de cancelamento após esse período ou de não comparência (no-show), o hotel poderá cobrar o valor correspondente à primeira noite.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-primary);">6. Informações Adicionais</h4>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem;">
+              <li><strong>Receção:</strong> disponível 24 horas por dia, 7 dias por semana;</li>
+              <li><strong>Animais de estimação:</strong> não são permitidos nas instalações do hotel.</li>
+            </ul>
+          </div>
+
+          <div style="background-color: var(--color-bg-alt); padding: 1rem; border-radius: var(--radius-sm); margin-top: 1rem; font-size: 0.875rem;">
+            <strong style="display: block; margin-bottom: 0.25rem; color: var(--color-primary);">Contactos para Reservas:</strong>
+            <div>Telefone 1: <a href="tel:+244933694600" style="color: var(--color-primary); font-weight: 600;">+244 933 694 600</a></div>
+            <div>Telefone 2: <a href="tel:+244918001001" style="color: var(--color-primary); font-weight: 600;">+244 918 001 001</a></div>
+            <div>E-mail: <a href="mailto:reservations@arthouseangola.com" style="color: var(--color-primary); font-weight: 600;">reservations@arthouseangola.com</a></div>
+          </div>
+        `;
+      } else {
+        contentEl.innerHTML = `
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-primary);">5.1 Check-in & Check-out</h4>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem;">
+              <li><strong>Check-in:</strong> from 14:00 (2:00 PM) onwards;</li>
+              <li><strong>Check-out:</strong> until 12:00 (12:00 PM).</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-primary);">5.2 Cancellation Policy</h4>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem;">
+              <li>Free cancellation up to 24 hours prior to the arrival date;</li>
+              <li>In case of cancellation after this period or non-arrival (no-show), the hotel may charge the amount corresponding to the first night.</li>
+            </ul>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: var(--color-primary);">6. Additional Information</h4>
+            <ul style="padding-left: 1.25rem; margin-bottom: 0.5rem;">
+              <li><strong>Reception:</strong> available 24 hours a day, 7 days a week;</li>
+              <li><strong>Pets:</strong> not allowed on hotel premises.</li>
+            </ul>
+          </div>
+
+          <div style="background-color: var(--color-bg-alt); padding: 1rem; border-radius: var(--radius-sm); margin-top: 1rem; font-size: 0.875rem;">
+            <strong style="display: block; margin-bottom: 0.25rem; color: var(--color-primary);">Reservation Contacts:</strong>
+            <div>Phone 1: <a href="tel:+244933694600" style="color: var(--color-primary); font-weight: 600;">+244 933 694 600</a></div>
+            <div>Phone 2: <a href="tel:+244918001001" style="color: var(--color-primary); font-weight: 600;">+244 918 001 001</a></div>
+            <div>Email: <a href="mailto:reservations@arthouseangola.com" style="color: var(--color-primary); font-weight: 600;">reservations@arthouseangola.com</a></div>
+          </div>
+        `;
+      }
+    }
+
+    modal.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+  };
+
+  window.closeTermsModal = () => {
+    const modal = document.getElementById('termsOfStayModal');
+    if (modal) {
+      modal.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+    }
   };
 
   /* ==========================================================================
