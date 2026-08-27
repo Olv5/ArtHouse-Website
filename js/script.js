@@ -855,12 +855,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const thumbsContainer = document.getElementById('modalRoomThumbnails');
 
     if (modalImg) {
-      modalImg.style.opacity = '0.4';
-      setTimeout(() => {
+      const tempImg = new Image();
+      tempImg.src = currentImgObj.url;
+      if (tempImg.complete) {
         modalImg.src = currentImgObj.url;
         modalImg.alt = currentImgObj.caption;
         modalImg.style.opacity = '1';
-      }, 100);
+      } else {
+        modalImg.style.opacity = '0.6';
+        tempImg.onload = () => {
+          modalImg.src = currentImgObj.url;
+          modalImg.alt = currentImgObj.caption;
+          modalImg.style.opacity = '1';
+        };
+      }
     }
 
     if (badge) {
@@ -873,7 +881,7 @@ document.addEventListener('DOMContentLoaded', () => {
       data.images.forEach((imgObj, idx) => {
         const btn = document.createElement('button');
         btn.className = `modal-thumb-btn ${idx === currentPhotoIndex ? 'active' : ''}`;
-        btn.innerHTML = `<img src="${imgObj.url}" alt="${imgObj.caption}" referrerPolicy="no-referrer" />`;
+        btn.innerHTML = `<img src="${imgObj.url}" alt="${imgObj.caption}" loading="lazy" decoding="async" referrerPolicy="no-referrer" />`;
         btn.addEventListener('click', () => {
           currentPhotoIndex = idx;
           renderModalGalleryPhoto();
@@ -902,11 +910,21 @@ document.addEventListener('DOMContentLoaded', () => {
   window.switchCardPhoto = (btn, photoUrl, cardImgId) => {
     const cardImg = document.getElementById(cardImgId);
     if (cardImg) {
-      cardImg.style.opacity = '0.5';
-      setTimeout(() => {
+      if (cardImg.src.endsWith(photoUrl) || cardImg.src === photoUrl) {
+        return;
+      }
+      // Fast image swap with cached preload
+      const tempImg = new Image();
+      tempImg.src = photoUrl;
+      if (tempImg.complete) {
         cardImg.src = photoUrl;
-        cardImg.style.opacity = '1';
-      }, 100);
+      } else {
+        cardImg.style.opacity = '0.6';
+        tempImg.onload = () => {
+          cardImg.src = photoUrl;
+          cardImg.style.opacity = '1';
+        };
+      }
     }
 
     // Toggle active state on dots
@@ -1494,9 +1512,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.fade-in, .section-header, .room-card, .experience-card').forEach(el => {
-    el.classList.add('fade-in');
-    observer.observe(el);
-  });
+  /* ==========================================================================
+     10. IDLE IMAGE PRELOADER (FOR ZERO-DELAY ROOM & GALLERY BROWSING)
+     ========================================================================== */
+  const idlePreloadImages = () => {
+    const imagesToPreload = [
+      '/images/MasterSuite1.jpg',
+      '/images/MasterSuite2.jpg',
+      '/images/MasterSuite3.jpg',
+      '/images/Twins3.jpg',
+      '/images/Twins2.jpg',
+      '/images/BathRooms.jpg',
+      '/images/CityView1.jpg',
+      '/images/CityView2.jpg',
+      '/images/CityView3.jpg',
+      '/images/SuiteMaster1.jpg',
+      '/images/SuiteMaster2.jpg',
+      '/images/SeaView1.jpg',
+      '/images/SeaView2.jpg',
+      '/images/SeaView3.jpg',
+      '/images/Twins.jpg',
+      '/images/MonkeyArt.jpg',
+      '/images/ArtGallery.jpg',
+      '/images/SunsetTakes1.jpg',
+      '/images/RooftopTakes.jpg',
+      '/images/Events1.jpg'
+    ];
+
+    let index = 0;
+    const preloadNext = () => {
+      if (index >= imagesToPreload.length) return;
+      const img = new Image();
+      img.src = imagesToPreload[index++];
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(preloadNext, { timeout: 1000 });
+      } else {
+        setTimeout(preloadNext, 200);
+      }
+    };
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preloadNext, { timeout: 2000 });
+    } else {
+      setTimeout(preloadNext, 1000);
+    }
+  };
+
+  // Trigger idle preloader after primary page render
+  if (document.readyState === 'complete') {
+    idlePreloadImages();
+  } else {
+    window.addEventListener('load', idlePreloadImages);
+  }
 
 });

@@ -24,6 +24,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="/images/Facade03.jpg" fetchpriority="high" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css" />
 </head>
@@ -35,8 +38,8 @@
   <header class="header">
     <div class="container header-container">
       <a href="/index.html" class="logo" id="headerLogo" aria-label="Art House Hotel & Rooftop Bar">
-        <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-white" />
-        <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-dark" />
+        <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-white" width="185" height="34" />
+        <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-dark" width="185" height="34" />
       </a>
 
       <nav class="nav-menu" aria-label="Main Navigation">
@@ -73,8 +76,8 @@
     <div>
       <div class="drawer-header">
         <a href="/index.html" class="logo" aria-label="Art House Hotel & Rooftop Bar">
-          <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-white" />
-          <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-dark" />
+          <img src="/images/logo-white.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-white" width="185" height="34" />
+          <img src="/images/logo.svg" alt="Art House Hotel & Rooftop Bar" class="logo-img logo-img-drawer-dark" width="185" height="34" />
         </a>
         <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close Mobile Menu" onclick="closeMobileMenu()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -107,7 +110,7 @@
        ========================================================================== -->
   <section id="home" class="hero">
     <div class="hero-bg">
-      <img src="/images/Facade03.jpg" alt="Art House Luxury Boutique Hotel in Angola at Golden Hour" referrerPolicy="no-referrer" />
+      <img src="/images/Facade03.jpg" alt="Art House Luxury Boutique Hotel in Angola at Golden Hour" fetchpriority="high" loading="eager" decoding="async" referrerPolicy="no-referrer" />
     </div>
     <div class="hero-overlay"></div>
 
@@ -142,7 +145,7 @@
     <div class="container">
       <div class="brand-grid">
         <div class="brand-image-stack">
-          <img src="/images/MonkeyArt.jpg" alt="Art House Hotel Gallery Lobby Lounge" class="brand-main-img" referrerPolicy="no-referrer" />
+          <img src="/images/MonkeyArt.jpg" alt="Art House Hotel Gallery Lobby Lounge" class="brand-main-img" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="brand-accent-card">
             <h4 data-i18n="cardCuratedArtTitle">Angolan Art</h4>
             <p data-i18n="cardCuratedArtDesc">We love local art, Angolan culture, and showing foreigners what our country has to offer!</p>
@@ -209,7 +212,7 @@
         <!-- Room 1: Master Art Suite -->
         <article class="room-card" data-category="master seaview">
           <div class="room-img-wrap">
-            <img id="card-img-home-master" src="/images/MasterSuite1.jpg" alt="Suite 301 Bedroom at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-master" src="/images/MasterSuite1.jpg" alt="Suite 301 Bedroom at Art House Angola" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
@@ -255,7 +258,7 @@
         <!-- Room 2: Garden Villa Suite -->
         <article class="room-card" data-category="villa">
           <div class="room-img-wrap">
-            <img id="card-img-home-villa" src="/images/Twins3.jpg" alt="Twin Room at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-villa" src="/images/Twins3.jpg" alt="Twin Room at Art House Angola" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
@@ -301,7 +304,7 @@
         <!-- Room 3: Executive Studio -->
         <article class="room-card" data-category="seaview">
           <div class="room-img-wrap">
-            <img id="card-img-home-exec" src="/images/CityView1.jpg" alt="Ocean Room at Art House Angola" referrerPolicy="no-referrer" />
+            <img id="card-img-home-exec" src="/images/CityView1.jpg" alt="Ocean Room at Art House Angola" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
             <button class="card-photo-nav card-photo-prev" onclick="navigateCardPhoto(this, -1, event)" aria-label="Previous Photo" title="Previous Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
             <button class="card-photo-nav card-photo-next" onclick="navigateCardPhoto(this, 1, event)" aria-label="Next Photo" title="Next Photo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
             <div class="photo-count-badge">📷 3 Photos</div>
@@ -464,7 +467,7 @@
 
       <div class="gallery-grid">
         <div class="gallery-item frame-500-333" data-full="/images/SunsetTakes1.jpg">
-          <img src="/images/SunsetTakes1.jpg" alt="Luanda Coastal Sunset & Atmosphere" referrerPolicy="no-referrer" />
+          <img src="/images/SunsetTakes1.jpg" alt="Luanda Coastal Sunset & Atmosphere" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="gallery-overlay">
             <span class="gallery-cat">Sunset Atmosphere</span>
             <div class="gallery-caption">Luanda Coastal Sunset</div>
@@ -472,7 +475,7 @@
         </div>
 
         <div class="gallery-item frame-750-500" data-full="/images/RooftopTakes.jpg">
-          <img src="/images/RooftopTakes.jpg" alt="Botanico Rooftop Bar & Lounge Setup" referrerPolicy="no-referrer" />
+          <img src="/images/RooftopTakes.jpg" alt="Botanico Rooftop Bar & Lounge Setup" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="gallery-overlay">
             <span class="gallery-cat">Rooftop Lounge</span>
             <div class="gallery-caption">Botanico Rooftop Bar</div>
@@ -480,7 +483,7 @@
         </div>
 
         <div class="gallery-item" data-full="/images/ArtGallery.jpg">
-          <img src="/images/ArtGallery.jpg" alt="Art House Main Exhibition Lounge" referrerPolicy="no-referrer" />
+          <img src="/images/ArtGallery.jpg" alt="Art House Main Exhibition Lounge" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="gallery-overlay">
             <span class="gallery-cat">Art Collection</span>
             <div class="gallery-caption">Main Exhibition Lounge</div>
@@ -488,7 +491,7 @@
         </div>
 
         <div class="gallery-item" data-full="/images/ArtGallery1.jpg">
-          <img src="/images/ArtGallery1.jpg" alt="Angolan Contemporary Canvas Exhibition" referrerPolicy="no-referrer" />
+          <img src="/images/ArtGallery1.jpg" alt="Angolan Contemporary Canvas Exhibition" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="gallery-overlay">
             <span class="gallery-cat">Art Collection</span>
             <div class="gallery-caption">Angolan Contemporary Canvas</div>
@@ -496,7 +499,7 @@
         </div>
 
         <div class="gallery-item" data-full="/images/Events1.jpg">
-          <img src="/images/Events1.jpg" alt="Oceanfront Event & Dining Experience" referrerPolicy="no-referrer" />
+          <img src="/images/Events1.jpg" alt="Oceanfront Event & Dining Experience" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="gallery-overlay">
             <span class="gallery-cat">Events & Dining</span>
             <div class="gallery-caption">Oceanfront Dining Experience</div>
@@ -504,7 +507,7 @@
         </div>
 
         <div class="gallery-item" data-full="/images/ArtGallery3.jpg">
-          <img src="/images/ArtGallery3.jpg" alt="Gallery Fine Art Curation" referrerPolicy="no-referrer" />
+          <img src="/images/ArtGallery3.jpg" alt="Gallery Fine Art Curation" loading="lazy" decoding="async" referrerPolicy="no-referrer" />
           <div class="gallery-overlay">
             <span class="gallery-cat">Art Collection</span>
             <div class="gallery-caption">Gallery Fine Art Curation</div>

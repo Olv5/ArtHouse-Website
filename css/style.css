@@ -662,12 +662,14 @@ form .btn.btn-lg {
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   padding-top: calc(var(--header-height) + var(--spacing-xl));
   padding-bottom: var(--spacing-2xl);
   color: var(--color-text-inverse);
   overflow: hidden;
+  background-color: #121829; /* Immediate dark navy fallback to prevent white flashes */
 }
 
 .hero-bg {
@@ -677,6 +679,8 @@ form .btn.btn-lg {
   width: 100%;
   height: 100%;
   z-index: 1;
+  background-color: #121829;
+  background: radial-gradient(circle at center, #1b2758 0%, #121829 100%);
 }
 
 .hero-bg img {
@@ -685,6 +689,8 @@ form .btn.btn-lg {
   object-fit: cover;
   transform: scale(1.05);
   animation: heroZoom 15s ease-out infinite alternate;
+  opacity: 1;
+  will-change: transform;
 }
 
 @keyframes heroZoom {
@@ -1022,13 +1028,30 @@ form .btn.btn-lg {
   border-radius: var(--radius-md);
   overflow: hidden;
   margin-bottom: var(--spacing-xs);
-  background: var(--color-bg-alt);
+  background: #141b2d;
   display: flex;
   justify-content: center;
   align-items: center;
+  contain: layout paint;
+}
+
+.modal-gallery-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmerSkeleton 2s infinite linear;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .modal-room-img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   aspect-ratio: 4 / 5;
   max-height: 480px;
@@ -1141,14 +1164,37 @@ form .btn.btn-lg {
   position: relative;
   height: 260px;
   overflow: hidden;
+  background-color: #141b2d; /* Instant deep fallback */
+  contain: layout paint;
+}
+
+.room-img-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmerSkeleton 2s infinite linear;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes shimmerSkeleton {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .room-img-wrap img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center ;
-  transition: transform var(--transition-slow);
+  object-position: center;
+  transition: transform var(--transition-slow), opacity 0.25s ease-out;
 }
 
 .room-card:hover .room-img-wrap img {
@@ -1358,6 +1404,22 @@ form .btn.btn-lg {
   cursor: pointer;
   break-inside: avoid;
   margin-bottom: var(--spacing-sm);
+  background-color: #141b2d;
+  contain: layout paint;
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmerSkeleton 2s infinite linear;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .gallery-item.frame-500-333,
@@ -1382,10 +1444,12 @@ form .btn.btn-lg {
 }
 
 .gallery-item img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
+  transition: transform var(--transition-slow), opacity 0.25s ease-out;
 }
 
 .gallery-item:hover img {
