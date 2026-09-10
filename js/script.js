@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filterMaster: "Suites",
       filterTwin: "Twin rooms",
       filterSeaView: "Sea View",
+      filterCityView: "City View",
       masterSuite: "Suite 301",
       gardenVilla: "Twin Room",
       executiveStudio: "Ocean Room",
@@ -282,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filterMaster: "Suítes",
       filterTwin: "Quartos Twin",
       filterSeaView: "Vista Mar",
+      filterCityView: "Vista Cidade",
       masterSuite: "Suíte 301",
       gardenVilla: "Quarto Twin",
       executiveStudio: "Quarto Ocean",
@@ -735,16 +737,16 @@ document.addEventListener('DOMContentLoaded', () => {
       title: { en: 'Executive suite', pt: 'Suíte Executiva' },
       tagline: { en: 'Premium', pt: 'Premium' },
       priceUSD: 111,
-      size: '58 m²',
+      size: '30 m²',
       capacity: { en: '2 Adults', pt: '2 Adultos' },
-      bed: { en: 'King-size Bed', pt: 'Cama King-size' },
+      bed: { en: 'King Bed', pt: 'Cama King' },
       description: {
         en: 'More than just a place to sleep, this spacious suite offers a calm, inviting atmosphere with refined interiors, a king-size bed, and flexible spaces to dine, work, or unwind at your own pace.',
         pt: 'Mais do que um simples lugar para dormir, esta espaçosa suíte oferece uma atmosfera calma e acolhedora com interiores requintados, uma cama king-size e espaços flexíveis para jantar, trabalhar ou relaxar ao seu próprio ritmo.'
       },
       amenities: {
-        en: ['58 m²', 'Ocean Terrace', 'King Bed', 'Rain Shower', 'Fiber Wi-Fi'],
-        pt: ['58 m²', 'Terraço Vista Mar', 'Cama King', 'Chuveiro de Teto', 'Wi-Fi por Fibra']
+        en: ['30 m²', 'King bed', 'Free Wi-fi', 'Private bathroom', 'Plain tv', 'Living room'],
+        pt: ['30 m²', 'Cama King', 'Wi-Fi gratuito', 'Casa de banho privada', 'TV ecrã plano', 'Sala de estar']
       },
       images: [
         { url: '/images/SuiteMaster1.jpg', caption: 'Coastline View' },
@@ -966,9 +968,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const categories = rawCategory.split(' ');
         const isSeaViewFilter = filterValue === 'seaview' || filterValue === 'executive';
         const matchesSeaView = isSeaViewFilter && (categories.includes('seaview') || categories.includes('executive'));
+        const isCityViewFilter = filterValue === 'cityview' || filterValue === 'city-view';
+        const matchesCityView = isCityViewFilter && (categories.includes('cityview') || categories.includes('city-view'));
         const matchesDirect = filterValue === 'all' || categories.includes(filterValue);
 
-        if (matchesDirect || matchesSeaView) {
+        if (matchesDirect || matchesSeaView || matchesCityView) {
           card.style.display = 'flex';
           setTimeout(() => {
             card.style.opacity = '1';
